@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+GSCLib/NAND2X1 type="cell"
+GSCLib/NAND2X2 type="cell"
+GSCLib/NAND3X1 type="cell"
+GSCLib/NAND4X1 type="cell"
+keepEmptyCategory type="unknown"

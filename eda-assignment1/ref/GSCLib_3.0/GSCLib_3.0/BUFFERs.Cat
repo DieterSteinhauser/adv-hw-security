@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+GSCLib/BUFX1 type="cell"
+GSCLib/BUFX3 type="cell"
+GSCLib/CLOCKs.Cat type="category"
+GSCLib/TSTATEs.Cat type="category"
+keepEmptyCategory type="unknown"

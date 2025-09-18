@@ -1,0 +1,26 @@
+#! /bin/csh -f
+
+if ($1 == "") then
+	echo "Please specify UNIX path to target library..."
+	exit -1
+endif
+
+# This is the official supported cell list...
+
+set cellList = "ADDFX1 ADDHX1 XOR2X1 SDFFSRX1 OR4X1 OR2X1 OAI33X1 OAI22X1 OAI21X1 NOR4X1 NOR3X1 NOR2X1 NAND4X1 NAND3X1 NAND2X2 NAND2X1 MX2X1 INVX8 INVX4 INVX2 INVX1 DFFX1 DFFSRX1 CLKBUFX3 CLKBUFX2 CLKBUFX1 BUFX3 BUFX1 AOI22X1 AOI21X1 AND2X1 TBUFX1 TBUFX2 TBUFX4 TBUFX8"
+
+echo Starting...
+
+foreach x ( $cellList )
+
+	echo "Processing cell $x"
+	set sourceSch = $1/$x/abstract
+	if ( -d $sourceSch ) then
+		echo "Found abstract for $sourceSch"
+		rm -rf $sourceSch 
+	else
+		echo "No abs available for $sourceSch"
+	endif
+
+end
+

@@ -1,0 +1,7 @@
+TDMCHECKPOINT="1.0"
+GSCLib/AOI21X1 type="cell"
+GSCLib/AOI22X1 type="cell"
+GSCLib/OAI21X1 type="cell"
+GSCLib/OAI22X1 type="cell"
+GSCLib/OAI33X1 type="cell"
+keepEmptyCategory type="unknown"

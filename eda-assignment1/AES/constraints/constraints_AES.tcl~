@@ -1,0 +1,28 @@
+#######################################
+## File Name: constraints_AES.tcl
+## File to setup constraints for a design
+#######################################
+
+    
+set clock_name_1 [get_attribute [get_ports -nocase clk] full_name]
+create_clock -name $clock_name_1 -period 20 -waveform [list 0 10] [get_port $clock_name_1]
+
+
+set_clock_latency 0.25 [get_clock $clock_name_1]
+set_clock_transition 0.1 [get_clock $clock_name_1]
+set_input_delay -max 0.5 [remove_from_collection [all_input] \
+		[get_port $clock_name_1]] -clock [get_clock $clock_name_1]
+set_output_delay -max 0.5 [all_output] -clock [get_clock $clock_name_1]
+
+
+set_driving_cell -lib_cell INVX1 -library saed90nm_typ -pin ZN -from_pin INP\
+		-no_design_rule [remove_from_collection [all_input] [get_port $clock_name_1]]
+
+
+set MAX_INPUT_LOAD [expr [load_of saed90nm_typ/AND2X1/IN1] * 10]
+
+set_max_capacitance $MAX_INPUT_LOAD [remove_from_collection [all_input]\
+		[get_port $clock_name_1]]
+
+set_load [expr $MAX_INPUT_LOAD * 3] [all_output]
+set_operating_conditions -library saed90nm_typ TYPICAL

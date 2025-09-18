@@ -1,0 +1,60 @@
+#! /bin/csh -f
+
+if ($1 == "") then
+	echo "Please specify UNIX path to source library..."
+	exit -1
+endif
+
+if ($2 == "") then
+	echo "Please specify UNIX path to destination library..."
+	exit -1
+endif
+
+if (-d $1) then
+	echo Will be copying extracted layout from $1
+else
+	echo "Can not locate specified source library..."
+	exit -1
+endif
+
+if (-d $2) then
+        echo Will be copying extracted layouts to $2 
+else
+        echo "Can not locate specified destination library..."
+        exit -1
+endif
+
+# This is the official supported cell list...
+
+set cellList = "ADDFX1 ADDHX1 XOR2X1 SDFFSRX1 OR4X1 OR2X1 OAI33X1 OAI22X1 OAI21X1 NOR4X1 NOR3X1 NOR2X1 NAND4X1 NAND3X1 NAND2X2 NAND2X1 MX2X1 INVX8 INVX4 INVX2 INVX1 DFFX1 DFFSRX1 CLKBUFX3 CLKBUFX2 CLKBUFX1 BUFX3 BUFX1 AOI22X1 AOI21X1 AND2X1 TBUFX1 TBUFX2 TBUFX4 TBUFX8"
+
+echo Starting...
+
+foreach x ( $cellList )
+
+	echo "Processing cell $x"
+	set sourceSch = $1/$x/extracted
+	if ( -d $sourceSch ) then
+		echo "Found extracted layout for $sourceSch"
+		cp -R $sourceSch $2/$x
+	else
+		echo "No extracted layout view available for $sourceSch"
+	endif
+        set sourceSch = $1/$x/extractedRC
+        if ( -d $sourceSch ) then
+                echo "Found extractedRC layout for $sourceSch"
+                cp -R $sourceSch $2/$x
+        else
+                echo "No extractedRC layout view available for $sourceSch"
+        endif
+        set sourceSch = $1/$x/analog_extracted
+        if ( -d $sourceSch ) then
+                echo "Found analog_extracted layout for $sourceSch"
+                cp -R $sourceSch $2/$x
+        else
+                echo "No analog_extracted layout view available for $sourceSch"
+        endif
+
+
+end
+

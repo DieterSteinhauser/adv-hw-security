@@ -1,0 +1,8 @@
+# /bin/csh -f
+
+echo Removing back-up and temp files
+rm -rf GSCLib/*/*/*.cd%
+rm -rf GSCLib/*/*/*.cd-
+
+echo Cleaning up cdslck files...
+find . -name '*cdslck*' | xargs /bin/rm

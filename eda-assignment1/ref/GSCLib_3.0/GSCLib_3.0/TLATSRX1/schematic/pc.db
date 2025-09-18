@@ -1,0 +1,43 @@
+#
+gpdk pmos symbol
+MP13
+MP12
+MP11
+MP10
+MP9
+MP8
+MP7
+MP6
+MP5
+MP4
+MP3
+MP2
+MP1
+MP0
+#
+gpdk nmos symbol
+MN12
+MN11
+MN10
+MN9
+MN8
+MN7
+MN6
+MN5
+MN4
+MN3
+MN2
+MN1
+MN0
+#ISCELL
+basic ipin symbol
+PIN8
+PIN7
+PIN6
+PIN5
+PIN3
+PIN4
+#ISCELL
+basic opin symbol
+PIN1
+PIN0

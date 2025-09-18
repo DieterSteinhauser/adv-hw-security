@@ -1,0 +1,424 @@
+#Cadence Generic Standard cell library 
+#History
+# comment out spacing for metal1 and metal2, jfelipe 11/1/04
+# first created by neiman 7/2/02
+# Small updates, gscl, 7/4/2002
+# added STACK to Metal5 neiman 7/15/02
+# Fixed vias, gscl 7/17/2002
+# Fixed stack vias name for consistency, gscl 10/16/2002
+# Added ViaRule for metal 5 and 6, jfelipe 10/10/2003
+# Moved MANUF after UNITS jfelipe 11/21/03
+VERSION 5.4 ;
+
+NAMESCASESENSITIVE ON ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+USEMINSPACING OBS ON ;
+USEMINSPACING PIN OFF ;
+CLEARANCEMEASURE EUCLIDEAN ;
+UNITS
+    DATABASE MICRONS 2000  ;
+END UNITS
+MANUFACTURINGGRID 0.005 ;
+
+LAYER Poly
+    TYPE MASTERSLICE ;
+END Poly
+
+LAYER Metal1
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    #SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION HORIZONTAL ;
+    RESISTANCE RPERSQ      1.0100e-01 ;
+    CAPACITANCE CPERSQDIST 1.3153e-04 ;
+    EDGECAPACITANCE        8.7703e-05 ;
+END Metal1
+
+LAYER Via1
+    TYPE CUT ;
+END Via1
+
+LAYER Metal2
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    #SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION VERTICAL ;
+    RESISTANCE RPERSQ      1.0100e-01 ;
+    CAPACITANCE CPERSQDIST 7.0018e-05 ;
+    EDGECAPACITANCE        8.3115e-05 ;
+END Metal2
+
+LAYER Via2
+    TYPE CUT ;
+END Via2
+
+LAYER Metal3
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION HORIZONTAL ;
+    RESISTANCE RPERSQ      1.0100e-01 ;
+    CAPACITANCE CPERSQDIST 6.3069e-05 ;
+    EDGECAPACITANCE        1.0028e-04 ;
+END Metal3
+
+LAYER Via3
+    TYPE CUT ;
+END Via3
+
+LAYER Metal4
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION VERTICAL ;
+    RESISTANCE RPERSQ      1.0100e-01 ;
+    CAPACITANCE CPERSQDIST 5.3607e-05 ;
+    EDGECAPACITANCE        8.2986e-05 ;
+END Metal4
+
+LAYER Via4
+    TYPE CUT ;
+END Via4
+
+LAYER Metal5
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION HORIZONTAL ;
+    RESISTANCE RPERSQ      4.5000e-02 ;
+    CAPACITANCE CPERSQDIST 3.1440e-05 ;
+    EDGECAPACITANCE        1.0224e-04 ;
+END Metal5
+
+LAYER Via5
+    TYPE CUT ;
+END Via5
+
+LAYER Metal6
+    TYPE ROUTING ;
+    WIDTH 0.30 ;
+    SPACING 0.30 ;
+    SPACING 0.6 RANGE 10.0 100000.0 ;
+    PITCH 0.660 ;
+    DIRECTION VERTICAL ;
+    RESISTANCE RPERSQ      4.5000e-02 ;
+    CAPACITANCE CPERSQDIST 3.1440e-05 ;
+    EDGECAPACITANCE        1.0224e-04 ;
+END Metal6
+
+LAYER OVERLAP
+    TYPE OVERLAP ;
+END OVERLAP
+
+# Default (regular routing) via definition
+
+Via M2_M1 DEFAULT
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal1 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+    LAYER Via1 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal2 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END M2_M1
+
+Via M3_M2 DEFAULT
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal2 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+    LAYER Via2 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal3 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END M3_M2
+
+Via M4_M3 DEFAULT
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal3 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+    LAYER Via3 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END M4_M3
+
+Via M5_M4 DEFAULT
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+    LAYER Via4 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal5 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END M5_M4
+
+Via M6_M5 DEFAULT
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal5 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+    LAYER Via5 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal6 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END M6_M5
+
+# Via arrays...
+
+ViaRULE Via12Array GENERATE
+    LAYER Metal1 ;
+        DIRECTION HORIZONTAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Metal2 ;
+        DIRECTION VERTICAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Via1 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+        SPACING 0.50 BY 0.50 ;
+END Via12Array
+
+ViaRULE Via23Array GENERATE
+    LAYER Metal2 ;
+        DIRECTION VERTICAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Metal3 ;
+        DIRECTION HORIZONTAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Via2 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+        SPACING 0.50 BY 0.50 ;
+END Via23Array
+
+ViaRULE Via34Array GENERATE
+    LAYER Metal3 ;
+        DIRECTION HORIZONTAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Metal4 ;
+        DIRECTION VERTICAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Via3 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+        SPACING 0.50 BY 0.50 ;
+END Via34Array
+
+ViaRULE Via45Array GENERATE
+    LAYER Metal4 ;
+        DIRECTION VERTICAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Metal5 ;
+        DIRECTION HORIZONTAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+
+    LAYER Via4 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+        SPACING 0.50 BY 0.50 ;
+END Via45Array
+
+ViaRULE Via56Array GENERATE
+    LAYER Metal5 ;
+        DIRECTION HORIZONTAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+    LAYER Metal6 ;
+        DIRECTION VERTICAL ;
+        OVERHANG 0.10 ;
+        METALOVERHANG 0.000 ;
+    LAYER Via5 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+        SPACING 0.50 BY 0.50 ;
+END Via56Array
+
+# turn vias
+
+ViaRULE TURNMetal1 GENERATE
+    LAYER Metal1 ;
+        DIRECTION vertical ;
+
+    LAYER Metal1 ;
+        DIRECTION horizontal ;
+END TURNMetal1
+
+ViaRULE TURNMetal2 GENERATE
+    LAYER Metal2 ;
+        DIRECTION vertical ;
+
+    LAYER Metal2 ;
+        DIRECTION horizontal ;
+END TURNMetal2
+
+ViaRULE TURNMetal3 GENERATE
+    LAYER Metal3 ;
+        DIRECTION vertical ;
+
+    LAYER Metal3 ;
+        DIRECTION horizontal ;
+END TURNMetal3
+
+ViaRULE TURNMetal4 GENERATE
+    LAYER Metal4 ;
+        DIRECTION vertical ;
+
+    LAYER Metal4 ;
+        DIRECTION horizontal ;
+END TURNMetal4
+
+ViaRULE TURNMetal5 GENERATE
+    LAYER Metal5 ;
+        DIRECTION vertical ;
+
+    LAYER Metal5 ;
+        DIRECTION horizontal ;
+END TURNMetal5
+
+ViaRULE TURNMetal6 GENERATE
+    LAYER Metal6 ;
+        DIRECTION vertical ;
+
+    LAYER Metal6 ;
+        DIRECTION horizontal ;
+END TURNMetal6
+
+
+# BEGIN STACKED ViaS
+
+#TOPOFSTACKONLY
+#  Prevents the router from using the Via1 except for Via stacking.
+#  When defining stacked Vias, use this keyword to instruct the
+#  router to use a Via1 first (rather than the default Via1) to
+#  satisfy minimum area rules requirements. 
+
+Via Via23_stack_north  DEFAULT TOPOFSTACKONLY
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal2 ;
+        RECT -0.20 -0.20 0.20 0.30 ;
+    LAYER Via2 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal3 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via23_stack_north
+
+Via Via23_stack_south  DEFAULT TOPOFSTACKONLY
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal2 ;
+        RECT -0.20 -0.30 0.20 0.20 ;
+    LAYER Via2 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal3 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via23_stack_south
+
+Via Via34_stack_east DEFAULT TOPOFSTACKONLY
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal3 ;
+        RECT -0.20 -0.20 0.30 0.20 ;
+    LAYER Via3 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via34_stack_east
+
+Via Via34_stack_west DEFAULT TOPOFSTACKONLY
+    RESISTANCE 6.4000e+00 ;
+    LAYER Metal3 ;
+        RECT -0.30 -0.20 0.20 0.20 ;
+    LAYER Via3 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via34_stack_west
+
+Via Via45_stack_north DEFAULT TOPOFSTACKONLY
+    RESISTANCE 2.5400e+00 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.20 0.20 0.30 ;
+    LAYER Via4 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal5 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via45_stack_north
+
+Via Via45_stack_south DEFAULT TOPOFSTACKONLY
+    RESISTANCE 2.5400e+00 ;
+    LAYER Metal4 ;
+        RECT -0.20 -0.30 0.20 0.20 ;
+    LAYER Via4 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal5 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via45_stack_south
+
+Via Via56_stack_east DEFAULT TOPOFSTACKONLY
+    RESISTANCE 2.5400e+00 ;
+    LAYER Metal5 ;
+        RECT -0.20 -0.20 0.30 0.20 ;
+    LAYER Via5 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal6 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via56_stack_east
+
+Via Via56_stack_west DEFAULT TOPOFSTACKONLY
+    RESISTANCE 2.5400e+00 ;
+    LAYER Metal5 ;
+        RECT -0.30 -0.20 0.20 0.20 ;
+    LAYER Via5 ;
+        RECT -0.10 -0.10 0.10 0.10 ;
+    LAYER Metal6 ;
+        RECT -0.20 -0.20 0.20 0.20 ;
+END Via56_stack_west
+
+# END STACKED ViaS
+#To enable Via stacking, the STACK keyword needs to
+#be specified at the layer between the two Vias that you
+#want to be stacked.  Metal and Via have to have the Keyword
+#STACK.
+
+SPACING
+    SAMENET Metal1 Metal1 0.30  ;
+    SAMENET Metal2 Metal2 0.30  STACK ;
+    SAMENET Metal3 Metal3 0.30  STACK ;
+    SAMENET Metal4 Metal4 0.30  STACK ;
+    SAMENET Metal5 Metal5 0.30  STACK ;
+    SAMENET Metal6 Metal6 0.30  ;
+    SAMENET Via1 Via1 0.30  ;
+    SAMENET Via2 Via2 0.30  ;
+    SAMENET Via3 Via3 0.30  ;
+    SAMENET Via4 Via4 0.30  ;
+    SAMENET Via1 Via2 0.000  STACK ;
+    SAMENET Via2 Via3 0.000  STACK ;
+    SAMENET Via3 Via4 0.000  STACK ;
+    SAMENET Via4 Via5 0.000  STACK ;
+END SPACING
+
+SITE  CORE
+    CLASS       CORE ;
+    SYMMETRY    Y ;
+    SIZE        0.660 BY 7.920 ;
+END  CORE
+
+END LIBRARY

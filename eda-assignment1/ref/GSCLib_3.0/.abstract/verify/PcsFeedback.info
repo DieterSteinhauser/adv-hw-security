@@ -1,0 +1,166 @@
+********** SILICON_ENSEMBLE Short Infos, 5.4.109 MASTER SEDb 5.1 **********
+------------------------- 22 July 2003, 17:25:55 --------------------------
+Design Name: XOR2X1
+Report File Name: PcsFeedback.info
+                                                                    Page: 1
+
+
+MESSAGE ** VERIFY-USER-151 **
+
+PROBLEM @69: ESHORT:  PinSpSeg of Cell Right & PinSpSeg of Cell Top ( Metal
+1 ).
+Bounds: (7260,7380) (7260,8460)  / Cell Right / Cell Top
+
+PROBLEM @67: ESHORT:  PinSpSeg of Cell Right & PinSpSeg of Cell main ( Meta
+l1 ).
+Bounds: (7260,7380) (7260,8460)  / Cell Right / Cell main
+
+PROBLEM @65: ESHORT:  PinSpSeg of Cell Right & PinSpSeg of Cell Bottom ( Me
+tal1 ).
+Bounds: (7260,-540) (7260,540)  / Cell Right / Cell Bottom
+
+PROBLEM @63: ESHORT:  PinSpSeg of Cell Right & PinSpSeg of Cell main ( Meta
+l1 ).
+Bounds: (7260,-540) (7260,540)  / Cell Right / Cell main
+
+PROBLEM @61: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (2060,7380) (2460,8460)  / Cell main / Cell Top
+
+PROBLEM @59: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (2060,7380) (2460,8460)  / Cell main / Cell Top
+
+PROBLEM @57: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (2060,7380) (2460,8460)  / Cell main / Cell Top
+
+PROBLEM @55: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (3460,7380) (3860,8460)  / Cell main / Cell Top
+
+PROBLEM @53: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (840,7380) (2840,8460)  / Cell main / Cell Top
+
+PROBLEM @51: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (0,7380) (7260,8460)  / Cell main / Cell Top
+
+PROBLEM @49: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (2060,7380) (2460,8460)  / Cell main / Cell Top
+
+PROBLEM @47: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Left ( Metal
+1 ).
+Bounds: (0,7380) (0,8460)  / Cell main / Cell Left
+
+PROBLEM @45: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (3460,7380) (3860,8460)  / Cell main / Cell Top
+
+
+********** SILICON_ENSEMBLE Short Infos, 5.4.109 MASTER SEDb 5.1 **********
+------------------------- 22 July 2003, 17:25:55 --------------------------
+Design Name: XOR2X1
+Report File Name: PcsFeedback.info
+                                                                    Page: 2
+
+PROBLEM @43: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (3460,7380) (3860,8460)  / Cell main / Cell Top
+
+MESSAGE ** VERIFY-USER-151 **
+
+PROBLEM @41: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (840,7380) (2840,8460)  / Cell main / Cell Top
+
+PROBLEM @39: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (840,7380) (2840,8460)  / Cell main / Cell Top
+
+PROBLEM @37: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (2060,7380) (2460,8460)  / Cell main / Cell Top
+
+PROBLEM @35: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (1280,-540) (1680,540)  / Cell main / Cell Bottom
+
+PROBLEM @33: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (1280,-540) (1680,540)  / Cell main / Cell Bottom
+
+PROBLEM @31: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (6000,-540) (6400,540)  / Cell main / Cell Bottom
+
+PROBLEM @29: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (3440,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @27: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (3460,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @25: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (0,-540) (7260,540)  / Cell main / Cell Bottom
+
+PROBLEM @23: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (1280,-540) (1680,540)  / Cell main / Cell Bottom
+
+PROBLEM @21: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Left ( Metal
+1 ).
+Bounds: (0,-540) (0,540)  / Cell main / Cell Left
+
+PROBLEM @19: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (6000,-540) (6400,540)  / Cell main / Cell Bottom
+
+PROBLEM @17: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+
+********** SILICON_ENSEMBLE Short Infos, 5.4.109 MASTER SEDb 5.1 **********
+------------------------- 22 July 2003, 17:25:55 --------------------------
+Design Name: XOR2X1
+Report File Name: PcsFeedback.info
+                                                                    Page: 3
+
+al1 ).
+Bounds: (6000,-540) (6400,540)  / Cell main / Cell Bottom
+
+MESSAGE ** VERIFY-USER-151 **
+
+PROBLEM @15: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (3460,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @13: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (3460,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @11: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Met
+al1 ).
+Bounds: (3460,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @9: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Meta
+l1 ).
+Bounds: (3440,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @7: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Meta
+l1 ).
+Bounds: (3460,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @5: ESHORT:  PinSpSeg of Cell main & PinSpSeg of Cell Bottom ( Meta
+l1 ).
+Bounds: (3440,-540) (3860,540)  / Cell main / Cell Bottom
+
+PROBLEM @3: ESHORT:  PinSpSeg of Cell Left & PinSpSeg of Cell Top ( Metal1 
+).
+Bounds: (0,7380) (0,8460)  / Cell Left / Cell Top
+
+PROBLEM @1: ESHORT:  PinSpSeg of Cell Left & PinSpSeg of Cell Bottom ( Meta
+l1 ).
+Bounds: (0,-540) (0,540)  / Cell Left / Cell Bottom

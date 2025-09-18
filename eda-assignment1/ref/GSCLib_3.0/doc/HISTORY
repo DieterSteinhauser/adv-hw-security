@@ -1,0 +1,79 @@
+
+GSCLib v1.0 - Nov 19th, 2002
+
+	- Added place holders for Adder, 1/2 Adders and tri-state buffers
+	(symbol, verilog, symbolPT, and schematics with pins only).
+	- Added new corners to characterization (5364 spectre simulations !)
+		- fast/nom/slow @ 2.7V, 27 degC & 125 degC
+		- fast/nom/slow @ 3.0V, 27 degC & 125 degC
+		- fast/nom/slow @ 3.3V, 27 degC & 125 degC
+	- Fixed problem with missing test info in .lib and .tlf for scan
+	devices.
+	- Fixed some label issues.
+	- Abstracts now have inherited connections info attached to
+	  terminal. No labels, so not directly visible unless you
+	  query properties of the pin.
+
+	== In order to support via stacking and assymetric vias during
+	   DEF In, we recommend that you use gpdk_MIET_2.0.1 or
+	   later.
+
+GSCLib v0.9 - Oct 5th, 2002
+
+	- SDFFSRX1 (Scan DFF) is now in !
+	- Area is now include in TLF/LIB files
+	- 6 corners have been used for timing
+	  info ! (this means we ran 1788 spectre
+	  simulations)
+			fast/nom/slow @ 3.3 V, 27 degC
+			fast/nom/slow @ 3.0 V, 27 degC
+
+GSCLib v0.8 - Setp 27th, 2002
+
+	- DFF, DFFSR schematic/layout and timing info
+	has been completed.
+
+GSCLib v0.7 - Sept 14th, 2002
+
+	- Continuing clean-up/optimization of layouts.
+	- TLF has been generated with 4.3 format, to enable
+		using with Ambit.
+
+GSCLib v0.6 - Aug 30th, 2002
+
+	- Items are being populated...
+
+GSCLib v0.5 - Aug 24th, 2002
+
+	- A lot of the cells now have abstracts (in dfII)!
+	- A lot of the cells have timing info (nominal)!
+	- A lot of the cells have verilog/vhdl models !
+	- A LEF file (tech & macro) is available...
+
+GSCLib v0.4 - Aug 17th, 2002
+
+	- A lot more layouts are done.
+	- CHANGE: the "PWR" pin is now "POWR"
+	- All completed schematics now also have a verilog
+		representation (look at verilog/GSCLib.v)
+	- All completed schematics now also have a VHDL
+		representation (look at verilog/GSCLib.vhd)
+	- A first cut .lib file is available for the
+		completed schematics, for the nominal conditions
+		(ie 3V, 27deg, process NN corner).
+		NOTE: This has been generated from the schematics,
+		and therefore does not include the layout parasitics.
+	- A first cut .tlf file is available for the
+		completed schematics, for the nominal conditions
+		(ie 3V, 27deg, process NN corner).
+		NOTE: This has been generated from the schematics,
+		and therefore does not include the layout parasitics.
+
+GSCLib v0.3 - Aug 9th, 2002
+
+	- Major changes for nearly all schematics. The base transistor sizes
+	have been changed, as well as several schematics have been significantly
+	modified as a result of the design review activity.
+	- A few layouts are starting to appear...
+
+

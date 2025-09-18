@@ -1,0 +1,210 @@
+VERSION  5.4 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS  "[]" ;
+DESIGN XOR2X1 ;
+UNITS DISTANCE MICRONS 1000 ;
+
+HISTORY CREATETIME 22 July 2003 17:25:42 ;
+HISTORY SAVETIME 22 July 2003 17:25:42 ;
+HISTORY DB CREATE by davenguy ;
+HISTORY Name: LBRARY, dir: '' ;
+HISTORY SE version: 5.4.109 MASTER, DB code version: 5.1, DB created under: 5.1
+        ;
+HISTORY Max mem: 100663296, mainsail: $TNT_INST_DIR/tools/dsm/lib/sys1620r.olb:
+        16.20 ;
+HISTORY System no. 19 --> SPARC UNIX, CPU id = 'Sun_Microsystems: 2164115709' ;
+HISTORY Design saved as LBRARY in directory  ;
+HISTORY DB LOAD by davenguy ;
+HISTORY Name: LBRARY, dir: '' ;
+HISTORY SE version: 5.4.109 MASTER, DB code version: 5.1, DB created under: 5.1
+        ;
+HISTORY Max mem: 100663296, mainsail: $TNT_INST_DIR/tools/dsm/lib/sys1620r.olb:
+        16.20 ;
+HISTORY System no. 19 --> SPARC UNIX, CPU id = 'Sun_Microsystems: 2164115709' ;
+HISTORY INPUT LEF FILENAME "PcsAbstract.lef" REPORTFILE "PcsAbstract.lef.rpt" ;
+HISTORY FINPUT DEF FILENAME "PcsCell.def" REPORTFILE "PcsCell.def.rpt" ;
+HISTORY WROUTE NOCONFIG ;
+
+
+PROPERTYDEFINITIONS
+
+DESIGN HSNAPGRID STRING "-44220 660 147" ;
+DESIGN VSNAPGRID STRING "-19800 660 72" ;
+
+END PROPERTYDEFINITIONS
+DIEAREA ( -19800 -44220 ) ( 27060 52140 ) ;
+
+ROW ROW_0 CORE -7260 -31680 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_1 CORE -7260 -23760 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_2 CORE -7260 -15840 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_3 CORE -7260 -7920 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_4 CORE -7260 0 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_5 CORE -7260 7920 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_6 CORE -7260 15840 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_7 CORE -7260 23760 N DO 33 BY 1 STEP 660 0 ;
+ROW ROW_8 CORE -7260 31680 N DO 33 BY 1 STEP 660 0 ;
+TRACKS Y -43890 DO 1 STEP 660 ;
+TRACKS Y 51810 DO 1 STEP 660 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal1 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal2 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal3 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal4 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal5 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal6 ;
+TRACKS X -19470 DO 1 STEP 660 ;
+TRACKS X 26730 DO 1 STEP 660 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal1 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal2 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal3 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal4 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal5 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal6 ;
+GCELLGRID Y -44220 DO 2 STEP 6930 ;
+GCELLGRID Y -30690 DO 13 STEP 6600 ;
+GCELLGRID Y 52140 DO 1 STEP 0 ;
+GCELLGRID X -19800 DO 2 STEP 6930 ;
+GCELLGRID X -6270 DO 5 STEP 6600 ;
+GCELLGRID X 27060 DO 1 STEP 0 ;
+
+COMPONENTS 5 ;
+- Top XOR2X1 + PLACED ( 0 7920 ) FS ;
+- Bottom XOR2X1 + PLACED ( 0 -7920 ) FS ;
+- Right XOR2X1 + PLACED ( 7260 0 ) FN ;
+- Left XOR2X1 + PLACED ( -7260 0 ) FN ;
+- main XOR2X1 + PLACED ( 0 0 ) N ;
+END COMPONENTS
+
+PINS 25 ;
+- Top_POWR + NET Top_POWR + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 )
+  ( 300 300 ) + PLACED ( 12060 51000 ) N ;
+- Top_Y + NET Top_Y + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) ( 300
+  300 ) + PLACED ( 9420 51000 ) N ;
+- Top_GRND + NET Top_GRND + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 )
+  ( 300 300 ) + PLACED ( 8760 51000 ) N ;
+- Top_B + NET Top_B + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) ( 300
+  300 ) + PLACED ( 8100 51000 ) N ;
+- Top_A + NET Top_A + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) ( 300
+  300 ) + PLACED ( 7440 51000 ) N ;
+- Bottom_POWR + NET Bottom_POWR + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 (
+  0 0 ) ( 300 300 ) + PLACED ( 2820 51000 ) N ;
+- Bottom_Y + NET Bottom_Y + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 )
+  ( 300 300 ) + PLACED ( 6780 51000 ) N ;
+- Bottom_GRND + NET Bottom_GRND + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 (
+  0 0 ) ( 300 300 ) + PLACED ( 6120 51000 ) N ;
+- Bottom_B + NET Bottom_B + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 )
+  ( 300 300 ) + PLACED ( 2160 51000 ) N ;
+- Bottom_A + NET Bottom_A + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 )
+  ( 300 300 ) + PLACED ( 5460 51000 ) N ;
+- Right_POWR + NET Right_POWR + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0
+  0 ) ( 300 300 ) + PLACED ( 14040 51000 ) N ;
+- Right_Y + NET Right_Y + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 11400 51000 ) N ;
+- Right_GRND + NET Right_GRND + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0
+  0 ) ( 300 300 ) + PLACED ( 10740 51000 ) N ;
+- Right_B + NET Right_B + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 13380 51000 ) N ;
+- Right_A + NET Right_A + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 10080 51000 ) N ;
+- Left_POWR + NET Left_POWR + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0
+  ) ( 300 300 ) + PLACED ( 180 51000 ) N ;
+- Left_Y + NET Left_Y + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( -2460 51000 ) N ;
+- Left_GRND + NET Left_GRND + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0
+  ) ( 300 300 ) + PLACED ( -3120 51000 ) N ;
+- Left_B + NET Left_B + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( -480 51000 ) N ;
+- Left_A + NET Left_A + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( -3780 51000 ) N ;
+- main_POWR + NET main_POWR + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0
+  ) ( 300 300 ) + PLACED ( 1500 51000 ) N ;
+- main_Y + NET main_Y + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 4800 51000 ) N ;
+- main_GRND + NET main_GRND + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0
+  ) ( 300 300 ) + PLACED ( 3480 51000 ) N ;
+- main_B + NET main_B + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 840 51000 ) N ;
+- main_A + NET main_A + DIRECTION INPUT + USE SIGNAL + LAYER Metal1 ( 0 0 ) (
+  300 300 ) + PLACED ( 4140 51000 ) N ;
+END PINS
+
+NETS 25 ;
+- Top_POWR ( PIN Top_POWR ) ( Top POWR )
+  + ROUTED Metal1 ( 2310 11550  ) M2_M1 Via23_stack_south ( 13530 *  ) M3_M2
+  ( * 35310  ) M2_M1 ( 12210 *  ) M2_M1 ( * 51150  ) M2_M1 ;
+- Top_Y ( PIN Top_Y ) ( Top Y )
+  + ROUTED Metal1 ( 6930 13530  ) M2_M1 ( * 35970  ) M2_M1 ( 8910 *  ) ( * 37290
+   ) M2_M1 ( * 51150  ) ( 9570 *  ) M2_M1 ;
+- Top_GRND ( PIN Top_GRND ) ( Top GRND )
+  + ROUTED Metal1 ( 6930 16170  ) ( 11550 *  ) M2_M1 ( * 49830  ) M3_M2 ( 9570 *
+   ) Via23_stack_north M2_M1 ( 8910 *  ) ( * 51150  ) ;
+- Top_B ( PIN Top_B ) ( Top B )
+  + ROUTED Metal1 ( 5610 12870  ) M2_M1 ( * 17490  ) M2_M1 ( 8250 *  ) M2_M1
+  ( * 51150  ) M2_M1 ;
+- Top_A ( PIN Top_A ) ( Top A )
+  + ROUTED Metal1 ( 4290 12210  ) M2_M1 Via23_stack_north ( 9570 *  ) M3_M2
+  ( * 48510  ) M2_M1 ( 7590 *  ) M2_M1 ( * 49830  ) M2_M1 ( * 51150  ) ;
+- Bottom_POWR ( PIN Bottom_POWR ) ( Bottom POWR )
+  + ROUTED Metal1 ( 330 -7590  ) ( -990 *  ) M2_M1 ( * 44550  ) M2_M1 ( 2310 *
+   ) M2_M1 ( * 50490  ) ( 2970 *  ) ( * 51150  ) M2_M1 ;
+- Bottom_Y ( PIN Bottom_Y ) ( Bottom Y )
+  + ROUTED Metal1 ( 6930 -2310  ) M2_M1 ( * 990  ) M3_M2 ( -330 *  ) M3_M2
+  ( * 50490  ) M3_M2 ( 6930 *  ) Via23_stack_south M2_M1 ( * 51150  ) ;
+- Bottom_GRND ( PIN Bottom_GRND ) ( Bottom GRND )
+  + ROUTED Metal1 ( 3630 -1650  ) M2_M1 ( * 330  ) M3_M2 ( 5610 *  ) M4_M3
+  ( * 18810  ) Via34_stack_east M3_M2 ( * 43890  ) ( 6270 *  ) ( * 51150  )
+  M2_M1 ;
+- Bottom_B ( PIN Bottom_B ) ( Bottom B )
+  + ROUTED Metal1 ( 5610 -2970  ) ( 4950 *  ) M2_M1 ( * 2310  ) ( 4290 *  )
+  ( * 2970  ) ( 3630 *  ) ( * 49170  ) M2_M1 ( 2310 *  ) ( * 51150  ) ;
+- Bottom_A ( PIN Bottom_A ) ( Bottom A )
+  + ROUTED Metal1 ( 4290 -3630  ) M2_M1 ( * 990  ) ( 2970 *  ) ( * 37290  )
+  M2_M1 ( 6930 *  ) M2_M1 ( * 49170  ) M2_M1 ( 6270 *  ) ( * 50490  ) ( 5610 *
+   ) ( * 51150  ) ;
+- Right_POWR ( PIN Right_POWR ) ( Right POWR )
+  + ROUTED Metal1 ( 14190 8250  ) M2_M1 ( * 51150  ) M2_M1 ;
+- Right_Y ( PIN Right_Y ) ( Right Y )
+  + ROUTED Metal1 ( 7590 2310  ) M2_M1 ( * 37950  ) M2_M1 ( 12870 *  ) M2_M1
+  ( * 50490  ) M2_M1 ( 11550 *  ) ( * 51150  ) ;
+- Right_GRND ( PIN Right_GRND ) ( Right GRND )
+  + ROUTED Metal1 ( 10890 1650  ) M2_M1 ( * 50490  ) M2_M1 ( * 51150  ) ;
+- Right_B ( PIN Right_B ) ( Right B )
+  + ROUTED Metal1 ( 8910 2970  ) M2_M1 ( * 35310  ) M2_M1 ( 11550 *  ) ( * 35970
+   ) ( 14850 *  ) M2_M1 ( * 50490  ) M2_M1 ( 13530 *  ) ( * 51150  ) ;
+- Right_A ( PIN Right_A ) ( Right A )
+  + ROUTED Metal1 ( 10230 3630  ) M2_M1 ( * 49170  ) M2_M1 ( * 51150  ) ;
+- Left_POWR ( PIN Left_POWR ) ( Left POWR )
+  + ROUTED Metal1 ( -1650 8250  ) M2_M1 ( * 35310  ) M2_M1 ( 330 *  ) M2_M1
+  ( * 51150  ) M2_M1 ;
+- Left_Y ( PIN Left_Y ) ( Left Y )
+  + ROUTED Metal1 ( -6930 2310  ) M2_M1 ( * 21450  ) ( -6270 *  ) ( * 35970  )
+  M2_M1 ( -2310 *  ) M2_M1 ( * 51150  ) M2_M1 ;
+- Left_GRND ( PIN Left_GRND ) ( Left GRND )
+  + ROUTED Metal1 ( -3630 1650  ) M2_M1 ( * 43230  ) ( -2970 *  ) ( * 50490  )
+  M2_M1 ( * 51150  ) ;
+- Left_B ( PIN Left_B ) ( Left B )
+  + ROUTED Metal1 ( -5610 2970  ) M2_M1 ( * 36630  ) M2_M1 ( -1650 *  ) M2_M1
+  ( * 50490  ) M2_M1 ( -330 *  ) ( * 51150  ) ;
+- Left_A ( PIN Left_A ) ( Left A )
+  + ROUTED Metal1 ( -4290 3630  ) M2_M1 ( * 43890  ) ( -3630 *  ) ( * 51150  )
+  M2_M1 ;
+- main_POWR ( PIN main_POWR ) ( main POWR )
+  + ROUTED Metal1 ( 2310 6270  ) M2_M1 ( * 10230  ) M3_M2 Via34_stack_east
+  ( * 12870  ) Via34_stack_east M3_M2 ( * 43890  ) ( 1650 *  ) ( * 51150  )
+  M2_M1 ;
+- main_Y ( PIN main_Y ) ( main Y )
+  + ROUTED Metal1 ( 6270 4580  ) M2_M1 ( * 43230  ) M2_M1 ( 4950 *  ) M2_M1
+  ( * 50490  ) M2_M1 ( * 51150  ) ;
+- main_GRND ( PIN main_GRND ) ( main GRND )
+  + ROUTED Metal1 ( 3630 1650  ) M2_M1 Via23_stack_north ( 1650 *  ) M3_M2
+  ( * 43230  ) M2_M1 ( 2970 *  ) M2_M1 ( * 49830  ) M2_M1 ( 3630 *  ) ( * 51150
+   ) ;
+- main_B ( PIN main_B ) ( main B )
+  + ROUTED Metal1 ( 5610 2970  ) ( 4950 *  ) M2_M1 ( * 41910  ) M2_M1 ( 990 *  )
+  M2_M1 ( * 50490  ) M2_M1 ( * 51150  ) ;
+- main_A ( PIN main_A ) ( main A )
+  + ROUTED Metal1 ( 4290 3630  ) M2_M1 ( * 10890  ) M3_M2 Via34_stack_west
+  ( * 13530  ) Via34_stack_east M3_M2 ( * 51150  ) M2_M1 ;
+END NETS
+
+END DESIGN

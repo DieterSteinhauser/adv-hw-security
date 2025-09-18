@@ -1,0 +1,6 @@
+cUiSelectCellP {CLKBUFX2}
+cUiSetViewStatus {CLKBUFX2} {logical} {1}
+cUiSetViewStatus {CLKBUFX2} {abstract.pin} {0}
+cUiSetViewStatus {CLKBUFX2} {abstract.ext} {0}
+cUiSetViewStatus {CLKBUFX2} {abstract} {37}
+cUiSetViewStatus {CLKBUFX2} {abstract.ver} {0}

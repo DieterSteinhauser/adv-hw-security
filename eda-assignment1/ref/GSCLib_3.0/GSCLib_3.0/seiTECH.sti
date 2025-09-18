@@ -1,0 +1,24 @@
+# SeiTech Config File v1.0
+# Process Data
+ProcessType   = CMOS
+SubstrateType = P
+Nplus = "Nimp"	-	-	-	-	-	-	
+Pplus = "Pimp"	-	-	-	-	-	-	
+Nactive = ""	-	-	-	-	-	-	
+Pactive = ""	-	-	-	-	-	-	
+Nwell = "Nwell"	15	11.7	6	-	9.54e-5	8.5e-10	
+NinPwell = -	-	-	-	-	-	-	
+NinNwell = -	-	-	-	-	-	-	
+Pwell = ""	""	""	""	-	-	-	
+PinNwell = -	-	-	-	-	-	-	
+PinPwell = -	-	-	-	-	-	-	
+Nwell2 = -	-	-	-	-	-	-	
+Pwell2 = -	-	-	-	-	-	-	
+Trench = -	-	-	-	-	-	-	
+BuriedLayer = -	-	-	-	-	-	-	
+Contact = -	-	-	-	-	-	-	
+Channel_stop = ""	""	""	""	-	-	-	
+Epitaxial = -	-	-	-	-	-	-	
+Bulk = "Substrate"	15	11.7	300	-	-	-	
+Epoxy = ""	""	""	""	-	-	-	
+

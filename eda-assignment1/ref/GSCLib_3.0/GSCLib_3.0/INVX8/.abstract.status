@@ -1,0 +1,6 @@
+cUiSelectCellP {INVX8}
+cUiSetViewStatus {INVX8} {logical} {1}
+cUiSetViewStatus {INVX8} {abstract.pin} {0}
+cUiSetViewStatus {INVX8} {abstract.ext} {0}
+cUiSetViewStatus {INVX8} {abstract} {37}
+cUiSetViewStatus {INVX8} {abstract.ver} {0}

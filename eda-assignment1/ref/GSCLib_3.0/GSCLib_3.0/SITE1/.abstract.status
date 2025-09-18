@@ -1,0 +1,6 @@
+cUiSelectCellP {SITE1}
+cUiSetViewStatus {SITE1} {logical} {0}
+cUiSetViewStatus {SITE1} {abstract.pin} {0}
+cUiSetViewStatus {SITE1} {abstract.ext} {0}
+cUiSetViewStatus {SITE1} {abstract} {0}
+cUiSetViewStatus {SITE1} {abstract.ver} {0}

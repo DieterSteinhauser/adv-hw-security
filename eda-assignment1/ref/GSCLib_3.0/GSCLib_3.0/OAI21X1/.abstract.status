@@ -1,0 +1,6 @@
+cUiSelectCellP {OAI21X1}
+cUiSetViewStatus {OAI21X1} {logical} {1}
+cUiSetViewStatus {OAI21X1} {abstract.pin} {0}
+cUiSetViewStatus {OAI21X1} {abstract.ext} {0}
+cUiSetViewStatus {OAI21X1} {abstract} {37}
+cUiSetViewStatus {OAI21X1} {abstract.ver} {0}

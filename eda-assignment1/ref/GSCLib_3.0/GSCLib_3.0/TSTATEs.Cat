@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+GSCLib/TBUFX1 type="cell"
+GSCLib/TBUFX2 type="cell"
+GSCLib/TBUFX4 type="cell"
+GSCLib/TBUFX8 type="cell"
+keepEmptyCategory type="unknown"

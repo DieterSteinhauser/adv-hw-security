@@ -1,0 +1,6 @@
+TDMCHECKPOINT="1.0"
+GSCLib/INVX1 type="cell"
+GSCLib/INVX2 type="cell"
+GSCLib/INVX4 type="cell"
+GSCLib/INVX8 type="cell"
+keepEmptyCategory type="unknown"

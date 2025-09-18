@@ -1,0 +1,6 @@
+cUiSelectCellP {TINVX1}
+cUiSetViewStatus {TINVX1} {logical} {0}
+cUiSetViewStatus {TINVX1} {abstract.pin} {0}
+cUiSetViewStatus {TINVX1} {abstract.ext} {0}
+cUiSetViewStatus {TINVX1} {abstract} {0}
+cUiSetViewStatus {TINVX1} {abstract.ver} {0}

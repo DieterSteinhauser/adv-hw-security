@@ -1,0 +1,5541 @@
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:04:53 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT ADDHX1 A B CO GRND POWR S
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN6	net78	A#7	GRND#5	GRND#1	nmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MN4	S#3	B#5	net78	GRND#1	nmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MN5	net0162#3	net66#8	S#3	GRND#1	nmos	L=0.18U
++ W=1.6U	effW=1.6e-06
+MN3	net66#6	B#6	GRND#10	GRND#1	nmos	L=0.18U
++ W=1U	effW=1e-06
+MN2	net0162#5	net0154#5	GRND#9	GRND#1	nmos	L=0.18U
++ W=1.6U	effW=1.6e-06
+MN1	net0154#7	A#8	GRND#8	GRND#1	nmos	L=0.18U	W=0.7U
++ effW=7e-07
+MN7	net68#5	B#10	net0138#2	GRND#1	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN8	net0138	A#2	GRND#7	GRND#1	nmos	L=0.18U	W=0.7U
++ effW=7e-07
+MN0	CO#3	net68#6	GRND#6	GRND#1	nmos	L=0.18U	W=1U
++ effW=1e-06
+MP4	S#2	net66	net0154	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP6	net0162	B#8	S#2	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP2	net66#5	B#7	POWR#10	POWR#2	pmos	L=0.18U
++ W=1.2U	effW=1.2e-06
+MP1	net0162#6	net0154#6	POWR#9	POWR#2	pmos	L=0.18U
++ W=2.2U	effW=2.2e-06
+MP8	net68#4	A#10	POWR#6	POWR#2	pmos	L=0.18U	W=0.7U
++ effW=7e-07
+MP0	net68	B#12	POWR#7	POWR#2	pmos	L=0.18U	W=0.7U
++ effW=7e-07
+MP7	CO#2	net68#7	POWR#1	POWR#2	pmos	L=0.18U	W=1.4U
++ effW=1.4e-06
+MP5	net0154	A#4	POWR#2	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP3	net0154	A#4	POWR#2	POWR#2	pmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg6	B#1	B#2	   30.8253
+Rg7	B#2	B#3	   78.0421
+Rg8	B#3	B#4	  125.1017
+Rg9	B#4	B#5	  133.6639
+Rg10	B#2	B#6	   72.8068
+Rg11	B#3	B#7	   42.9087
+Rg12	B#4	B#8	   54.9920
+Rg27	B#10	B#11	   36.9258
+Rg28	B#11	B#9	  106.6708
+Rg29	B#11	B#12	  435.8662
+Rg5	net0162#2	net0162#4	  160.4764
+Rg30	net68#6	net68#3	   99.2143
+Rg31	net68#3	net68#7	   59.1667
+Rg1	net66	net66#2	  114.2026
+Rg2	net66#4	net66#7	  101.9612
+Rg3	net66#7	net66#8	   74.1678
+Rg4	net66#7	net66#3	    2.3215
+Rg25	A#4	A#10	  156.5607
+Rg17	A#2	A#3	  227.5158
+Rg22	A#3	A#8	   58.3906
+Rg21	A#4	A#7	  134.4734
+Rg24	A#4	A#1	    3.6441
+Rg18	A#3	A#4	   23.7501
+Rg16	net0154	net0154#6	   57.5558
+Rg15	net0154	net0154#5	   91.6255
+Rf12	B#9	B	    0.7428
+Rf13	B	B#1	    0.1668
+Rf23	CO	CO#1	3.533E-02
+Rf24	CO#1	CO#2	    0.3491
+Rf25	CO#1	CO#3	    0.7752
+Rf37	GRND#1	GRND#2	    0.1636
+Rf38	GRND#2	GRND#1	    0.2774
+Rf39	GRND#1	GRND#3	    0.1644
+Rf40	GRND#3	GRND	1.693E-02
+Rf41	GRND	GRND#4	    0.2059
+Rf42	GRND#4	GRND#1	    0.2116
+Rf43	GRND#1	GRND#5	    0.6276
+Rf44	GRND#1	GRND#6	    0.5228
+Rf45	GRND#2	GRND#7	    0.2431
+Rf46	GRND#1	GRND#8	    0.5864
+Rf47	GRND#3	GRND#9	    0.3290
+Rf48	GRND#4	GRND#10	    0.4040
+Rf3	S	S#1	6.292E-02
+Rf4	S#1	S#2	    0.9302
+Rf5	S#1	S#3	    0.8538
+Rf6	net0162	net0162#2	    1.5495
+Rf7	net0162#2	net0162#3	    0.5205
+Rf10	net0162#5	net0162#4	    0.2076
+Rf11	net0162#4	net0162#6	    1.1797
+Rf18	net0138	net0138#2	    0.5474
+Rf19	net68	net68#2	    0.2385
+Rf20	net68#2	net68#3	    0.5805
+Rf21	net68	net68#4	    0.5037
+Rf22	net68#2	net68#5	    0.5448
+Rf1	net66#3	net66#2	    0.7110
+Rf8	net66#4	net66#5	    0.6234
+Rf9	net66#4	net66#6	    0.5284
+Rf17	A	A#1	6.509E-02
+Rf30	POWR	POWR#2	    0.1883
+Rf35	POWR	POWR#9	    0.8267
+Rf29	POWR#2	POWR	    0.2086
+Rf26	POWR#1	POWR#2	    0.4825
+Rf36	POWR#2	POWR#10	    0.6575
+Rf33	POWR#6	POWR#7	    0.5250
+Rf32	POWR#2	POWR#6	    0.3198
+Rf14	net0154#7	net0154	    0.3958
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.929E-17
+C2	B	GRND	cmodel	3.040E-16
+C3	CO	GRND	cmodel	5.524E-17
+C4	POWR	GRND	cmodel	7.984E-17
+C5	S	GRND	cmodel	9.715E-17
+C6	net0162	GRND	cmodel	7.533E-16
+C7	net0138	GRND	cmodel	2.485E-16
+C8	net68	GRND	cmodel	1.684E-16
+C9	net78	GRND	cmodel	3.587E-16
+C10	net66	GRND	cmodel	1.670E-16
+C11	net0154	GRND	cmodel	2.880E-15
+C12	net68#7	GRND	cmodel	1.094E-16
+C13	A#10	GRND	cmodel	2.645E-16
+C14	B#12	GRND	cmodel	7.222E-16
+C15	net0154#6	GRND	cmodel	1.296E-16
+C16	B#7	GRND	cmodel	1.072E-16
+C17	B#8	GRND	cmodel	1.287E-16
+C18	net68#6	GRND	cmodel	1.840E-16
+C19	A#2	GRND	cmodel	4.268E-16
+C20	B#10	GRND	cmodel	9.088E-17
+C21	A#8	GRND	cmodel	1.261E-16
+C22	net0154#5	GRND	cmodel	1.752E-16
+C23	B#6	GRND	cmodel	1.668E-16
+C24	net66#8	GRND	cmodel	1.392E-16
+C25	B#5	GRND	cmodel	2.030E-16
+C26	A#7	GRND	cmodel	2.332E-16
+C27	net68#3	GRND	cmodel	4.821E-16
+C28	A#1	GRND	cmodel	2.197E-16
+C29	B#9	GRND	cmodel	5.198E-16
+C30	B#1	GRND	cmodel	3.180E-16
+C31	net0162#4	GRND	cmodel	6.999E-16
+C32	net66#4	GRND	cmodel	4.616E-16
+C33	net0162#2	GRND	cmodel	8.542E-16
+C34	net66#3	GRND	cmodel	2.873E-16
+C35	net66#2	GRND	cmodel	4.927E-16
+C36	POWR#2	GRND	cmodel	5.394E-15
+C37	CO#3	GRND	cmodel	2.169E-16
+C38	CO#2	GRND	cmodel	2.614E-16
+C39	POWR#1	GRND	cmodel	2.066E-16
+C40	net68#5	GRND	cmodel	1.843E-16
+C41	net68#4	GRND	cmodel	1.786E-16
+C42	net0138#2	GRND	cmodel	2.303E-16
+C43	POWR#6	GRND	cmodel	1.121E-16
+C44	POWR#7	GRND	cmodel	1.575E-16
+C45	net0154#7	GRND	cmodel	2.036E-16
+C46	POWR#9	GRND	cmodel	3.423E-16
+C47	net0162#5	GRND	cmodel	2.823E-16
+C48	net0162#6	GRND	cmodel	5.505E-16
+C49	POWR#10	GRND	cmodel	2.540E-16
+C50	net66#6	GRND	cmodel	3.086E-16
+C51	net66#5	GRND	cmodel	4.114E-16
+C52	net0162#3	GRND	cmodel	3.606E-16
+C53	S#2	GRND	cmodel	7.139E-16
+C54	S#3	GRND	cmodel	5.002E-16
+C55	S#1	GRND	cmodel	4.671E-16
+C56	net66#7	GRND	cmodel	4.678E-16
+C57	B#2	GRND	cmodel	2.547E-16
+C58	B#3	GRND	cmodel	3.795E-16
+C59	B#4	GRND	cmodel	5.413E-16
+C60	A#3	GRND	cmodel	3.535E-16
+C61	A#4	GRND	cmodel	2.641E-15
+C62	B#11	GRND	cmodel	8.476E-16
+C63	net68#2	GRND	cmodel	1.924E-16
+C64	CO#1	GRND	cmodel	2.309E-16
+*
+*
+.ENDS ADDHX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 12:47:53 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT ADDFX1 A B CI CO GRND POWR S
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN46	net0123#7	net0151#14	net0127#3	GRND#2	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN48	net0127#2	B#12	GRND#12	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN49	net0127	CI#9	GRND#11	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN52	net0147	CI#2	GRND#10	GRND#2	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN51	net0143	B#15	net0147	GRND#2	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN50	net0123#5	A#18	net0143	GRND#2	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN0	S#1	net0123#8	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN45	CO#3	net0151#3	GRND#17	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN43	net0151#11	A#3	net0163	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN44	net0163	B#6	GRND#16	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN42	net0155#2	B#1	GRND#15	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN41	net0155	A#5	GRND#14	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN40	net0151#5	CI#10	net0155	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN47	net0127#4	A#11	GRND#13	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP36	net0123#4	net0151#16	net0194#2	POWR#1	pmos	L=0.18U
++ W=1.8U	effW=1.8e-06
+MP34	net0194#3	B#13	POWR#12	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP35	net0194#4	CI#8	POWR#11	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP37	net0202	CI#12	POWR#10	POWR#1	pmos	L=0.18U
++ W=1.8U	effW=1.8e-06
+MP41	net0198	B#16	net0202	POWR#1	pmos	L=0.18U
++ W=1.8U	effW=1.8e-06
+MP42	net0123#6	A#19	net0198	POWR#1	pmos	L=0.18U
++ W=1.8U	effW=1.8e-06
+MP4	S#2	net0123#10	POWR#9	POWR#1	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP32	CO#2	net0151#4	POWR#17	POWR#1	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP31	net0151#12	A#4	net0230	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP30	net0230	B#5	POWR#16	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP28	net0214#2	B#7	POWR#15	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP27	net0214	A#8	POWR#14	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP29	net0151#10	CI#11	net0214	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+MP33	net0194	A#13	POWR#13	POWR#1	pmos	L=0.18U
++ W=1.46U	effW=1.46e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	net0151	net0151#2	    4.2166
+Rg2	net0151#2	net0151#3	   93.0986
+Rg3	net0151#2	net0151#4	   58.3069
+Rg4	A#1	A#2	    4.2166
+Rg5	A#2	A#3	  131.2236
+Rg6	A#2	A#4	   67.0569
+Rg7	B#1	B#2	   92.5158
+Rg8	B#2	B#3	  126.9141
+Rg9	B#3	B#4	    3.0795
+Rg10	B#4	B#5	   60.0599
+Rg11	B#2	B#6	   24.0092
+Rg12	B#4	B#7	   80.4765
+Rg13	A#5	A#6	  151.6879
+Rg14	A#6	A#7	    2.9666
+Rg15	A#6	A#8	  123.3545
+Rg16	A#11	A#12	  119.0000
+Rg17	A#12	A#9	   26.4645
+Rg18	A#12	A#13	  135.2500
+Rg19	A#12	A#14	   24.3812
+Rg20	net0151#14	net0151#15	   78.0606
+Rg21	net0151#15	net0151#13	    2.6965
+Rg22	net0151#15	net0151#16	  111.5840
+Rg23	A#16	A#15	   43.9046
+Rg24	B#9	B#10	   85.8304
+Rg25	B#10	B#11	  113.6083
+Rg26	B#11	B#8	  442.1761
+Rg27	B#10	B#12	   31.5330
+Rg28	B#11	B#13	   39.5753
+Rg29	CI#2	CI#3	   42.3663
+Rg30	CI#3	CI#4	   53.4350
+Rg31	CI#4	CI#5	  417.7444
+Rg32	CI#5	CI#6	   92.7566
+Rg33	CI#6	CI#1	    4.0916
+Rg34	CI#3	CI#7	  111.0845
+Rg35	CI#7	CI#8	  117.9801
+Rg36	CI#4	CI#9	   25.8253
+Rg37	CI#5	CI#10	   39.1587
+Rg38	CI#6	CI#11	   92.8903
+Rg39	CI#7	CI#12	   49.0092
+Rg40	B#15	B#14	   67.9526
+Rg41	B#14	B#16	  124.5833
+Rg42	A#18	A#17	  137.9526
+Rg43	A#17	A#19	   81.6667
+Rg44	net0123#8	net0123#9	  145.2295
+Rg45	net0123#9	net0123	    2.9666
+Rg46	net0123#9	net0123#10	   57.8903
+Rf1	CO	CO#1	4.417E-02
+Rf2	CO#1	CO#2	    0.5207
+Rf3	CO#1	CO#3	    0.6547
+Rf4	net0214	net0214#2	    1.1201
+Rf5	CI	CI#1	    0.1669
+Rf6	net0155	net0155#2	    0.8734
+Rf7	B#8	B	    1.2065
+Rf8	B	B#3	    0.3332
+Rf9	A#9	A#10	    1.0258
+Rf10	A#10	A#1	    1.2093
+Rf11	A#10	A	    0.1302
+Rf12	A	A#7	    0.1398
+Rf13	net0151#5	net0151#6	    0.4372
+Rf14	net0151#6	net0151#7	    2.2720
+Rf15	net0151#7	net0151#8	    0.5214
+Rf16	net0151#8	net0151	    0.2877
+Rf17	net0151#6	net0151#9	    0.1980
+Rf18	net0151#9	net0151#10	    1.1941
+Rf19	net0151#7	net0151#11	    0.3923
+Rf20	net0151#8	net0151#12	    0.6532
+Rf21	net0151#9	net0151#13	    0.6877
+Rf22	A#15	A#14	    0.7733
+Rf23	net0194	net0194#2	    0.3111
+Rf24	net0194#2	net0194#3	    1.2466
+Rf25	net0194#3	net0194#4	    1.1562
+Rf26	net0127	net0127#2	    1.2584
+Rf27	net0127#2	net0127#3	    0.9286
+Rf28	net0127#3	net0127#4	    0.2967
+Rf29	B#14	B#9	    0.6387
+Rf30	A#17	A#16	    1.8262
+Rf31	net0123	net0123#2	    0.2748
+Rf32	net0123#2	net0123#3	    2.2953
+Rf33	net0123#3	net0123#4	    0.5018
+Rf34	net0123#2	net0123#5	    1.2236
+Rf35	net0123#2	net0123#6	    0.3616
+Rf36	net0123#3	net0123#7	    0.7633
+Rf37	S#1	S	    0.7035
+Rf38	S	S#2	    0.8502
+Rf39	GRND#1	GRND#2	    0.2964
+Rf40	GRND#2	GRND#3	    0.4029
+Rf41	GRND#3	GRND#4	8.859E-02
+Rf42	GRND#4	GRND#5	    0.2034
+Rf43	GRND#5	GRND	    0.3095
+Rf44	GRND	GRND#2	7.831E-02
+Rf45	GRND#2	GRND#6	    0.3156
+Rf46	GRND#6	GRND#7	    0.1608
+Rf47	GRND#7	GRND#8	9.229E-02
+Rf48	GRND#8	GRND#9	    0.2738
+Rf49	GRND#9	GRND#2	7.887E-02
+Rf50	GRND#3	GRND#10	    0.2131
+Rf51	GRND#4	GRND#11	    0.2006
+Rf52	GRND#5	GRND#12	    0.4040
+Rf53	GRND#2	GRND#13	    0.4276
+Rf54	GRND#6	GRND#14	    0.2273
+Rf55	GRND#7	GRND#15	    0.2273
+Rf56	GRND#8	GRND#16	    0.2273
+Rf57	GRND#9	GRND#17	    0.3686
+Rf58	POWR#1	POWR#2	    0.1036
+Rf59	POWR#2	POWR#3	    0.3071
+Rf60	POWR#3	POWR#4	9.229E-02
+Rf61	POWR#4	POWR#1	    0.1925
+Rf62	POWR#1	POWR	    0.2643
+Rf63	POWR	POWR#5	    0.1355
+Rf64	POWR#5	POWR#6	    0.3006
+Rf65	POWR#6	POWR#7	    0.1673
+Rf66	POWR#7	POWR#8	9.137E-02
+Rf67	POWR#8	POWR#1	    0.2849
+Rf68	POWR#2	POWR#9	    0.5781
+Rf69	POWR#3	POWR#10	    0.5540
+Rf70	POWR#4	POWR#11	    0.5115
+Rf71	POWR#1	POWR#12	    0.4385
+Rf72	POWR#5	POWR#13	    0.5115
+Rf73	POWR#6	POWR#14	    0.4181
+Rf74	POWR#7	POWR#15	    0.4181
+Rf75	POWR#8	POWR#16	    0.4181
+Rf76	POWR#1	POWR#17	    0.6438
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	6.645E-17
+C2	B	GRND	cmodel	4.479E-16
+C3	CI	GRND	cmodel	1.654E-16
+C4	CO	GRND	cmodel	2.641E-16
+C5	POWR	GRND	cmodel	2.262E-16
+C6	S	GRND	cmodel	3.146E-16
+C7	net0151	GRND	cmodel	1.095E-16
+C8	net0194	GRND	cmodel	2.081E-16
+C9	net0127	GRND	cmodel	3.721E-16
+C10	net0202	GRND	cmodel	3.605E-16
+C11	net0198	GRND	cmodel	3.580E-16
+C12	net0147	GRND	cmodel	2.527E-16
+C13	net0143	GRND	cmodel	2.951E-16
+C14	net0123	GRND	cmodel	1.754E-16
+C15	net0230	GRND	cmodel	3.080E-16
+C16	net0163	GRND	cmodel	2.216E-16
+C17	net0214	GRND	cmodel	5.016E-16
+C18	net0155	GRND	cmodel	4.344E-16
+C19	net0123#10	GRND	cmodel	1.183E-16
+C20	A#19	GRND	cmodel	1.268E-16
+C21	B#16	GRND	cmodel	1.975E-16
+C22	CI#12	GRND	cmodel	1.124E-16
+C23	CI#8	GRND	cmodel	2.064E-16
+C24	B#13	GRND	cmodel	8.986E-17
+C25	net0151#16	GRND	cmodel	2.192E-16
+C26	A#13	GRND	cmodel	1.784E-16
+C27	CI#11	GRND	cmodel	1.660E-16
+C28	A#8	GRND	cmodel	2.339E-16
+C29	B#7	GRND	cmodel	1.206E-16
+C30	B#5	GRND	cmodel	1.021E-16
+C31	A#4	GRND	cmodel	1.145E-16
+C32	net0151#4	GRND	cmodel	1.115E-16
+C33	net0123#8	GRND	cmodel	2.412E-16
+C34	A#18	GRND	cmodel	2.236E-16
+C35	B#15	GRND	cmodel	1.155E-16
+C36	CI#2	GRND	cmodel	9.582E-17
+C37	CI#9	GRND	cmodel	9.300E-17
+C38	B#12	GRND	cmodel	7.162E-17
+C39	net0151#14	GRND	cmodel	1.265E-16
+C40	A#11	GRND	cmodel	2.071E-16
+C41	CI#10	GRND	cmodel	8.330E-17
+C42	A#5	GRND	cmodel	3.458E-16
+C43	B#1	GRND	cmodel	1.926E-16
+C44	B#6	GRND	cmodel	7.285E-17
+C45	A#3	GRND	cmodel	2.140E-16
+C46	net0151#3	GRND	cmodel	1.295E-16
+C47	A#17	GRND	cmodel	1.064E-15
+C48	B#14	GRND	cmodel	5.689E-16
+C49	B#9	GRND	cmodel	4.676E-16
+C50	A#16	GRND	cmodel	7.208E-16
+C51	A#15	GRND	cmodel	4.518E-16
+C52	net0151#13	GRND	cmodel	3.016E-16
+C53	A#14	GRND	cmodel	3.494E-16
+C54	B#8	GRND	cmodel	1.195E-15
+C55	A#9	GRND	cmodel	6.305E-16
+C56	CI#1	GRND	cmodel	2.708E-16
+C57	A#7	GRND	cmodel	1.679E-16
+C58	B#3	GRND	cmodel	5.724E-17
+C59	A#1	GRND	cmodel	3.075E-16
+C60	POWR#1	GRND	cmodel	4.783E-15
+C61	S#1	GRND	cmodel	1.790E-16
+C62	S#2	GRND	cmodel	3.278E-16
+C63	net0123#5	GRND	cmodel	4.073E-16
+C64	POWR#9	GRND	cmodel	3.928E-16
+C65	net0123#6	GRND	cmodel	3.813E-16
+C66	POWR#10	GRND	cmodel	2.141E-16
+C67	POWR#11	GRND	cmodel	1.687E-16
+C68	net0194#4	GRND	cmodel	4.087E-16
+C69	POWR#12	GRND	cmodel	2.731E-16
+C70	net0127#2	GRND	cmodel	5.834E-16
+C71	net0194#3	GRND	cmodel	6.703E-16
+C72	net0123#7	GRND	cmodel	2.829E-16
+C73	net0123#4	GRND	cmodel	3.571E-16
+C74	net0127#3	GRND	cmodel	3.658E-16
+C75	net0194#2	GRND	cmodel	4.909E-16
+C76	net0127#4	GRND	cmodel	1.552E-16
+C77	POWR#13	GRND	cmodel	2.864E-16
+C78	net0151#5	GRND	cmodel	2.103E-16
+C79	net0151#10	GRND	cmodel	5.042E-16
+C80	POWR#14	GRND	cmodel	2.637E-16
+C81	net0155#2	GRND	cmodel	3.209E-16
+C82	net0214#2	GRND	cmodel	4.476E-16
+C83	POWR#15	GRND	cmodel	1.886E-16
+C84	POWR#16	GRND	cmodel	1.749E-16
+C85	net0151#12	GRND	cmodel	2.998E-16
+C86	net0151#11	GRND	cmodel	1.659E-16
+C87	POWR#17	GRND	cmodel	3.534E-16
+C88	CO#2	GRND	cmodel	2.389E-16
+C89	CO#3	GRND	cmodel	1.845E-16
+C90	net0151#2	GRND	cmodel	2.691E-16
+C91	A#2	GRND	cmodel	3.616E-16
+C92	B#2	GRND	cmodel	3.196E-16
+C93	B#4	GRND	cmodel	4.445E-16
+C94	A#6	GRND	cmodel	3.872E-16
+C95	A#10	GRND	cmodel	4.941E-16
+C96	A#12	GRND	cmodel	4.427E-16
+C97	net0151#6	GRND	cmodel	7.563E-16
+C98	net0151#7	GRND	cmodel	6.803E-16
+C99	net0151#8	GRND	cmodel	2.384E-16
+C100	net0151#9	GRND	cmodel	4.226E-16
+C101	net0151#15	GRND	cmodel	3.133E-16
+C102	B#10	GRND	cmodel	3.410E-16
+C103	B#11	GRND	cmodel	8.109E-16
+C104	CI#3	GRND	cmodel	2.927E-16
+C105	CI#4	GRND	cmodel	7.040E-16
+C106	CI#5	GRND	cmodel	8.698E-16
+C107	CI#6	GRND	cmodel	3.170E-16
+C108	CI#7	GRND	cmodel	3.838E-16
+C109	net0123#2	GRND	cmodel	8.330E-16
+C110	net0123#3	GRND	cmodel	9.468E-16
+C111	net0123#9	GRND	cmodel	2.584E-16
+C112	POWR#2	GRND	cmodel	5.988E-17
+C113	POWR#3	GRND	cmodel	7.189E-17
+C114	POWR#4	GRND	cmodel	2.451E-17
+C115	POWR#5	GRND	cmodel	1.495E-16
+C116	POWR#6	GRND	cmodel	1.051E-16
+C117	POWR#7	GRND	cmodel	4.388E-17
+C118	POWR#8	GRND	cmodel	7.713E-17
+*
+*
+.ENDS ADDFX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:04:53 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT ADDHX1 A B CO GRND POWR S
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN6	net78	A#7	GRND#5	GRND#1	nmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MN4	S#3	B#5	net78	GRND#1	nmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MN5	net0162#3	net66#8	S#3	GRND#1	nmos	L=0.18U
++ W=1.6U	effW=1.6e-06
+MN3	net66#6	B#6	GRND#10	GRND#1	nmos	L=0.18U
++ W=1U	effW=1e-06
+MN2	net0162#5	net0154#5	GRND#9	GRND#1	nmos	L=0.18U
++ W=1.6U	effW=1.6e-06
+MN1	net0154#7	A#8	GRND#8	GRND#1	nmos	L=0.18U	W=0.7U
++ effW=7e-07
+MN7	net68#5	B#10	net0138#2	GRND#1	nmos	L=0.18U
++ W=0.7U	effW=7e-07
+MN8	net0138	A#2	GRND#7	GRND#1	nmos	L=0.18U	W=0.7U
++ effW=7e-07
+MN0	CO#3	net68#6	GRND#6	GRND#1	nmos	L=0.18U	W=1U
++ effW=1e-06
+MP4	S#2	net66	net0154	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP6	net0162	B#8	S#2	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP2	net66#5	B#7	POWR#10	POWR#2	pmos	L=0.18U
++ W=1.2U	effW=1.2e-06
+MP1	net0162#6	net0154#6	POWR#9	POWR#2	pmos	L=0.18U
++ W=2.2U	effW=2.2e-06
+MP8	net68#4	A#10	POWR#6	POWR#2	pmos	L=0.18U	W=0.7U
++ effW=7e-07
+MP0	net68	B#12	POWR#7	POWR#2	pmos	L=0.18U	W=0.7U
++ effW=7e-07
+MP7	CO#2	net68#7	POWR#1	POWR#2	pmos	L=0.18U	W=1.4U
++ effW=1.4e-06
+MP5	net0154	A#4	POWR#2	POWR#2	pmos	L=0.18U	W=2.2U
++ effW=2.2e-06
+MP3	net0154	A#4	POWR#2	POWR#2	pmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg6	B#1	B#2	   30.8253
+Rg7	B#2	B#3	   78.0421
+Rg8	B#3	B#4	  125.1017
+Rg9	B#4	B#5	  133.6639
+Rg10	B#2	B#6	   72.8068
+Rg11	B#3	B#7	   42.9087
+Rg12	B#4	B#8	   54.9920
+Rg27	B#10	B#11	   36.9258
+Rg28	B#11	B#9	  106.6708
+Rg29	B#11	B#12	  435.8662
+Rg5	net0162#2	net0162#4	  160.4764
+Rg30	net68#6	net68#3	   99.2143
+Rg31	net68#3	net68#7	   59.1667
+Rg1	net66	net66#2	  114.2026
+Rg2	net66#4	net66#7	  101.9612
+Rg3	net66#7	net66#8	   74.1678
+Rg4	net66#7	net66#3	    2.3215
+Rg25	A#4	A#10	  156.5607
+Rg17	A#2	A#3	  227.5158
+Rg22	A#3	A#8	   58.3906
+Rg21	A#4	A#7	  134.4734
+Rg24	A#4	A#1	    3.6441
+Rg18	A#3	A#4	   23.7501
+Rg16	net0154	net0154#6	   57.5558
+Rg15	net0154	net0154#5	   91.6255
+Rf12	B#9	B	    0.7428
+Rf13	B	B#1	    0.1668
+Rf23	CO	CO#1	3.533E-02
+Rf24	CO#1	CO#2	    0.3491
+Rf25	CO#1	CO#3	    0.7752
+Rf37	GRND#1	GRND#2	    0.1636
+Rf38	GRND#2	GRND#1	    0.2774
+Rf39	GRND#1	GRND#3	    0.1644
+Rf40	GRND#3	GRND	1.693E-02
+Rf41	GRND	GRND#4	    0.2059
+Rf42	GRND#4	GRND#1	    0.2116
+Rf43	GRND#1	GRND#5	    0.6276
+Rf44	GRND#1	GRND#6	    0.5228
+Rf45	GRND#2	GRND#7	    0.2431
+Rf46	GRND#1	GRND#8	    0.5864
+Rf47	GRND#3	GRND#9	    0.3290
+Rf48	GRND#4	GRND#10	    0.4040
+Rf3	S	S#1	6.292E-02
+Rf4	S#1	S#2	    0.9302
+Rf5	S#1	S#3	    0.8538
+Rf6	net0162	net0162#2	    1.5495
+Rf7	net0162#2	net0162#3	    0.5205
+Rf10	net0162#5	net0162#4	    0.2076
+Rf11	net0162#4	net0162#6	    1.1797
+Rf18	net0138	net0138#2	    0.5474
+Rf19	net68	net68#2	    0.2385
+Rf20	net68#2	net68#3	    0.5805
+Rf21	net68	net68#4	    0.5037
+Rf22	net68#2	net68#5	    0.5448
+Rf1	net66#3	net66#2	    0.7110
+Rf8	net66#4	net66#5	    0.6234
+Rf9	net66#4	net66#6	    0.5284
+Rf17	A	A#1	6.509E-02
+Rf30	POWR	POWR#2	    0.1883
+Rf35	POWR	POWR#9	    0.8267
+Rf29	POWR#2	POWR	    0.2086
+Rf26	POWR#1	POWR#2	    0.4825
+Rf36	POWR#2	POWR#10	    0.6575
+Rf33	POWR#6	POWR#7	    0.5250
+Rf32	POWR#2	POWR#6	    0.3198
+Rf14	net0154#7	net0154	    0.3958
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.929E-17
+C2	B	GRND	cmodel	3.040E-16
+C3	CO	GRND	cmodel	5.524E-17
+C4	POWR	GRND	cmodel	7.984E-17
+C5	S	GRND	cmodel	9.715E-17
+C6	net0162	GRND	cmodel	7.533E-16
+C7	net0138	GRND	cmodel	2.485E-16
+C8	net68	GRND	cmodel	1.684E-16
+C9	net78	GRND	cmodel	3.587E-16
+C10	net66	GRND	cmodel	1.670E-16
+C11	net0154	GRND	cmodel	2.880E-15
+C12	net68#7	GRND	cmodel	1.094E-16
+C13	A#10	GRND	cmodel	2.645E-16
+C14	B#12	GRND	cmodel	7.222E-16
+C15	net0154#6	GRND	cmodel	1.296E-16
+C16	B#7	GRND	cmodel	1.072E-16
+C17	B#8	GRND	cmodel	1.287E-16
+C18	net68#6	GRND	cmodel	1.840E-16
+C19	A#2	GRND	cmodel	4.268E-16
+C20	B#10	GRND	cmodel	9.088E-17
+C21	A#8	GRND	cmodel	1.261E-16
+C22	net0154#5	GRND	cmodel	1.752E-16
+C23	B#6	GRND	cmodel	1.668E-16
+C24	net66#8	GRND	cmodel	1.392E-16
+C25	B#5	GRND	cmodel	2.030E-16
+C26	A#7	GRND	cmodel	2.332E-16
+C27	net68#3	GRND	cmodel	4.821E-16
+C28	A#1	GRND	cmodel	2.197E-16
+C29	B#9	GRND	cmodel	5.198E-16
+C30	B#1	GRND	cmodel	3.180E-16
+C31	net0162#4	GRND	cmodel	6.999E-16
+C32	net66#4	GRND	cmodel	4.616E-16
+C33	net0162#2	GRND	cmodel	8.542E-16
+C34	net66#3	GRND	cmodel	2.873E-16
+C35	net66#2	GRND	cmodel	4.927E-16
+C36	POWR#2	GRND	cmodel	5.394E-15
+C37	CO#3	GRND	cmodel	2.169E-16
+C38	CO#2	GRND	cmodel	2.614E-16
+C39	POWR#1	GRND	cmodel	2.066E-16
+C40	net68#5	GRND	cmodel	1.843E-16
+C41	net68#4	GRND	cmodel	1.786E-16
+C42	net0138#2	GRND	cmodel	2.303E-16
+C43	POWR#6	GRND	cmodel	1.121E-16
+C44	POWR#7	GRND	cmodel	1.575E-16
+C45	net0154#7	GRND	cmodel	2.036E-16
+C46	POWR#9	GRND	cmodel	3.423E-16
+C47	net0162#5	GRND	cmodel	2.823E-16
+C48	net0162#6	GRND	cmodel	5.505E-16
+C49	POWR#10	GRND	cmodel	2.540E-16
+C50	net66#6	GRND	cmodel	3.086E-16
+C51	net66#5	GRND	cmodel	4.114E-16
+C52	net0162#3	GRND	cmodel	3.606E-16
+C53	S#2	GRND	cmodel	7.139E-16
+C54	S#3	GRND	cmodel	5.002E-16
+C55	S#1	GRND	cmodel	4.671E-16
+C56	net66#7	GRND	cmodel	4.678E-16
+C57	B#2	GRND	cmodel	2.547E-16
+C58	B#3	GRND	cmodel	3.795E-16
+C59	B#4	GRND	cmodel	5.413E-16
+C60	A#3	GRND	cmodel	3.535E-16
+C61	A#4	GRND	cmodel	2.641E-15
+C62	B#11	GRND	cmodel	8.476E-16
+C63	net68#2	GRND	cmodel	1.924E-16
+C64	CO#1	GRND	cmodel	2.309E-16
+*
+*
+.ENDS ADDHX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:14:44 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT AND2X1 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	Y#3	net20#6	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	net26	B#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	net20#3	A#4	net26	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP0	Y#1	net20#5	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	net20#4	B#1	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP2	net20#4	A#2	POWR#3	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#3	   57.8903
+Rg2	A#3	A#1	    5.0916
+Rg3	A#3	A#4	  106.4319
+Rg4	B#1	B#2	  121.3097
+Rg5	B#2	B#3	   46.8155
+Rg6	net20#5	net20	   79.5833
+Rg7	net20	net20#6	   77.2917
+Rf1	A#1	A	2.284E-02
+Rf2	B	B#2	7.421E-02
+Rf3	net20	net20#2	    0.3794
+Rf4	net20#2	net20#3	    0.8298
+Rf5	net20#2	net20#4	    0.5973
+Rf6	Y#1	Y#2	    0.2572
+Rf7	Y#2	Y	    0.3565
+Rf8	Y#2	Y#3	    0.9166
+Rf9	POWR#1	POWR#2	    0.4354
+Rf10	POWR	POWR#2	1.467E-02
+Rf11	POWR#2	POWR#3	    0.4408
+Rf12	GRND#1	GRND#2	    0.2363
+Rf13	GRND#2	GRND	1.136E-02
+*
+*       CAPACITOR CARDS
+*
+*
+C1	B	GRND	cmodel	8.043E-17
+C2	Y	GRND	cmodel	2.812E-16
+C3	net26	GRND	cmodel	2.035E-16
+C4	net20	GRND	cmodel	4.978E-16
+C5	net20#5	GRND	cmodel	1.334E-16
+C6	B#1	GRND	cmodel	1.943E-16
+C7	A#2	GRND	cmodel	1.203E-16
+C8	net20#6	GRND	cmodel	1.259E-16
+C9	B#3	GRND	cmodel	9.145E-17
+C10	A#4	GRND	cmodel	1.702E-16
+C11	B#2	GRND	cmodel	5.112E-16
+C12	A#1	GRND	cmodel	2.740E-16
+C13	POWR#2	GRND	cmodel	9.045E-16
+C14	Y#1	GRND	cmodel	2.548E-16
+C15	Y#3	GRND	cmodel	2.919E-16
+C16	POWR#1	GRND	cmodel	4.285E-16
+C17	net20#4	GRND	cmodel	4.666E-16
+C18	POWR#3	GRND	cmodel	2.515E-16
+C19	net20#3	GRND	cmodel	2.221E-16
+C20	A#3	GRND	cmodel	2.655E-16
+C21	net20#2	GRND	cmodel	3.940E-16
+C22	Y#2	GRND	cmodel	2.387E-16
+*
+*
+.ENDS AND2X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:20:07 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT AOI21X1 A0 A1 B0 GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#1	B0#1	GRND#1	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN2	Y#1	A0#3	net044	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN1	net044	A1#4	GRND#3	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MP0	Y#2	B0#3	net035	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP1	net035	A0#1	POWR#1	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP2	net035#2	A1#2	POWR#1	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A1#2	A1#3	  112.4736
+Rg2	A1#3	A1#1	    2.9666
+Rg3	A1#3	A1#4	   34.5569
+Rg4	A0#1	A0#2	   70.4167
+Rg5	A0#2	A0#3	   69.1667
+Rg6	B0#1	B0#2	   30.6991
+Rg7	B0#2	B0#3	  132.2273
+Rg8	B0#2	B0#4	    2.5715
+Rf1	A1#1	A1	    0.2592
+Rf2	net035	net035#2	    0.3065
+Rf3	A0	A0#2	    0.1183
+Rf4	Y	Y#1	    0.5733
+Rf5	Y	Y#2	    0.6891
+Rf6	B0#4	B0	    0.1623
+Rf7	GRND#1	GRND	    0.3169
+Rf8	GRND	GRND#2	9.662E-02
+Rf9	GRND#2	GRND#3	    0.2529
+Rf10	POWR#1	POWR#2	    0.3701
+Rf11	POWR#2	POWR	1.136E-02
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	GRND	cmodel	1.696E-16
+C2	A1	GRND	cmodel	1.516E-16
+C3	B0	GRND	cmodel	8.457E-17
+C4	POWR	GRND	cmodel	1.799E-16
+C5	Y	GRND	cmodel	3.029E-16
+C6	net044	GRND	cmodel	2.074E-16
+C7	net035	GRND	cmodel	6.092E-16
+C8	B0#3	GRND	cmodel	1.703E-16
+C9	A0#1	GRND	cmodel	1.521E-16
+C10	A1#2	GRND	cmodel	1.604E-16
+C11	B0#1	GRND	cmodel	9.096E-17
+C12	A0#3	GRND	cmodel	1.207E-16
+C13	A1#4	GRND	cmodel	8.305E-17
+C14	B0#4	GRND	cmodel	2.130E-16
+C15	A0#2	GRND	cmodel	4.221E-16
+C16	A1#1	GRND	cmodel	1.896E-16
+C17	POWR#2	GRND	cmodel	4.450E-16
+C18	Y#2	GRND	cmodel	3.488E-16
+C19	Y#1	GRND	cmodel	3.564E-16
+C20	POWR#1	GRND	cmodel	4.499E-16
+C21	net035#2	GRND	cmodel	3.530E-16
+C22	A1#3	GRND	cmodel	2.049E-16
+C23	B0#2	GRND	cmodel	2.714E-16
+*
+*
+.ENDS AOI21X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:23:42 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT AOI22X1 A0 A1 B0 B1 GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	Y#2	B0#3	net59	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN0	Y#2	A0#4	net63	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN2	net63	A1#4	GRND#3	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN3	net59	B1#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MP1	net87	B0#4	POWR#1	POWR#2	pmos	L=0.18U	W=3.2U
++ effW=3.2e-06
+MP2	Y#1	A0#2	net87	POWR#2	pmos	L=0.18U	W=3.2U
++ effW=3.2e-06
+MP0	net87#3	B1#4	POWR#1	POWR#2	pmos	L=0.18U	W=3.2U
++ effW=3.2e-06
+MP3	Y#1	A1#2	net87#2	POWR#2	pmos	L=0.18U	W=3.2U
++ effW=3.2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A1#2	A1#3	  103.7236
+Rg2	A1#3	A1#1	    2.9666
+Rg3	A1#3	A1#4	   69.1403
+Rg4	A0#2	A0#3	  121.2236
+Rg5	A0#3	A0#1	    2.9666
+Rg6	A0#3	A0#4	   34.5569
+Rg7	B0#1	B0#2	    4.2166
+Rg8	B0#2	B0#3	   69.1403
+Rg9	B0#2	B0#4	   86.6403
+Rg10	B1#1	B1#2	    3.5916
+Rg11	B1#2	B1#3	   52.0569
+Rg12	B1#2	B1#4	  103.7236
+Rf1	A1#1	A1	2.262E-02
+Rf2	A0	A0#1	6.237E-02
+Rf3	Y#1	Y	    0.3664
+Rf4	Y	Y#2	    0.5615
+Rf5	B0	B0#1	    0.2525
+Rf6	B1	B1#1	9.875E-03
+Rf7	net87	net87#2	    0.3583
+Rf8	net87	net87#3	    0.4033
+Rf9	GRND#1	GRND#2	    0.2674
+Rf10	GRND#2	GRND	    0.1512
+Rf11	GRND	GRND#3	    0.3781
+Rf12	POWR#1	POWR	    0.2767
+Rf13	POWR#2	POWR	8.523E-03
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	GRND	cmodel	2.205E-16
+C2	A1	GRND	cmodel	9.823E-17
+C3	B0	GRND	cmodel	1.315E-16
+C4	B1	GRND	cmodel	1.297E-16
+C5	Y	GRND	cmodel	2.836E-16
+C6	net87	GRND	cmodel	7.324E-16
+C7	net63	GRND	cmodel	2.984E-16
+C8	net59	GRND	cmodel	3.170E-16
+C9	B1#4	GRND	cmodel	2.024E-16
+C10	B0#4	GRND	cmodel	1.997E-16
+C11	A0#2	GRND	cmodel	2.452E-16
+C12	A1#2	GRND	cmodel	2.271E-16
+C13	B1#3	GRND	cmodel	1.030E-16
+C14	B0#3	GRND	cmodel	1.301E-16
+C15	A0#4	GRND	cmodel	9.395E-17
+C16	A1#4	GRND	cmodel	1.482E-16
+C17	B0#1	GRND	cmodel	1.775E-16
+C18	A0#1	GRND	cmodel	1.013E-16
+C19	A1#1	GRND	cmodel	6.937E-17
+C20	POWR#2	GRND	cmodel	6.775E-16
+C21	POWR#1	GRND	cmodel	6.514E-16
+C22	net87#3	GRND	cmodel	4.585E-16
+C23	Y#2	GRND	cmodel	3.034E-16
+C24	Y#1	GRND	cmodel	5.220E-16
+C25	net87#2	GRND	cmodel	3.789E-16
+C26	A1#3	GRND	cmodel	2.440E-16
+C27	A0#3	GRND	cmodel	2.405E-16
+C28	B0#2	GRND	cmodel	2.984E-16
+C29	B1#2	GRND	cmodel	3.058E-16
+*
+*
+.ENDS AOI22X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:28:57 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT BUFX1 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	Y#2	net9#8	GRND#1	GRND#2	nmos	L=0.18U	W=1.8U
++ effW=1.8e-06
+MN0	net9#3	A#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MP0	net9#4	A#4	POWR#1	POWR#1	pmos	L=0.18U	W=2U
++ effW=2e-06
+MP1	Y#1	net9#5	POWR#1	POWR#1	pmos	L=0.18U	W=2U	M=2
++ effW=2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#1	A#2	    2.9666
+Rg2	A#2	A#3	   34.5569
+Rg3	A#2	A#4	  108.7236
+Rg7	net9	net9#8	   79.5833
+Rg6	net9#5	net9	   18.3253
+Rf1	A	A#1	8.345E-02
+Rf10	GRND#1	GRND	    0.1576
+Rf11	GRND	GRND#2	    0.1169
+Rf8	POWR#1	POWR	9.868E-03
+Rf6	Y	Y#2	    0.5876
+Rf5	Y	Y#1	    0.7867
+Rf2	net9	net9#2	    0.4610
+Rf4	net9#2	net9#4	    0.5740
+Rf3	net9#2	net9#3	    0.5332
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	8.825E-17
+C2	Y	GRND	cmodel	2.487E-16
+C3	net9	GRND	cmodel	4.399E-16
+C4	net9#5	GRND	cmodel	3.970E-16
+C5	A#4	GRND	cmodel	1.600E-16
+C6	net9#8	GRND	cmodel	1.566E-16
+C7	A#3	GRND	cmodel	7.991E-17
+C8	A#1	GRND	cmodel	1.236E-16
+C9	POWR#1	GRND	cmodel	1.434E-15
+C10	Y#2	GRND	cmodel	3.529E-16
+C11	Y#1	GRND	cmodel	5.120E-16
+C12	net9#4	GRND	cmodel	2.547E-16
+C13	net9#3	GRND	cmodel	1.858E-16
+C14	A#2	GRND	cmodel	3.274E-16
+C15	net9#2	GRND	cmodel	2.425E-16
+*
+*
+.ENDS BUFX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:33:46 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT BUFX3 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	net9#3	A#3	GRND	GRND#3	nmos	L=0.18U	W=0.9U
++ effW=9e-07
+MN1	Y#2	net9#7	GRND	GRND#3	nmos	L=0.18U	W=1.35U
++ M=2	effW=1.35e-06
+MP0	net9#4	A#4	POWR	POWR#4	pmos	L=0.18U	W=2U
++ effW=2e-06
+MP1	Y#3	net9#5	POWR	POWR#4	pmos	L=0.18U	W=3U	M=2
++ effW=3e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#1	A#2	    3.3416
+Rg2	A#2	A#3	   34.5569
+Rg3	A#2	A#4	  127.4736
+Rg5	net9#5	net9	    3.0191
+Rg6	net9#5	net9#7	   58.6390
+Rf1	A	A#1	    0.1549
+Rf14	GRND	GRND#3	7.920E-02
+Rf11	POWR	POWR#4	7.920E-02
+Rf5	Y	Y#1	8.533E-02
+Rf7	Y#1	Y#3	    0.7734
+Rf6	Y#1	Y#2	    0.4572
+Rf2	net9	net9#2	    0.3243
+Rf4	net9#2	net9#4	    0.5973
+Rf3	net9#2	net9#3	    0.6598
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	9.339E-17
+C2	POWR	GRND	cmodel	9.878E-16
+C3	Y	GRND	cmodel	8.905E-17
+C4	net9	GRND	cmodel	2.721E-16
+C5	net9#5	GRND	cmodel	5.973E-16
+C6	A#4	GRND	cmodel	1.798E-16
+C7	A#3	GRND	cmodel	8.293E-17
+C8	A#1	GRND	cmodel	1.741E-16
+C9	POWR#4	GRND	cmodel	4.668E-16
+C10	Y#3	GRND	cmodel	6.514E-16
+C11	Y#2	GRND	cmodel	3.182E-16
+C12	net9#4	GRND	cmodel	2.629E-16
+C13	net9#3	GRND	cmodel	2.193E-16
+C14	A#2	GRND	cmodel	3.676E-16
+C15	net9#2	GRND	cmodel	2.336E-16
+C16	Y#1	GRND	cmodel	1.979E-16
+C17	net9#7	GRND	cmodel	4.178E-16
+*
+*
+.ENDS BUFX3
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:37:05 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT CLKBUFX1 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	net9#3	A#3	GRND#2	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	Y#2	net9#7	GRND#2	GRND#1	nmos	L=0.18U	W=1U
++ effW=1e-06
+MP1	Y#3	net9#5	POWR#1	POWR#2	pmos	L=0.18U	W=2.38U
++ effW=2.38e-06
+MP0	net9#4	A#4	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#1	A#2	    2.9666
+Rg2	A#2	A#3	   91.4319
+Rg3	A#2	A#4	   72.8903
+Rg4	net9#5	net9#6	  117.0569
+Rg5	net9#6	net9	    2.9666
+Rg6	net9#6	net9#7	   36.6403
+Rf1	A#1	A	9.837E-02
+Rf2	net9	net9#2	    0.3790
+Rf3	net9#2	net9#3	    0.2756
+Rf4	net9#2	net9#4	    0.8717
+Rf5	Y	Y#1	1.508E-02
+Rf6	Y#1	Y#2	    0.6134
+Rf7	Y#1	Y#3	    0.5459
+Rf8	POWR#1	POWR#2	    0.2877
+Rf9	POWR#2	POWR	1.364E-02
+Rf10	GRND	GRND#1	1.364E-02
+Rf11	GRND#1	GRND#2	    0.1727
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	8.096E-17
+C2	POWR	GRND	cmodel	1.519E-16
+C3	Y	GRND	cmodel	2.219E-16
+C4	net9	GRND	cmodel	2.301E-16
+C5	net9#5	GRND	cmodel	1.764E-16
+C6	A#4	GRND	cmodel	1.259E-16
+C7	net9#7	GRND	cmodel	8.677E-17
+C8	A#3	GRND	cmodel	1.700E-16
+C9	A#1	GRND	cmodel	1.664E-16
+C10	POWR#2	GRND	cmodel	5.790E-16
+C11	Y#3	GRND	cmodel	2.792E-16
+C12	Y#2	GRND	cmodel	2.100E-16
+C13	POWR#1	GRND	cmodel	4.866E-16
+C14	net9#4	GRND	cmodel	4.086E-16
+C15	net9#3	GRND	cmodel	1.338E-16
+C16	A#2	GRND	cmodel	3.523E-16
+C17	net9#2	GRND	cmodel	2.857E-16
+C18	net9#6	GRND	cmodel	2.395E-16
+*
+*
+.ENDS CLKBUFX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 13:41:10 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT CLKBUFX2 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	Y#2	net17#9	GRND#3	GRND#2	nmos	L=0.18U	W=1.55U
++ effW=1.55e-06
+MN0	net17#3	A#3	GRND#3	GRND#2	nmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+MP0	net17#4	A#4	POWR	POWR	pmos	L=0.18U	W=2.6U
++ effW=2.6e-06
+MP1	Y#3	net17#5	POWR	POWR	pmos	L=0.18U	W=1.7U
++ M=2	effW=1.7e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#1	A#2	    2.9666
+Rg2	A#2	A#3	   45.8069
+Rg3	A#2	A#4	  116.2236
+Rg8	net17#7	net17#9	   99.3486
+Rg6	net17#7	net17	    3.5916
+Rg5	net17#5	net17#7	   23.5661
+Rf1	A	A#1	8.263E-02
+Rf11	GRND	GRND#1	3.281E-02
+Rf12	GRND#1	GRND#2	7.920E-02
+Rf13	GRND#1	GRND#3	    0.2014
+Rf5	Y	Y#1	8.783E-02
+Rf7	Y#1	Y#3	    0.6876
+Rf6	Y#1	Y#2	    0.6155
+Rf2	net17	net17#2	    0.3310
+Rf4	net17#2	net17#4	    0.4957
+Rf3	net17#2	net17#3	    0.7240
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.026E-16
+C2	POWR	GRND	cmodel	1.396E-15
+C3	Y	GRND	cmodel	8.386E-17
+C4	net17	GRND	cmodel	2.674E-16
+C5	net17#5	GRND	cmodel	3.771E-16
+C6	A#4	GRND	cmodel	1.893E-16
+C7	net17#9	GRND	cmodel	1.543E-16
+C8	A#3	GRND	cmodel	9.861E-17
+C9	A#1	GRND	cmodel	8.759E-17
+C10	Y#3	GRND	cmodel	3.985E-16
+C11	Y#2	GRND	cmodel	2.483E-16
+C12	net17#4	GRND	cmodel	3.043E-16
+C13	net17#3	GRND	cmodel	2.535E-16
+C14	A#2	GRND	cmodel	3.679E-16
+C15	net17#2	GRND	cmodel	1.922E-16
+C16	Y#1	GRND	cmodel	2.229E-16
+C17	net17#7	GRND	cmodel	1.918E-16
+*
+*
+.ENDS CLKBUFX2
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:02:41 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT CLKBUFX3 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	net25#3	A#3	GRND#1	GRND#1	nmos	L=0.18U	W=1.36U
++ effW=1.36e-06
+MN1	Y#1	net25#7	GRND#1	GRND#1	nmos	L=0.18U	W=1.1U
++ M=2	effW=1.1e-06
+MP0	net25#4	A#2	POWR	POWR	pmos	L=0.18U	W=3U
++ effW=3e-06
+MP1	Y#2	net25#5	POWR	POWR	pmos	L=0.18U	W=2.5U
++ M=2	effW=2.5e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#1	  102.5000
+Rg2	A#1	A#3	   40.4167
+Rg4	net25#5	net25	   20.6758
+Rg5	net25	net25#7	   20.6758
+Rf1	A#1	A	6.737E-02
+Rf11	GRND#1	GRND	1.559E-02
+Rf6	Y	Y#2	    0.7925
+Rf5	Y	Y#1	    0.4213
+Rf2	net25	net25#2	    0.5739
+Rf4	net25#2	net25#4	    0.4610
+Rf3	net25#2	net25#3	    0.6013
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	9.640E-17
+C2	POWR	GRND	cmodel	1.435E-15
+C3	Y	GRND	cmodel	2.867E-16
+C4	net25	GRND	cmodel	4.624E-16
+C5	net25#5	GRND	cmodel	4.517E-16
+C6	A#2	GRND	cmodel	1.900E-16
+C7	A#3	GRND	cmodel	9.639E-17
+C8	A#1	GRND	cmodel	4.462E-16
+C9	Y#2	GRND	cmodel	6.577E-16
+C10	Y#1	GRND	cmodel	2.546E-16
+C11	net25#4	GRND	cmodel	3.324E-16
+C12	net25#3	GRND	cmodel	3.004E-16
+C13	net25#2	GRND	cmodel	2.239E-16
+C14	net25#7	GRND	cmodel	3.260E-16
+*
+*
+.ENDS CLKBUFX3
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:06:03 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT DFFSRX1 CK D GRND POWR Q QN RN SN
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN7	net128#10	CK#8	net082#3	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN10	net082#3	CKZ#5	net0194#4	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN8	net0131	net082#9	net091	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN9	net091	SN#7	GRND#5	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN11	net0176	RN#7	GRND#5	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN12	net0194	net0131#7	net0176	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN13	Q#1	net082#8	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN14	QN#1	net0131#6	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	D#2	CKZ#8	net80#3	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN4	net80#3	CK#10	net83#4	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN0	CKZ#4	CK#4	GRND#7	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN2	net128#3	net80#5	net100	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN3	net100	RN#2	GRND#6	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN6	net84	SN#2	GRND#6	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN5	net83	net128#7	net84	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP7	net128#11	CKZ#6	net082#4	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP10	net082#4	CK#2	net0194#3	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP8	net0131#3	net082#6	POWR#7	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP9	net0131#3	SN#6	POWR#2	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP11	net0194#2	RN#6	POWR#2	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP12	net0194#2	net0131#8	POWR#1	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP13	Q#2	net082#5	POWR#8	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP14	QN#2	net0131#5	POWR#8	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	D#3	CK#7	net80#2	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP4	net80#2	CKZ#9	net83#3	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP0	CKZ	CK#9	POWR#11	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP3	net128#4	net80#4	POWR#10	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP2	net128#4	RN#1	POWR#9	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP6	net83#2	SN#1	POWR#9	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP5	net83#2	net128#8	POWR#12	POWR#4	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	net80#4	net80	  182.9526
+Rg2	net80#4	net80#5	  135.6250
+Rg3	RN#1	RN#2	  135.6250
+Rg4	RN#2	RN#3	   36.0417
+Rg5	SN#1	SN#2	  135.6250
+Rg6	SN#1	SN#3	   54.1667
+Rg7	net128#5	net128#6	   47.7945
+Rg8	net128#6	net128	    2.5715
+Rg9	net128#6	net128#7	   27.1132
+Rg10	net128	net128#8	   88.3333
+Rg11	CKZ#5	CKZ#6	  179.8393
+Rg12	CKZ#6	CKZ#7	  477.0448
+Rg13	CKZ#7	CKZ#8	  324.7055
+Rg14	CKZ#7	CKZ#9	   63.7420
+Rg15	CKZ#9	CKZ#3	   91.6905
+Rg16	CK#2	CK#3	  309.0806
+Rg17	CK#3	CK#4	  326.3246
+Rg18	CK#4	CK#5	   50.9284
+Rg19	CK#5	CK#6	   89.5526
+Rg20	CK#6	CK#7	  133.1996
+Rg21	CK#3	CK#8	   48.5337
+Rg22	CK#5	CK#9	  104.4701
+Rg23	CK#5	CK#1	    3.7691
+Rg24	CK#6	CK#10	   46.8670
+Rg25	SN#6	SN#5	   54.1667
+Rg26	SN#6	SN#7	  135.6250
+Rg27	RN#6	RN#7	  135.6250
+Rg28	RN#7	RN#5	   36.0417
+Rg29	net082#5	net082#6	  348.7976
+Rg30	net082#6	net082#7	   66.9258
+Rg31	net082#7	net082	   50.4087
+Rg32	net082#5	net082#8	  154.3750
+Rg33	net082#7	net082#9	   67.5508
+Rg34	net0131#5	net0131#6	  154.3750
+Rg35	net0131#6	net0131#7	  203.7976
+Rg36	net0131#7	net0131#4	   29.7917
+Rg37	net0131#4	net0131#8	   88.3333
+Rf1	D	D#1	5.332E-03
+Rf2	D#1	D#2	    0.4279
+Rf3	D#1	D#3	    0.6809
+Rf4	net80	net80#2	    0.9855
+Rf5	net80#2	net80#3	    1.1321
+Rf6	CKZ	CKZ#2	    0.2257
+Rf7	CKZ#2	CKZ#3	    0.1610
+Rf8	CKZ#2	CKZ#4	    0.7436
+Rf9	CK	CK#1	    0.1151
+Rf10	net128	net128#2	    0.8310
+Rf11	net128#2	net128#3	    0.2236
+Rf12	net128#2	net128#4	    0.7816
+Rf13	net83	net83#2	    1.0595
+Rf14	net83#2	net83#3	    2.0914
+Rf15	net83#3	net83#4	    1.2079
+Rf16	net128#5	net128#9	5.271E-02
+Rf17	net128#9	net128#10	    0.4147
+Rf18	net128#9	net128#11	    0.6576
+Rf19	net082	net082#2	    0.3177
+Rf20	net082#2	net082#3	    0.6469
+Rf21	net082#2	net082#4	    0.4365
+Rf22	SN	SN#4	8.021E-02
+Rf23	SN#4	SN#3	    0.2601
+Rf24	SN#4	SN#5	    1.8334
+Rf25	RN	RN#4	    0.1302
+Rf26	RN#4	RN#3	    0.2967
+Rf27	RN#4	RN#5	    2.3101
+Rf28	net0131	net0131#2	    0.3557
+Rf29	net0131#2	net0131#3	    0.5657
+Rf30	net0131#2	net0131#4	    0.5710
+Rf31	net0194	net0194#2	    1.0338
+Rf32	net0194#2	net0194#3	    1.3172
+Rf33	net0194#3	net0194#4	    1.4351
+Rf34	Q	Q#1	    0.2529
+Rf35	Q	Q#2	    0.8292
+Rf36	QN	QN#1	    0.4928
+Rf37	QN	QN#2	    0.6258
+Rf38	GRND#1	GRND#2	    0.5219
+Rf39	GRND#2	GRND	    0.6980
+Rf40	GRND	GRND#3	    0.3337
+Rf41	GRND#3	GRND#4	    0.1895
+Rf42	GRND#4	GRND#2	    0.2135
+Rf43	GRND#2	GRND#5	    0.8060
+Rf44	GRND#3	GRND#6	    0.7406
+Rf45	GRND#4	GRND#7	    0.3686
+Rf46	POWR#1	POWR#2	    0.3900
+Rf47	POWR#2	POWR#3	    0.3488
+Rf48	POWR#3	POWR	    0.4358
+Rf49	POWR	POWR#4	    0.1225
+Rf50	POWR#4	POWR#5	    0.2836
+Rf51	POWR#5	POWR#6	    0.2520
+Rf52	POWR#6	POWR#4	    0.2953
+Rf53	POWR#2	POWR#7	    0.3900
+Rf54	POWR#3	POWR#4	    0.3750
+Rf55	POWR#4	POWR#8	    0.5304
+Rf56	POWR#5	POWR#9	    0.3488
+Rf57	POWR#9	POWR#10	    0.3900
+Rf58	POWR#6	POWR#11	    0.4673
+Rf59	POWR#9	POWR#12	    0.6384
+*
+*       CAPACITOR CARDS
+*
+*
+C1	CK	GRND	cmodel	7.824E-17
+C2	Q	GRND	cmodel	2.056E-16
+C3	QN	GRND	cmodel	1.873E-16
+C4	RN	GRND	cmodel	1.302E-16
+C5	SN	GRND	cmodel	1.122E-16
+C6	net100	GRND	cmodel	2.381E-17
+C7	net84	GRND	cmodel	1.395E-17
+C8	net091	GRND	cmodel	2.331E-17
+C9	net0176	GRND	cmodel	2.603E-17
+C10	net0194	GRND	cmodel	3.493E-16
+C11	CKZ	GRND	cmodel	1.283E-16
+C12	net128	GRND	cmodel	4.625E-16
+C13	net83	GRND	cmodel	3.523E-16
+C14	net082	GRND	cmodel	4.544E-16
+C15	net0131	GRND	cmodel	1.329E-16
+C16	net80	GRND	cmodel	6.669E-16
+C17	net0131#5	GRND	cmodel	2.093E-16
+C18	net082#5	GRND	cmodel	6.051E-16
+C19	net0131#8	GRND	cmodel	1.414E-16
+C20	RN#6	GRND	cmodel	1.890E-16
+C21	SN#6	GRND	cmodel	1.377E-16
+C22	net082#6	GRND	cmodel	5.137E-16
+C23	CK#2	GRND	cmodel	5.080E-16
+C24	CKZ#6	GRND	cmodel	9.017E-16
+C25	net128#8	GRND	cmodel	1.557E-16
+C26	SN#1	GRND	cmodel	1.402E-16
+C27	RN#1	GRND	cmodel	1.993E-16
+C28	net80#4	GRND	cmodel	3.589E-16
+C29	CK#9	GRND	cmodel	1.623E-16
+C30	CKZ#9	GRND	cmodel	7.744E-17
+C31	CK#7	GRND	cmodel	2.003E-16
+C32	net0131#6	GRND	cmodel	4.478E-16
+C33	net082#8	GRND	cmodel	2.582E-16
+C34	net0131#7	GRND	cmodel	2.943E-16
+C35	RN#7	GRND	cmodel	1.946E-16
+C36	SN#7	GRND	cmodel	2.493E-16
+C37	net082#9	GRND	cmodel	1.330E-16
+C38	CKZ#5	GRND	cmodel	3.413E-16
+C39	CK#8	GRND	cmodel	1.033E-16
+C40	net128#7	GRND	cmodel	6.909E-17
+C41	SN#2	GRND	cmodel	2.278E-16
+C42	RN#2	GRND	cmodel	1.706E-16
+C43	net80#5	GRND	cmodel	2.103E-16
+C44	CK#4	GRND	cmodel	4.961E-16
+C45	CK#10	GRND	cmodel	9.557E-17
+C46	CKZ#8	GRND	cmodel	5.101E-16
+C47	net0131#4	GRND	cmodel	4.960E-16
+C48	RN#5	GRND	cmodel	8.999E-16
+C49	SN#5	GRND	cmodel	8.758E-16
+C50	net128#5	GRND	cmodel	1.901E-16
+C51	SN#3	GRND	cmodel	4.263E-16
+C52	RN#3	GRND	cmodel	3.703E-16
+C53	CK#1	GRND	cmodel	1.383E-16
+C54	CKZ#3	GRND	cmodel	3.463E-16
+C55	POWR#4	GRND	cmodel	5.468E-15
+C56	QN#2	GRND	cmodel	2.652E-16
+C57	QN#1	GRND	cmodel	1.550E-16
+C58	POWR#8	GRND	cmodel	3.748E-16
+C59	Q#2	GRND	cmodel	3.658E-16
+C60	Q#1	GRND	cmodel	1.491E-16
+C61	POWR#1	GRND	cmodel	1.450E-16
+C62	net0194#2	GRND	cmodel	6.854E-16
+C63	POWR#2	GRND	cmodel	3.859E-16
+C64	net0131#3	GRND	cmodel	2.196E-16
+C65	POWR#7	GRND	cmodel	2.630E-16
+C66	net0194#3	GRND	cmodel	7.127E-16
+C67	net0194#4	GRND	cmodel	4.708E-16
+C68	net082#4	GRND	cmodel	3.931E-16
+C69	net082#3	GRND	cmodel	2.377E-16
+C70	net128#11	GRND	cmodel	3.472E-16
+C71	net128#10	GRND	cmodel	1.580E-16
+C72	POWR#12	GRND	cmodel	3.264E-16
+C73	net83#2	GRND	cmodel	9.325E-16
+C74	POWR#9	GRND	cmodel	4.163E-16
+C75	net128#4	GRND	cmodel	3.036E-16
+C76	POWR#10	GRND	cmodel	1.674E-16
+C77	net128#3	GRND	cmodel	1.311E-16
+C78	POWR#11	GRND	cmodel	1.210E-16
+C79	CKZ#4	GRND	cmodel	2.276E-16
+C80	net83#3	GRND	cmodel	8.043E-16
+C81	net83#4	GRND	cmodel	3.000E-16
+C82	net80#2	GRND	cmodel	7.384E-16
+C83	net80#3	GRND	cmodel	3.809E-16
+C84	D#3	GRND	cmodel	3.254E-16
+C85	D#2	GRND	cmodel	1.396E-16
+C86	D#1	GRND	cmodel	2.425E-16
+C87	CKZ#2	GRND	cmodel	1.669E-16
+C88	net128#2	GRND	cmodel	2.680E-16
+C89	net128#6	GRND	cmodel	8.017E-17
+C90	net128#9	GRND	cmodel	2.205E-16
+C91	CKZ#7	GRND	cmodel	1.343E-15
+C92	net082#2	GRND	cmodel	2.312E-16
+C93	CK#3	GRND	cmodel	1.068E-15
+C94	CK#5	GRND	cmodel	3.065E-16
+C95	CK#6	GRND	cmodel	4.105E-16
+C96	SN#4	GRND	cmodel	5.129E-16
+C97	RN#4	GRND	cmodel	7.302E-16
+C98	net0131#2	GRND	cmodel	3.131E-16
+C99	net082#7	GRND	cmodel	1.784E-16
+C100	POWR#3	GRND	cmodel	2.492E-16
+C101	POWR#5	GRND	cmodel	2.833E-16
+C102	POWR#6	GRND	cmodel	2.470E-16
+*
+*
+.ENDS DFFSRX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:09:05 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT DFFX1 CK D GRND POWR Q QN
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN8	net202#3	CK#2	net183	GRND#2	nmos	L=0.18U	W=0.8U
++ effW=8e-07
+MN10	net202#3	net186#4	net194#5	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN3	net200#3	net202#7	GRND#3	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN4	net194#6	net200#7	GRND#3	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN5	Q#3	net194#10	GRND#1	GRND#2	nmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+MN6	QN#3	Q#6	GRND#1	GRND#2	nmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+MN11	net186#2	CK#8	GRND#5	GRND#2	nmos	L=0.18U	W=0.8U
++ effW=8e-07
+MN0	net187#3	D#3	GRND#5	GRND#2	nmos	L=0.18U	W=0.8U
++ effW=8e-07
+MN7	net184#3	net186#10	net187	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN9	net184#3	CK#7	net183#5	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN1	net206#3	net184#6	GRND#4	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN2	net183#2	net206#7	GRND#4	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MP8	net202#4	net186#8	net183#6	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP10	net202#4	CK#3	net194#7	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP3	net200#4	net202#5	POWR#3	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP4	net194#3	net200#5	POWR#3	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP5	Q#4	net194#8	POWR#1	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP6	QN#2	Q#5	POWR#1	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP11	net186#3	CK#5	POWR#5	POWR#2	pmos	L=0.18U	W=1.9U
++ effW=1.9e-06
+MP0	net187#5	D#2	POWR#5	POWR#2	pmos	L=0.18U	W=1.9U
++ effW=1.9e-06
+MP7	net184#4	CK#6	net187#6	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP9	net184#4	net186#9	net183#7	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP1	net206#4	net184#7	POWR#4	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+MP2	net183#3	net206#5	POWR#4	POWR#2	pmos	L=0.18U
++ W=1.9U	effW=1.9e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	D#2	D#1	   62.5000
+Rg2	D#1	D#3	   57.9167
+Rg3	net184	net184#5	   54.1587
+Rg4	net184#5	net184#6	   76.7239
+Rg5	net184#5	net184#7	   58.8072
+Rg6	net206#5	net206#6	   75.3903
+Rg7	net206#6	net206	    2.9666
+Rg8	net206#6	net206#7	   52.4736
+Rg9	CK#2	CK#3	  142.2968
+Rg10	CK#3	CK#4	  348.1996
+Rg11	CK#4	CK#5	  183.6163
+Rg12	CK#5	CK#1	   75.4167
+Rg13	CK#4	CK#6	   61.2420
+Rg14	CK#6	CK#7	  142.2968
+Rg15	CK#1	CK#8	   45.0000
+Rg16	net186#4	net186#5	  110.6996
+Rg17	net186#5	net186#6	  140.1017
+Rg18	net186#6	net186#7	   72.1850
+Rg19	net186#7	net186	  142.3425
+Rg20	net186#5	net186#8	  183.0085
+Rg21	net186#6	net186#9	  190.2615
+Rg22	net186#7	net186#10	   38.3253
+Rg23	net202#5	net202#6	   94.8901
+Rg24	net202#6	net202	   45.4087
+Rg25	net202#6	net202#7	   55.3068
+Rg26	net200#5	net200#6	   75.3903
+Rg27	net200#6	net200	    2.9666
+Rg28	net200#6	net200#7	   52.4736
+Rg29	net194#8	net194#9	  106.0925
+Rg30	net194#9	net194	   37.5042
+Rg31	net194#9	net194#10	   36.5092
+Rg32	Q#5	Q#1	   70.4167
+Rg33	Q#1	Q#6	   55.8333
+Rf1	net186	net186#2	    0.2722
+Rf2	net186#2	net186#3	    0.9235
+Rf3	CK	CK#1	8.750E-02
+Rf4	D	D#1	8.762E-02
+Rf5	net187	net187#2	    0.1923
+Rf6	net187#2	net187#3	    0.1923
+Rf7	net187#2	net187#4	    0.7420
+Rf8	net187#4	net187#5	    0.1708
+Rf9	net187#4	net187#6	    0.1708
+Rf10	net184	net184#2	    0.2877
+Rf11	net184#2	net184#3	    0.5940
+Rf12	net184#2	net184#4	    0.3982
+Rf13	net206	net206#2	    0.2477
+Rf14	net206#2	net206#3	    0.4273
+Rf15	net206#2	net206#4	    0.4023
+Rf16	net183	net183#2	    0.4000
+Rf17	net183#2	net183#3	    1.0783
+Rf18	net183#3	net183#4	    0.7174
+Rf19	net183#4	net183#5	    1.2569
+Rf20	net183#3	net183#6	    0.3569
+Rf21	net183#4	net183#7	    0.2574
+Rf22	net202	net202#2	    0.2210
+Rf23	net202#2	net202#3	    0.3640
+Rf24	net202#2	net202#4	    0.6282
+Rf25	net200	net200#2	    0.2477
+Rf26	net200#2	net200#3	    0.4240
+Rf27	net200#2	net200#4	    0.4057
+Rf28	net194	net194#2	2.771E-02
+Rf29	net194#2	net194#3	    0.7601
+Rf30	net194#3	net194#4	    0.7174
+Rf31	net194#4	net194#5	    1.1869
+Rf32	net194#2	net194#6	    0.2917
+Rf33	net194#4	net194#7	    0.1874
+Rf34	Q#1	Q	    0.1874
+Rf35	Q	Q#2	    0.2312
+Rf36	Q#2	Q#3	    0.2840
+Rf37	Q#2	Q#4	    0.7007
+Rf38	QN	QN#1	9.450E-02
+Rf39	QN#1	QN#2	    0.3938
+Rf40	QN#1	QN#3	    0.2896
+Rf41	GRND#1	GRND#2	    0.4255
+Rf42	GRND#2	GRND	1.334E-02
+Rf43	GRND#2	GRND#3	    0.4530
+Rf44	GRND#2	GRND#4	    0.4553
+Rf45	GRND#2	GRND#5	    0.4553
+Rf46	POWR#1	POWR#2	    0.5836
+Rf47	POWR	POWR#2	1.843E-02
+Rf48	POWR#2	POWR#3	    0.4286
+Rf49	POWR#2	POWR#4	    0.4286
+Rf50	POWR#2	POWR#5	    0.5928
+*
+*       CAPACITOR CARDS
+*
+*
+C1	CK	GRND	cmodel	6.852E-17
+C2	D	GRND	cmodel	9.698E-17
+C3	Q	GRND	cmodel	1.090E-16
+C4	QN	GRND	cmodel	6.582E-17
+C5	net206	GRND	cmodel	1.623E-16
+C6	net183	GRND	cmodel	1.224E-16
+C7	net202	GRND	cmodel	2.555E-16
+C8	net186	GRND	cmodel	5.342E-16
+C9	net200	GRND	cmodel	1.495E-16
+C10	net187	GRND	cmodel	1.070E-16
+C11	net194	GRND	cmodel	1.829E-16
+C12	net184	GRND	cmodel	3.296E-16
+C13	Q#5	GRND	cmodel	1.452E-16
+C14	net194#8	GRND	cmodel	1.689E-16
+C15	net200#5	GRND	cmodel	1.337E-16
+C16	net202#5	GRND	cmodel	1.343E-16
+C17	CK#3	GRND	cmodel	4.774E-16
+C18	net186#8	GRND	cmodel	2.341E-16
+C19	net206#5	GRND	cmodel	1.552E-16
+C20	net184#7	GRND	cmodel	1.210E-16
+C21	net186#9	GRND	cmodel	2.880E-16
+C22	CK#6	GRND	cmodel	1.497E-16
+C23	D#2	GRND	cmodel	1.342E-16
+C24	CK#5	GRND	cmodel	2.815E-16
+C25	Q#6	GRND	cmodel	1.091E-16
+C26	net194#10	GRND	cmodel	9.711E-17
+C27	net200#7	GRND	cmodel	8.901E-17
+C28	net202#7	GRND	cmodel	1.054E-16
+C29	net186#4	GRND	cmodel	1.763E-16
+C30	CK#2	GRND	cmodel	2.385E-16
+C31	net206#7	GRND	cmodel	1.049E-16
+C32	net184#6	GRND	cmodel	1.759E-16
+C33	CK#7	GRND	cmodel	2.717E-16
+C34	net186#10	GRND	cmodel	7.435E-17
+C35	D#3	GRND	cmodel	1.203E-16
+C36	CK#8	GRND	cmodel	9.681E-17
+C37	Q#1	GRND	cmodel	3.762E-16
+C38	D#1	GRND	cmodel	3.003E-16
+C39	CK#1	GRND	cmodel	3.991E-16
+C40	POWR#2	GRND	cmodel	3.589E-15
+C41	QN#2	GRND	cmodel	3.705E-16
+C42	QN#3	GRND	cmodel	1.803E-16
+C43	POWR#1	GRND	cmodel	5.594E-16
+C44	Q#4	GRND	cmodel	4.623E-16
+C45	Q#3	GRND	cmodel	1.984E-16
+C46	net194#3	GRND	cmodel	4.193E-16
+C47	net194#6	GRND	cmodel	1.590E-16
+C48	POWR#3	GRND	cmodel	1.984E-16
+C49	net200#4	GRND	cmodel	2.185E-16
+C50	net200#3	GRND	cmodel	2.088E-16
+C51	net194#7	GRND	cmodel	2.447E-16
+C52	net194#5	GRND	cmodel	4.493E-16
+C53	net202#4	GRND	cmodel	3.871E-16
+C54	net202#3	GRND	cmodel	1.803E-16
+C55	net183#6	GRND	cmodel	2.007E-16
+C56	net183#3	GRND	cmodel	3.931E-16
+C57	net183#2	GRND	cmodel	2.606E-16
+C58	POWR#4	GRND	cmodel	1.834E-16
+C59	net206#4	GRND	cmodel	2.110E-16
+C60	net206#3	GRND	cmodel	2.138E-16
+C61	net183#7	GRND	cmodel	2.869E-16
+C62	net183#5	GRND	cmodel	3.868E-16
+C63	net184#4	GRND	cmodel	3.547E-16
+C64	net184#3	GRND	cmodel	2.178E-16
+C65	net187#6	GRND	cmodel	2.106E-16
+C66	net187#5	GRND	cmodel	2.386E-16
+C67	net187#3	GRND	cmodel	1.212E-16
+C68	POWR#5	GRND	cmodel	3.614E-16
+C69	net186#3	GRND	cmodel	3.922E-16
+C70	net186#2	GRND	cmodel	3.097E-16
+C71	net187#2	GRND	cmodel	1.346E-16
+C72	net187#4	GRND	cmodel	1.928E-16
+C73	net184#2	GRND	cmodel	1.357E-16
+C74	net184#5	GRND	cmodel	2.747E-16
+C75	net206#2	GRND	cmodel	1.893E-16
+C76	net206#6	GRND	cmodel	1.405E-16
+C77	net183#4	GRND	cmodel	4.340E-16
+C78	CK#4	GRND	cmodel	7.585E-16
+C79	net186#5	GRND	cmodel	5.235E-16
+C80	net186#6	GRND	cmodel	5.299E-16
+C81	net186#7	GRND	cmodel	3.055E-16
+C82	net202#2	GRND	cmodel	1.132E-16
+C83	net202#6	GRND	cmodel	3.718E-16
+C84	net200#2	GRND	cmodel	1.956E-16
+C85	net200#6	GRND	cmodel	1.951E-16
+C86	net194#2	GRND	cmodel	1.940E-16
+C87	net194#4	GRND	cmodel	3.772E-16
+C88	net194#9	GRND	cmodel	2.579E-16
+C89	Q#2	GRND	cmodel	1.444E-16
+C90	QN#1	GRND	cmodel	1.504E-16
+*
+*
+.ENDS DFFX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:15:18 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT INVX1 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#1	A#4	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP0	Y#2	A#2	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#3	   64.9736
+Rg2	A#3	A#1	    2.9666
+Rg3	A#3	A#4	   99.3486
+Rf1	A	A#1	    0.1010
+Rf2	Y	Y#1	    0.4245
+Rf3	Y	Y#2	    0.8408
+Rf4	POWR#1	POWR#2	    0.3851
+Rf5	POWR#2	POWR	1.705E-02
+Rf6	GRND#1	GRND#2	    0.2388
+Rf7	GRND#2	GRND	1.705E-02
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	8.770E-17
+C2	POWR	GRND	cmodel	1.240E-16
+C3	Y	GRND	cmodel	2.220E-16
+C4	A#2	GRND	cmodel	1.176E-16
+C5	A#4	GRND	cmodel	1.584E-16
+C6	A#1	GRND	cmodel	1.968E-16
+C7	POWR#2	GRND	cmodel	3.863E-16
+C8	Y#2	GRND	cmodel	3.293E-16
+C9	Y#1	GRND	cmodel	1.481E-16
+C10	POWR#1	GRND	cmodel	2.373E-16
+C11	A#3	GRND	cmodel	2.081E-16
+*
+*
+.ENDS INVX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:18:25 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT INVX2 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#4	A#4	GRND#1	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MP0	Y#1	A#1	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ M=2	effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg3	A#1	A#4	   84.4258
+Rf8	GRND#1	GRND#2	2.222E-02
+Rf9	GRND#2	GRND	    0.1033
+Rf1	A#1	A	7.987E-02
+Rf7	POWR#2	POWR	1.364E-02
+Rf6	POWR#1	POWR#2	    0.3836
+Rf5	Y	Y#4	    0.6032
+Rf4	Y#1	Y	    0.2347
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	8.857E-17
+C2	POWR	GRND	cmodel	1.519E-16
+C3	Y	GRND	cmodel	1.455E-16
+C4	A#4	GRND	cmodel	1.584E-16
+C5	A#1	GRND	cmodel	7.858E-16
+C6	POWR#2	GRND	cmodel	5.719E-16
+C7	Y#1	GRND	cmodel	7.754E-16
+C8	Y#4	GRND	cmodel	2.613E-16
+C9	POWR#1	GRND	cmodel	4.336E-16
+*
+*
+.ENDS INVX2
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:21:50 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT INVX4 A GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#4	A#5	GRND	GRND#3	nmos	L=0.18U	W=1.7U	M=2
++ effW=1.7e-06
+MP0	Y#2	A#2	POWR#1	POWR#1	pmos	L=0.18U	W=2.69U
++ M=3	effW=2.69e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg6	A#5	A#1	    2.4753
+Rg3	A#2	A#5	   39.0050
+Rf12	GRND	GRND#3	9.302E-03
+Rf1	A#1	A	    0.2224
+Rf8	POWR	POWR#1	1.971E-02
+Rf2	Y	Y#1	7.533E-02
+Rf5	Y#1	Y#4	    0.3842
+Rf3	Y#1	Y#2	    0.2291
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.535E-16
+C2	Y	GRND	cmodel	9.701E-17
+C3	A#2	GRND	cmodel	7.433E-16
+C4	A#1	GRND	cmodel	2.166E-16
+C5	POWR#1	GRND	cmodel	1.399E-15
+C6	Y#4	GRND	cmodel	3.704E-16
+C7	A#5	GRND	cmodel	4.471E-16
+C8	Y#1	GRND	cmodel	1.131E-16
+C9	Y#2	GRND	cmodel	1.147E-15
+*
+*
+.ENDS INVX4
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Aug 15 14:31:17 2003
+*
+*
+*
+*  PROGRAM  /cadence_tools/work2/assura.3.0.5/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+*
+.SUBCKT INVX8 GRND Y POWR A
+*
+*       SUBCIRCUIT CALLS
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0     GRND#1  A#17    Y#1     GRND#5 nmos L=0.18U W=1.7U
++	 effW=1.7e-06
+MN0_1   Y#1     A#16    GRND#6  GRND#5 nmos L=0.18U W=1.7U
++	 effW=1.7e-06
+MN0_2   GRND#6  A#11    Y#6     GRND#5 nmos L=0.18U W=1.7U
++	 effW=1.7e-06
+MN0_3   Y#6     A#14    GRND#7  GRND#5 nmos L=0.18U W=1.7U
++	 effW=1.7e-06
+MP0     POWR#1  A#2     Y#7     POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+MP0_4   Y#7     A#8     POWR#3  POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+MP0_5   POWR#3  A#9     Y#4     POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+MP0_6   Y#4     A#12    POWR#4  POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+MP0_7   POWR#4  A#13    Y#5     POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+MP0_8   Y#5     A#7     POWR#5  POWR#2 pmos L=0.18U W=2.69U
++	 effW=2.69e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1     A#2     A#3 96.7413 $poly
+Rg2     A#3     A#4 31.3517 $poly
+Rg3     A#4     A#5 31.3570 $poly
+Rg4     A#5     A#6 29.2736 $poly
+Rg5     A#6     A#7 96.7413 $poly
+Rg6     A#3     A#8 65.2003 $poly
+Rg7     A#4     A#9 65.2003 $poly
+Rg8     A#5     A#1 23.9311 $poly
+Rg9     A#1     A#10 2.8941 $poly
+Rg10    A#10    A#11 44.7691 $poly
+Rg11    A#5     A#12 67.0143 $poly
+Rg12    A#6     A#13 65.2003 $poly
+Rg13    A#10    A#14 60.7369 $poly
+Rg14    A#10    A#15 33.4723 $poly
+Rg15    A#15    A#16 44.5753 $poly
+Rg16    A#15    A#17 76.1163 $poly
+Rf1     A#1     A 0.1249 $mt1
+Rf2     Y#1     Y#2 5.818E-02 $mt1
+Rf3     Y#2     Y 0.2060 $mt1
+Rf4     Y       Y#3 0.3330 $mt1
+Rf5     Y#3     Y#4 1.265E-02 $mt1
+Rf6     Y#4     Y#5 0.3061 $mt1
+Rf7     Y#2     Y#6 0.2432 $mt1
+Rf8     Y#3     Y#7 0.3182 $mt1
+Rf9     GRND#1  GRND#2 0.3041 $mt1
+Rf10    GRND#2  GRND#3 0.1423 $mt1
+Rf11    GRND#3  GRND#4 0.1423 $mt1
+Rf12    GRND#4  GRND#5 8.980E-02 $mt1
+Rf13    GRND#5  GRND 6.306E-02 $mt1
+Rf14    GRND#2  GRND#5 8.980E-02 $mt1
+Rf15    GRND#3  GRND#6 0.1666 $mt1
+Rf16    GRND#4  GRND#7 0.3041 $mt1
+Rf17    POWR#1  POWR#2 0.5360 $mt1
+Rf18    POWR#2  POWR#3 0.4310 $mt1
+Rf19    POWR#2  POWR#4 0.4310 $mt1
+Rf20    POWR#2  POWR#5 0.6090 $mt1
+Rf21    POWR#2  POWR 0.2908 $mt1
+*
+*       CAPACITOR CARDS
+*
+*
+C1      Y       GRND  1.360E-16
+C2      A       GRND  4.420E-17
+C3      A#2     GRND  1.405E-16
+C4      A#8     GRND  1.188E-16
+C5      A#9     GRND  1.111E-16
+C6      A#12    GRND  1.197E-16
+C7      A#13    GRND  1.226E-16
+C8      A#7     GRND  1.416E-16
+C9      A#17    GRND  1.229E-16
+C10     A#16    GRND  1.043E-16
+C11     A#11    GRND  1.043E-16
+C12     A#14    GRND  1.099E-16
+C13     A#1     GRND  3.727E-16
+C14     POWR#2  GRND  8.327E-16
+C15     POWR#1  GRND  2.443E-16
+C16     Y#7     GRND  5.368E-16
+C17     POWR#3  GRND  4.071E-16
+C18     Y#1     GRND  2.859E-16
+C19     Y#4     GRND  3.047E-16
+C20     POWR#4  GRND  4.181E-16
+C21     Y#6     GRND  3.846E-16
+C22     Y#5     GRND  5.653E-16
+C23     POWR#5  GRND  2.464E-16
+C24     Y#2     GRND  1.404E-16
+C25     Y#3     GRND  3.128E-16
+C26     A#3     GRND  2.256E-16
+C27     A#4     GRND  1.371E-16
+C28     A#5     GRND  1.456E-16
+C29     A#6     GRND  2.076E-16
+C30     A#15    GRND  2.073E-16
+*
+*
+.ENDS INVX8
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:28:43 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT MX2X1 A B GRND POWR S0 Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	net43	S0#4	GRND#4	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	net093#2	B#4	GRND#4	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN4	net093#2	S0#5	net35#3	GRND#3	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN3	net097	net43#5	net35#3	GRND#3	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN0	net097#2	A#3	GRND#1	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN5	Y#1	net35#5	GRND#1	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP1	net43#3	S0#3	POWR#3	POWR#1	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	net093	B#2	POWR#3	POWR#1	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP3	net35#2	net43#6	net093	POWR#1	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP4	net35#2	S0#2	net097#4	POWR#1	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP2	net097#3	A#4	POWR#4	POWR#1	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP5	Y#2	net35#4	POWR#4	POWR#1	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	B#2	B#3	  126.2236
+Rg2	B#3	B#1	    2.9666
+Rg3	B#3	B#4	   51.0153
+Rg4	S0#2	S0#3	  224.2143
+Rg5	S0#3	S0#1	   54.1667
+Rg6	S0#1	S0#4	  115.0064
+Rg7	S0#4	S0#5	  142.9643
+Rg8	net43#5	net43#4	  103.5776
+Rg9	net43#4	net43#6	   94.1667
+Rg10	A#1	A#2	    2.9666
+Rg11	A#2	A#3	   55.1819
+Rg12	A#2	A#4	   92.0569
+Rg13	net35	net35#4	  116.2738
+Rg14	net35#4	net35#5	  156.0544
+Rf1	S0	S0#1	    0.1141
+Rf2	B	B#1	    0.2463
+Rf3	net43	net43#2	    0.6557
+Rf4	net43#2	net43#3	    0.6025
+Rf5	net43#2	net43#4	    0.6977
+Rf6	net093	net093#2	    1.8189
+Rf7	net35	net35#2	    0.6480
+Rf8	net35#2	net35#3	    1.6118
+Rf9	net097	net097#2	    0.4022
+Rf10	net097#2	net097#3	    1.1619
+Rf11	net097#3	net097#4	    0.3943
+Rf12	A	A#1	    0.1146
+Rf13	Y	Y#1	    0.6455
+Rf14	Y	Y#2	    0.4865
+Rf15	POWR#1	POWR#2	8.794E-02
+Rf16	POWR#2	POWR	    0.1854
+Rf17	POWR	POWR#1	9.801E-03
+Rf18	POWR#1	POWR#3	    0.6675
+Rf19	POWR#2	POWR#4	    0.5466
+Rf20	GRND#1	GRND#2	    0.3028
+Rf21	GRND#2	GRND#3	    0.1063
+Rf22	GRND#3	GRND	7.773E-02
+Rf23	GRND	GRND#4	    0.4518
+Rf24	GRND#2	GRND#3	6.928E-02
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.005E-16
+C2	B	GRND	cmodel	1.835E-16
+C3	S0	GRND	cmodel	1.245E-16
+C4	Y	GRND	cmodel	2.052E-16
+C5	net097	GRND	cmodel	2.374E-16
+C6	net43	GRND	cmodel	2.908E-16
+C7	net093	GRND	cmodel	8.686E-16
+C8	net35	GRND	cmodel	5.277E-16
+C9	net35#4	GRND	cmodel	2.555E-16
+C10	A#4	GRND	cmodel	1.492E-16
+C11	S0#2	GRND	cmodel	3.774E-16
+C12	net43#6	GRND	cmodel	1.571E-16
+C13	B#2	GRND	cmodel	2.030E-16
+C14	S0#3	GRND	cmodel	3.009E-16
+C15	net35#5	GRND	cmodel	2.881E-16
+C16	A#3	GRND	cmodel	9.502E-17
+C17	net43#5	GRND	cmodel	1.698E-16
+C18	S0#5	GRND	cmodel	2.619E-16
+C19	B#4	GRND	cmodel	1.077E-16
+C20	S0#4	GRND	cmodel	3.721E-16
+C21	A#1	GRND	cmodel	7.949E-17
+C22	net43#4	GRND	cmodel	7.181E-16
+C23	B#1	GRND	cmodel	2.533E-16
+C24	S0#1	GRND	cmodel	4.517E-16
+C25	POWR#1	GRND	cmodel	1.725E-15
+C26	Y#2	GRND	cmodel	2.478E-16
+C27	Y#1	GRND	cmodel	2.160E-16
+C28	POWR#4	GRND	cmodel	4.278E-16
+C29	net097#3	GRND	cmodel	4.955E-16
+C30	net097#2	GRND	cmodel	3.262E-16
+C31	net097#4	GRND	cmodel	2.541E-16
+C32	net35#2	GRND	cmodel	9.077E-16
+C33	net35#3	GRND	cmodel	6.348E-16
+C34	net093#2	GRND	cmodel	6.799E-16
+C35	POWR#3	GRND	cmodel	5.809E-16
+C36	net43#3	GRND	cmodel	3.423E-16
+C37	B#3	GRND	cmodel	3.111E-16
+C38	net43#2	GRND	cmodel	3.306E-16
+C39	A#2	GRND	cmodel	3.101E-16
+C40	POWR#2	GRND	cmodel	1.204E-16
+*
+*
+.ENDS MX2X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:32:07 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NAND2X1 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	net30	B#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	Y#2	A#4	net30	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP1	Y#3	B#4	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	Y#3	A#2	POWR#3	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#3	   83.7236
+Rg2	A#3	A#1	    3.7166
+Rg3	A#3	A#4	   80.5986
+Rg4	B#1	B#2	    3.5916
+Rg5	B#2	B#3	   93.5153
+Rg6	B#2	B#4	   70.8069
+Rf1	A	A#1	    0.1585
+Rf2	Y	Y#1	    0.1612
+Rf3	Y#1	Y#2	    0.5853
+Rf4	Y#1	Y#3	    0.8465
+Rf5	B	B#1	8.750E-02
+Rf6	POWR#1	POWR#2	    0.3812
+Rf7	POWR	POWR#2	1.652E-02
+Rf8	POWR#2	POWR#3	    0.3805
+Rf9	GRND#1	GRND#2	    0.2373
+Rf10	GRND#2	GRND	1.364E-02
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.364E-16
+C2	B	GRND	cmodel	9.300E-17
+C3	Y	GRND	cmodel	9.980E-17
+C4	net30	GRND	cmodel	2.373E-16
+C5	B#4	GRND	cmodel	1.123E-16
+C6	A#2	GRND	cmodel	1.335E-16
+C7	B#3	GRND	cmodel	1.518E-16
+C8	A#4	GRND	cmodel	1.436E-16
+C9	B#1	GRND	cmodel	9.253E-17
+C10	A#1	GRND	cmodel	2.008E-16
+C11	POWR#2	GRND	cmodel	6.381E-16
+C12	POWR#1	GRND	cmodel	2.457E-16
+C13	Y#3	GRND	cmodel	5.347E-16
+C14	POWR#3	GRND	cmodel	2.484E-16
+C15	Y#2	GRND	cmodel	2.102E-16
+C16	A#3	GRND	cmodel	2.394E-16
+C17	B#2	GRND	cmodel	3.401E-16
+C18	Y#1	GRND	cmodel	3.334E-16
+*
+*
+.ENDS NAND2X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:36:21 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NAND2X2 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	Y#1	A#5	net18	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MN0	net18	B#6	GRND#1	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MP0	Y#4	A#2	POWR#1	POWR#1	pmos	L=0.18U	W=2.02U
++ M=2	effW=2.02e-06
+MP1	Y#3	B#2	POWR#1	POWR#1	pmos	L=0.18U	W=2.02U
++ M=2	effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg9	A#1	A#5	   75.4167
+Rg7	A#2	A#1	   26.0925
+Rg4	B#5	B#6	   79.9736
+Rg5	B#5	B#1	    3.7166
+Rg3	B#2	B#5	   28.9828
+Rf11	GRND	GRND#1	    0.2219
+Rf12	GRND#1	GRND#2	9.302E-03
+Rf2	A#1	A	8.738E-02
+Rf1	B#1	B	    0.1549
+Rf8	POWR	POWR#1	3.365E-02
+Rf3	Y#1	Y	    0.7074
+Rf4	Y	Y#2	    0.3982
+Rf6	Y#2	Y#4	    0.3385
+Rf5	Y#2	Y#3	    0.8291
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	9.428E-17
+C2	B	GRND	cmodel	9.010E-17
+C3	Y	GRND	cmodel	1.326E-16
+C4	net18	GRND	cmodel	3.792E-16
+C5	A#2	GRND	cmodel	4.410E-16
+C6	B#2	GRND	cmodel	4.297E-16
+C7	A#5	GRND	cmodel	1.392E-16
+C8	B#6	GRND	cmodel	1.515E-16
+C9	A#1	GRND	cmodel	3.676E-16
+C10	B#1	GRND	cmodel	1.938E-16
+C11	POWR#1	GRND	cmodel	1.731E-15
+C12	Y#4	GRND	cmodel	3.882E-16
+C13	Y#1	GRND	cmodel	3.612E-16
+C14	Y#3	GRND	cmodel	5.604E-16
+C15	B#5	GRND	cmodel	1.731E-16
+C16	Y#2	GRND	cmodel	2.821E-16
+*
+*
+.ENDS NAND2X2
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:39:54 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NAND3X1 A B C GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#1	A#3	net11	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MN1	net11	B#3	net7	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MN2	net7	C#4	GRND#1	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MP2	Y#4	A#1	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	Y#3	B#2	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	Y#3	C#2	POWR#3	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	C#2	C#3	   57.8903
+Rg2	C#3	C#1	    2.9666
+Rg3	C#3	C#4	  105.8069
+Rg4	B#2	B#1	  108.7500
+Rg5	B#1	B#3	   47.5000
+Rg6	A#1	A#2	   81.6667
+Rg7	A#2	A#3	   74.5833
+Rf1	C#1	C	    0.1224
+Rf2	B	B#1	    0.4465
+Rf3	A	A#2	    0.1002
+Rf4	Y#1	Y#2	    1.1173
+Rf5	Y#2	Y	    0.2129
+Rf6	Y	Y#3	    0.6075
+Rf7	Y#2	Y#4	    0.3385
+Rf8	POWR#1	POWR#2	    0.4395
+Rf9	POWR	POWR#2	1.845E-02
+Rf10	POWR#2	POWR#3	    0.4453
+Rf11	GRND	GRND#1	    0.2379
+Rf12	GRND#1	GRND#2	9.302E-03
+*
+*       CAPACITOR CARDS
+*
+*
+C1	B	GRND	cmodel	1.512E-16
+C2	C	GRND	cmodel	7.551E-17
+C3	Y	GRND	cmodel	1.781E-16
+C4	net11	GRND	cmodel	3.658E-16
+C5	net7	GRND	cmodel	3.950E-16
+C6	A#1	GRND	cmodel	1.345E-16
+C7	B#2	GRND	cmodel	1.741E-16
+C8	C#2	GRND	cmodel	1.202E-16
+C9	A#3	GRND	cmodel	1.375E-16
+C10	B#3	GRND	cmodel	1.262E-16
+C11	C#4	GRND	cmodel	1.929E-16
+C12	A#2	GRND	cmodel	5.386E-16
+C13	B#1	GRND	cmodel	4.729E-16
+C14	C#1	GRND	cmodel	1.867E-16
+C15	POWR#2	GRND	cmodel	8.846E-16
+C16	Y#4	GRND	cmodel	2.151E-16
+C17	Y#1	GRND	cmodel	4.556E-16
+C18	POWR#1	GRND	cmodel	4.361E-16
+C19	Y#3	GRND	cmodel	5.022E-16
+C20	POWR#3	GRND	cmodel	2.564E-16
+C21	C#3	GRND	cmodel	2.389E-16
+C22	Y#2	GRND	cmodel	2.554E-16
+*
+*
+.ENDS NAND3X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:47:07 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NAND4X1 A B C D GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN3	Y#2	A#3	net28	GRND#2	nmos	L=0.18U	W=2U
++ effW=2e-06
+MN2	net28	B#3	net32	GRND#2	nmos	L=0.18U	W=2U
++ effW=2e-06
+MN1	net32	C#3	net36	GRND#2	nmos	L=0.18U	W=2U
++ effW=2e-06
+MN0	net36	D#4	GRND#1	GRND#2	nmos	L=0.18U	W=2U
++ effW=2e-06
+MP0	Y#3	A#2	POWR#1	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	Y#3	B#2	POWR#5	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP2	Y#4	C#2	POWR#5	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP3	Y#4	D#2	POWR#3	POWR#4	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	D#2	D#3	   57.8903
+Rg2	D#3	D#1	    2.9666
+Rg3	D#3	D#4	  116.6403
+Rg4	C#2	C#1	  113.3333
+Rg5	C#1	C#3	   53.7500
+Rg6	B#2	B#1	   54.1667
+Rg7	B#1	B#3	  112.9167
+Rg8	A#2	A#1	  113.3333
+Rg9	A#1	A#3	   53.7500
+Rf1	D#1	D	    0.1709
+Rf2	C	C#1	9.005E-02
+Rf3	B	B#1	7.640E-02
+Rf4	A#1	A	    0.1309
+Rf5	Y	Y#1	4.838E-02
+Rf6	Y#1	Y#2	    0.5626
+Rf7	Y#1	Y#3	    0.4517
+Rf8	Y#3	Y#4	    0.3120
+Rf9	POWR#1	POWR#2	    0.3645
+Rf10	POWR#2	POWR	1.924E-02
+Rf11	POWR	POWR#3	    0.2844
+Rf12	POWR#3	POWR#4	8.908E-03
+Rf13	POWR#2	POWR#5	    0.2253
+Rf14	GRND	GRND#1	    0.2834
+Rf15	GRND#1	GRND#2	8.696E-03
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	7.475E-17
+C2	B	GRND	cmodel	6.061E-17
+C3	C	GRND	cmodel	6.152E-17
+C4	D	GRND	cmodel	6.592E-17
+C5	POWR	GRND	cmodel	1.046E-16
+C6	Y	GRND	cmodel	2.916E-16
+C7	net28	GRND	cmodel	4.499E-16
+C8	net36	GRND	cmodel	4.393E-16
+C9	net32	GRND	cmodel	4.223E-16
+C10	A#2	GRND	cmodel	1.665E-16
+C11	B#2	GRND	cmodel	1.333E-16
+C12	C#2	GRND	cmodel	1.997E-16
+C13	D#2	GRND	cmodel	1.324E-16
+C14	A#3	GRND	cmodel	1.312E-16
+C15	B#3	GRND	cmodel	2.021E-16
+C16	C#3	GRND	cmodel	1.383E-16
+C17	D#4	GRND	cmodel	2.012E-16
+C18	A#1	GRND	cmodel	4.953E-16
+C19	B#1	GRND	cmodel	4.836E-16
+C20	C#1	GRND	cmodel	4.357E-16
+C21	D#1	GRND	cmodel	2.072E-16
+C22	POWR#4	GRND	cmodel	1.185E-15
+C23	POWR#1	GRND	cmodel	2.293E-16
+C24	Y#2	GRND	cmodel	3.918E-16
+C25	Y#3	GRND	cmodel	5.531E-16
+C26	POWR#5	GRND	cmodel	2.657E-16
+C27	Y#4	GRND	cmodel	4.663E-16
+C28	POWR#3	GRND	cmodel	2.965E-22
+C29	D#3	GRND	cmodel	2.460E-16
+C30	POWR#2	GRND	cmodel	8.773E-17
+*
+*
+.ENDS NAND4X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:50:32 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NOR2X1 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	Y#2	B#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	Y#2	A#4	GRND#3	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP1	Y#1	B#4	net25	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP0	net25	A#2	POWR#1	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#3	   94.9736
+Rg2	A#3	A#1	    4.2166
+Rg3	A#3	A#4	   53.0986
+Rg4	B#1	B#2	    5.2166
+Rg5	B#2	B#3	   39.3486
+Rg6	B#2	B#4	  108.7236
+Rf1	A#1	A	    0.1615
+Rf2	Y#1	Y	    0.8267
+Rf3	Y	Y#2	    0.4213
+Rf4	B#1	B	7.096E-02
+Rf5	POWR#1	POWR#2	    0.4261
+Rf6	POWR#2	POWR	1.364E-02
+Rf7	GRND#1	GRND#2	    0.2791
+Rf8	GRND#2	GRND	1.009E-02
+Rf9	GRND#2	GRND#3	    0.2893
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.213E-16
+C2	B	GRND	cmodel	1.302E-16
+C3	POWR	GRND	cmodel	1.519E-16
+C4	Y	GRND	cmodel	3.324E-16
+C5	net25	GRND	cmodel	5.648E-16
+C6	B#4	GRND	cmodel	1.599E-16
+C7	A#2	GRND	cmodel	1.549E-16
+C8	B#3	GRND	cmodel	7.682E-17
+C9	A#4	GRND	cmodel	1.009E-16
+C10	B#1	GRND	cmodel	7.607E-17
+C11	A#1	GRND	cmodel	1.932E-16
+C12	POWR#2	GRND	cmodel	3.001E-16
+C13	Y#1	GRND	cmodel	3.943E-16
+C14	Y#2	GRND	cmodel	2.303E-16
+C15	POWR#1	GRND	cmodel	2.677E-16
+C16	A#3	GRND	cmodel	1.949E-16
+C17	B#2	GRND	cmodel	3.365E-16
+*
+*
+.ENDS NOR2X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:54:12 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NOR3X1 A B C GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	Y#3	A#2	GRND#5	GRND#4	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	Y#3	B#6	GRND#1	GRND#4	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	Y#4	C#5	GRND#1	GRND#4	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP1	net22#3	B#2	net26	POWR#1	pmos	L=0.18U	W=2.75U
++ M=2	effW=2.75e-06
+MP0	net26	A#4	POWR#2	POWR#1	pmos	L=0.18U	W=2.75U
++ M=2	effW=2.75e-06
+MP2	Y#1	C#2	net22	POWR#1	pmos	L=0.18U	W=2.75U
++ M=2	effW=2.75e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#3	   67.1812
+Rg2	A#3	A#1	    3.4465
+Rg3	A#3	A#4	   67.9383
+Rg9	B#5	B#6	   64.3486
+Rg10	B#5	B#1	    2.9666
+Rg8	B#2	B#5	   21.6323
+Rg13	C#4	C#5	   89.2645
+Rg15	C#4	C#1	    2.8215
+Rg12	C#2	C#4	   69.9627
+Rf12	GRND#1	GRND#2	    0.1978
+Rf13	GRND#2	GRND#3	    0.1423
+Rf14	GRND#3	GRND#4	8.980E-02
+Rf15	GRND#2	GRND	4.155E-02
+Rf16	GRND	GRND#4	    0.2014
+Rf17	GRND#3	GRND#5	    0.1978
+Rf1	A	A#1	3.737E-02
+Rf2	B	B#1	    0.4832
+Rf9	C	C#1	    0.1651
+Rf18	POWR#1	POWR	7.139E-02
+Rf19	POWR	POWR#1	    0.2421
+Rf20	POWR#1	POWR#2	    0.5268
+Rf5	Y#1	Y	    1.2178
+Rf6	Y	Y#2	    0.2884
+Rf8	Y#2	Y#4	    0.2236
+Rf7	Y#2	Y#3	    0.6780
+Rf11	net22	net22#3	    1.5426
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.400E-17
+C2	B	GRND	cmodel	2.324E-16
+C3	C	GRND	cmodel	1.214E-16
+C4	POWR	GRND	cmodel	1.746E-16
+C5	Y	GRND	cmodel	3.070E-16
+C6	net26	GRND	cmodel	1.963E-15
+C7	net22	GRND	cmodel	1.191E-15
+C8	C#2	GRND	cmodel	5.467E-16
+C9	B#2	GRND	cmodel	5.069E-16
+C10	C#5	GRND	cmodel	1.959E-16
+C11	B#6	GRND	cmodel	1.228E-16
+C12	A#2	GRND	cmodel	1.489E-16
+C13	C#1	GRND	cmodel	1.875E-16
+C14	B#1	GRND	cmodel	2.246E-16
+C15	A#1	GRND	cmodel	1.600E-16
+C16	POWR#1	GRND	cmodel	1.055E-15
+C17	Y#1	GRND	cmodel	6.735E-16
+C18	Y#4	GRND	cmodel	1.366E-16
+C19	net22#3	GRND	cmodel	7.632E-16
+C20	Y#3	GRND	cmodel	3.614E-16
+C21	POWR#2	GRND	cmodel	5.788E-16
+C22	A#3	GRND	cmodel	2.155E-16
+C23	A#4	GRND	cmodel	5.845E-16
+C24	B#5	GRND	cmodel	1.394E-16
+C25	Y#2	GRND	cmodel	2.188E-16
+C26	C#4	GRND	cmodel	2.469E-16
+*
+*
+.ENDS NOR3X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 14:58:34 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT NOR4X1 A B C D GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN11	net049#4	A#6	GRND#6	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN10	net049#4	B#5	GRND#9	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN5	net049#6	C#6	GRND#8	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN4	net049#6	D#5	GRND#7	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN9	net048#3	net049#9	GRND#3	GRND#1	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN12	Y#1	net048#7	GRND#3	GRND#1	nmos	L=0.18U	W=1.28U
++ effW=1.28e-06
+MP6	net048#4	net049#7	POWR#1	POWR#2	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP10	Y#2	net048#5	POWR#1	POWR#2	pmos	L=0.18U	W=3.02U
++ effW=3.02e-06
+MP8	net087	C#2	net083	POWR#2	pmos	L=0.18U	W=2.4U	M=2
++ effW=2.4e-06
+MP9	net049#5	D#2	net087	POWR#2	pmos	L=0.18U	W=2.4U
++ M=2	effW=2.4e-06
+MP1	net083#2	B#2	net35	POWR#2	pmos	L=0.18U	W=2.4U
++ M=2	effW=2.4e-06
+MP0	net35	A#2	POWR#3	POWR#2	pmos	L=0.18U	W=2.4U	M=2
++ effW=2.4e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg24	net048#5	net048#6	  126.2236
+Rg25	net048#6	net048	    2.9666
+Rg26	net048#6	net048#7	   42.4736
+Rg4	A#5	A#6	   42.6819
+Rg5	A#5	A#1	    2.9666
+Rg3	A#2	A#5	   60.2328
+Rg8	B#4	B#5	   70.1819
+Rg10	B#4	B#1	    2.9666
+Rg7	B#2	B#4	   32.7328
+Rg14	C#5	C#6	   70.1819
+Rg15	C#5	C#1	    2.9666
+Rg13	C#2	C#5	   32.7328
+Rg18	D#4	D#5	   42.6819
+Rg20	D#4	D#1	    4.2166
+Rg17	D#2	D#4	   60.2328
+Rg21	net049#7	net049#8	   86.0925
+Rg23	net049#8	net049#9	  104.2175
+Rg22	net049#8	net049	   31.6587
+Rf25	GRND#1	GRND#2	6.906E-02
+Rf26	GRND#2	GRND#3	    0.3655
+Rf27	GRND#2	GRND#4	9.042E-02
+Rf28	GRND#4	GRND	    0.1303
+Rf29	GRND	GRND#1	    0.1523
+Rf30	GRND#1	GRND#5	    0.1234
+Rf31	GRND#5	GRND#6	    0.3417
+Rf32	GRND#4	GRND#7	    0.1978
+Rf33	GRND	GRND#8	    0.2912
+Rf34	GRND#5	GRND#9	    0.1978
+Rf19	Y	Y#1	    0.6899
+Rf20	Y	Y#2	    0.5474
+Rf16	net048	net048#2	    0.3310
+Rf17	net048#2	net048#3	    0.4302
+Rf18	net048#2	net048#4	    0.9865
+Rf1	A#1	A	    0.1999
+Rf2	B	B#1	    0.1601
+Rf6	C#1	C	    0.1749
+Rf7	D	D#1	    0.1601
+Rf22	POWR#2	POWR	    0.2826
+Rf23	POWR	POWR#2	    0.1502
+Rf21	POWR#1	POWR#2	    0.4461
+Rf24	POWR#2	POWR#3	    0.4829
+Rf11	net049	net049#2	    0.4857
+Rf14	net049#2	net049#5	    0.4327
+Rf15	net049#3	net049#6	    0.2236
+Rf13	net049#3	net049#4	    1.6548
+Rf12	net049#2	net049#3	    0.7672
+Rf5	net083	net083#2	    1.7151
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	9.485E-17
+C2	B	GRND	cmodel	9.907E-17
+C3	C	GRND	cmodel	1.041E-16
+C4	D	GRND	cmodel	9.080E-17
+C5	POWR	GRND	cmodel	2.571E-16
+C6	Y	GRND	cmodel	1.668E-16
+C7	net087	GRND	cmodel	1.815E-15
+C8	net049	GRND	cmodel	2.911E-16
+C9	net048	GRND	cmodel	2.044E-16
+C10	net35	GRND	cmodel	1.755E-15
+C11	net083	GRND	cmodel	7.510E-16
+C12	net048#5	GRND	cmodel	1.992E-16
+C13	net049#7	GRND	cmodel	1.605E-16
+C14	D#2	GRND	cmodel	5.203E-16
+C15	C#2	GRND	cmodel	4.960E-16
+C16	B#2	GRND	cmodel	4.718E-16
+C17	A#2	GRND	cmodel	5.240E-16
+C18	net048#7	GRND	cmodel	1.142E-16
+C19	net049#9	GRND	cmodel	1.801E-16
+C20	D#5	GRND	cmodel	8.601E-17
+C21	C#6	GRND	cmodel	1.354E-16
+C22	B#5	GRND	cmodel	1.272E-16
+C23	A#6	GRND	cmodel	8.730E-17
+C24	D#1	GRND	cmodel	2.085E-16
+C25	C#1	GRND	cmodel	1.820E-16
+C26	B#1	GRND	cmodel	1.553E-16
+C27	A#1	GRND	cmodel	1.446E-16
+C28	POWR#2	GRND	cmodel	1.901E-15
+C29	Y#2	GRND	cmodel	3.512E-16
+C30	Y#1	GRND	cmodel	2.731E-16
+C31	POWR#1	GRND	cmodel	6.278E-16
+C32	net048#4	GRND	cmodel	4.062E-16
+C33	net048#3	GRND	cmodel	1.959E-16
+C34	net049#5	GRND	cmodel	4.799E-16
+C35	net049#6	GRND	cmodel	2.101E-16
+C36	net083#2	GRND	cmodel	7.448E-16
+C37	net049#4	GRND	cmodel	5.549E-16
+C38	POWR#3	GRND	cmodel	5.181E-16
+C39	A#5	GRND	cmodel	1.683E-16
+C40	B#4	GRND	cmodel	1.643E-16
+C41	C#5	GRND	cmodel	1.785E-16
+C42	D#4	GRND	cmodel	1.593E-16
+C43	net049#2	GRND	cmodel	2.723E-16
+C44	net049#3	GRND	cmodel	5.000E-16
+C45	net049#8	GRND	cmodel	3.130E-16
+C46	net048#2	GRND	cmodel	2.349E-16
+C47	net048#6	GRND	cmodel	2.189E-16
+*
+*
+.ENDS NOR4X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:01:56 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT OAI21X1 A0 A1 B0 GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN1	Y#3	B0#3	net059	GRND#2	nmos	L=0.18U	W=0.94U
++ effW=9.4e-07
+MN0	net059	A0#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.94U
++ effW=9.4e-07
+MN2	net059#2	A1#4	GRND#1	GRND#2	nmos	L=0.18U	W=0.94U
++ effW=9.4e-07
+MP2	Y#2	B0#4	POWR#1	POWR#3	pmos	L=0.18U	W=3.3U
++ effW=3.3e-06
+MP0	Y#2	A0#2	net26	POWR#3	pmos	L=0.18U	W=3.3U
++ effW=3.3e-06
+MP1	net26	A1#2	POWR#2	POWR#3	pmos	L=0.18U	W=3.3U
++ effW=3.3e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A1#2	A1#3	  108.0607
+Rg2	A1#3	A1#1	    3.9465
+Rg3	A1#3	A1#4	   81.5324
+Rg4	A0#2	A0#1	  121.2859
+Rg5	A0#1	A0#3	   61.6667
+Rg6	B0#1	B0#2	    4.0916
+Rg7	B0#2	B0#3	  107.9379
+Rg8	B0#2	B0#4	   84.5569
+Rf1	A1	A1#1	    0.1025
+Rf2	A0	A0#1	5.768E-02
+Rf3	net059	net059#2	    0.8834
+Rf4	Y	Y#1	8.033E-02
+Rf5	Y#1	Y#2	    0.9309
+Rf6	Y#1	Y#3	    0.3226
+Rf7	B0	B0#1	    0.1759
+Rf8	GRND#1	GRND	    0.3017
+Rf9	GRND	GRND#2	    0.1436
+Rf10	POWR#1	POWR	    0.6199
+Rf11	POWR	POWR#2	    0.3090
+Rf12	POWR#2	POWR#3	6.780E-03
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	GRND	cmodel	6.780E-17
+C2	A1	GRND	cmodel	9.395E-17
+C3	B0	GRND	cmodel	7.495E-17
+C4	POWR	GRND	cmodel	2.124E-16
+C5	Y	GRND	cmodel	1.063E-16
+C6	net26	GRND	cmodel	6.666E-16
+C7	net059	GRND	cmodel	4.262E-16
+C8	B0#4	GRND	cmodel	1.608E-16
+C9	A0#2	GRND	cmodel	1.889E-16
+C10	A1#2	GRND	cmodel	1.819E-16
+C11	B0#3	GRND	cmodel	1.870E-16
+C12	A0#3	GRND	cmodel	1.367E-16
+C13	A1#4	GRND	cmodel	1.715E-16
+C14	B0#1	GRND	cmodel	1.706E-16
+C15	A0#1	GRND	cmodel	4.833E-16
+C16	A1#1	GRND	cmodel	2.107E-16
+C17	POWR#3	GRND	cmodel	7.015E-16
+C18	POWR#1	GRND	cmodel	3.808E-16
+C19	Y#3	GRND	cmodel	1.423E-16
+C20	Y#2	GRND	cmodel	7.129E-16
+C21	net059#2	GRND	cmodel	3.185E-16
+C22	A1#3	GRND	cmodel	2.864E-16
+C23	Y#1	GRND	cmodel	1.925E-16
+C24	B0#2	GRND	cmodel	3.630E-16
+*
+*
+.ENDS OAI21X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:05:00 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT OAI22X1 A0 A1 B0 B1 GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN4	net40#3	B1#4	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN3	net40#2	B0#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN6	net081#3	A0#3	net40#2	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN8	net081#3	A1#3	net40	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN9	net073#3	net081#6	GRND#3	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN10	Y#1	net073#7	GRND#3	GRND#2	nmos	L=0.18U	W=1.3U
++ effW=1.3e-06
+MP6	net061	B1#2	POWR#4	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP8	net081#2	B0#2	net061	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	net081#2	A0#2	net39	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	net39	A1#4	POWR#3	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP9	net073#4	net081#4	POWR#1	POWR#2	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP10	Y#2	net073#5	POWR#1	POWR#2	pmos	L=0.18U	W=3.03U
++ effW=3.03e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	B1#2	B1#3	   57.8903
+Rg2	B1#3	B1#1	    2.9666
+Rg3	B1#3	B1#4	   98.5153
+Rg4	B0#2	B0#1	   98.3333
+Rg5	B0#1	B0#3	   50.6250
+Rg6	A0#2	A0#1	   71.2500
+Rg7	A0#1	A0#3	   77.7083
+Rg8	A1#1	A1#2	    2.9666
+Rg9	A1#2	A1#3	   98.5153
+Rg10	A1#2	A1#4	   57.8903
+Rg11	net081#4	net081#5	  136.0925
+Rg12	net081#5	net081	   29.5753
+Rg13	net081#5	net081#6	   54.2175
+Rg14	net073#5	net073#6	   78.9319
+Rg15	net073#6	net073	    3.9666
+Rg16	net073#6	net073#7	   72.0569
+Rf1	B1#1	B1	2.284E-02
+Rf2	B0	B0#1	9.774E-02
+Rf3	A0#1	A0	    0.1607
+Rf4	A1	A1#1	    0.1538
+Rf5	net40	net40#2	    0.8674
+Rf6	net40#2	net40#3	    0.8674
+Rf7	net081	net081#2	    1.3569
+Rf8	net081	net081#3	    0.7378
+Rf9	net073	net073#2	    0.2877
+Rf10	net073#2	net073#3	    0.6736
+Rf11	net073#2	net073#4	    0.7398
+Rf12	Y	Y#1	    0.3219
+Rf13	Y	Y#2	    0.7582
+Rf14	GRND#1	GRND#2	    0.3586
+Rf15	GRND#2	GRND	    0.2607
+Rf16	GRND	GRND#2	    0.1739
+Rf17	GRND#2	GRND#3	    0.1980
+Rf18	POWR#1	POWR	    0.5204
+Rf19	POWR	POWR#2	    0.1278
+Rf20	POWR#2	POWR#3	    0.3247
+Rf21	POWR#2	POWR#4	    0.5208
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	GRND	cmodel	1.813E-16
+C2	A1	GRND	cmodel	1.034E-16
+C3	B0	GRND	cmodel	8.626E-17
+C4	Y	GRND	cmodel	1.592E-16
+C5	net40	GRND	cmodel	3.859E-16
+C6	net081	GRND	cmodel	6.837E-16
+C7	net073	GRND	cmodel	2.070E-16
+C8	net061	GRND	cmodel	4.023E-16
+C9	net39	GRND	cmodel	2.755E-16
+C10	net073#5	GRND	cmodel	1.831E-16
+C11	net081#4	GRND	cmodel	2.106E-16
+C12	A1#4	GRND	cmodel	1.074E-16
+C13	A0#2	GRND	cmodel	1.422E-16
+C14	B0#2	GRND	cmodel	1.589E-16
+C15	B1#2	GRND	cmodel	1.238E-16
+C16	net073#7	GRND	cmodel	1.279E-16
+C17	net081#6	GRND	cmodel	1.138E-16
+C18	A1#3	GRND	cmodel	1.652E-16
+C19	A0#3	GRND	cmodel	1.398E-16
+C20	B0#3	GRND	cmodel	9.280E-17
+C21	B1#4	GRND	cmodel	1.736E-16
+C22	A1#1	GRND	cmodel	1.152E-16
+C23	A0#1	GRND	cmodel	4.267E-16
+C24	B0#1	GRND	cmodel	4.944E-16
+C25	B1#1	GRND	cmodel	1.730E-16
+C26	POWR#2	GRND	cmodel	1.288E-15
+C27	Y#2	GRND	cmodel	3.918E-16
+C28	Y#1	GRND	cmodel	1.648E-16
+C29	POWR#1	GRND	cmodel	7.542E-16
+C30	net073#4	GRND	cmodel	4.247E-16
+C31	net073#3	GRND	cmodel	2.645E-16
+C32	POWR#3	GRND	cmodel	2.094E-16
+C33	net081#3	GRND	cmodel	3.515E-16
+C34	net081#2	GRND	cmodel	6.465E-16
+C35	net40#2	GRND	cmodel	5.391E-16
+C36	POWR#4	GRND	cmodel	2.376E-16
+C37	net40#3	GRND	cmodel	2.820E-16
+C38	B1#3	GRND	cmodel	2.411E-16
+C39	A1#2	GRND	cmodel	3.144E-16
+C40	net081#5	GRND	cmodel	3.010E-16
+C41	net073#2	GRND	cmodel	2.978E-16
+C42	net073#6	GRND	cmodel	1.766E-16
+*
+*
+.ENDS OAI22X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:07:56 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT OAI33X1 A0 A1 A2 B0 B1 B2 GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN9	net50#3	B2#3	GRND#4	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN10	net50#3	B1#4	GRND#5	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN11	net50#2	B0#4	GRND#5	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN12	net0113#6	A0#1	net50#2	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN13	net0113#6	A1#4	net50	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN14	net0113#5	A2#1	net50	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN15	net097#3	net0113#9	GRND#1	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN16	Y#2	net097#7	GRND#1	GRND#2	nmos	L=0.18U	W=1.3U
++ effW=1.3e-06
+MP14	net075	B2#2	POWR#5	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP13	net079	B1#2	net075	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP12	net0113#4	B0#2	net079	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP7	net0113#4	A0#3	net091	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP10	net091	A1#2	net087	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP11	net087	A2#3	POWR#4	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP15	net097#4	net0113#7	POWR#1	POWR#2	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP16	Y#3	net097#5	POWR#1	POWR#2	pmos	L=0.18U	W=3.03U
++ effW=3.03e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	B2#2	B2#1	  162.1309
+Rg2	B2#1	B2#3	   67.7443
+Rg3	B1#2	B1#3	  100.0212
+Rg4	B1#3	B1#1	    2.9666
+Rg5	B1#3	B1#4	   68.9795
+Rg6	B0#2	B0#3	   94.1403
+Rg7	B0#3	B0#1	    4.7166
+Rg8	B0#3	B0#4	   63.0986
+Rg9	A0#1	A0#2	   66.0893
+Rg10	A0#2	A0#3	   98.7500
+Rg11	A1#2	A1#3	  120.6196
+Rg12	A1#3	A1#4	   50.4907
+Rg13	A1#3	A1#1	    3.4465
+Rg14	A2#1	A2#2	   81.7883
+Rg15	A2#2	A2#3	   99.3106
+Rg16	A2#2	A2#4	    2.5715
+Rg17	net0113#7	net0113#8	  125.2592
+Rg18	net0113#8	net0113	   37.9087
+Rg19	net0113#8	net0113#9	   29.2175
+Rg20	net097#5	net097#6	  109.2883
+Rg21	net097#6	net097	    2.5715
+Rg22	net097#6	net097#7	   48.8940
+Rf1	B2	B2#1	8.204E-02
+Rf2	B1#1	B1	5.912E-02
+Rf3	B0	B0#1	5.005E-02
+Rf4	A0	A0#2	    0.1009
+Rf5	A1	A1#1	    0.1100
+Rf6	net50	net50#2	    0.9440
+Rf7	net50#2	net50#3	    0.8947
+Rf8	A2	A2#4	7.839E-02
+Rf9	net0113	net0113#2	    0.1823
+Rf10	net0113#2	net0113#3	    0.4567
+Rf11	net0113#3	net0113#4	    1.2924
+Rf12	net0113#2	net0113#5	    0.1923
+Rf13	net0113#3	net0113#6	    0.2268
+Rf14	net097	net097#2	    0.2877
+Rf15	net097#2	net097#3	    0.2569
+Rf16	net097#2	net097#4	    0.8698
+Rf17	Y	Y#1	5.008E-02
+Rf18	Y#1	Y#2	    0.5509
+Rf19	Y#1	Y#3	    0.5472
+Rf20	GRND#1	GRND#2	    0.1503
+Rf21	GRND#2	GRND	    0.3082
+Rf22	GRND	GRND#3	    0.2230
+Rf23	GRND#3	GRND#4	    0.3052
+Rf24	GRND#4	GRND#2	8.877E-03
+Rf25	GRND#3	GRND#5	    0.3478
+Rf26	POWR#1	POWR#2	    0.2713
+Rf27	POWR#2	POWR#3	    0.1159
+Rf28	POWR#3	POWR#4	    0.4416
+Rf29	POWR#3	POWR	6.368E-02
+Rf30	POWR	POWR#5	    0.5679
+Rf31	POWR#5	POWR#2	7.407E-03
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	GRND	cmodel	6.397E-17
+C2	A1	GRND	cmodel	9.234E-17
+C3	A2	GRND	cmodel	1.023E-16
+C4	B0	GRND	cmodel	5.583E-17
+C5	B1	GRND	cmodel	7.703E-17
+C6	B2	GRND	cmodel	7.050E-17
+C7	POWR	GRND	cmodel	2.902E-16
+C8	Y	GRND	cmodel	1.895E-16
+C9	net0113	GRND	cmodel	3.071E-16
+C10	net087	GRND	cmodel	5.828E-16
+C11	net097	GRND	cmodel	2.040E-16
+C12	net091	GRND	cmodel	6.026E-16
+C13	net079	GRND	cmodel	5.807E-16
+C14	net075	GRND	cmodel	5.845E-16
+C15	net50	GRND	cmodel	4.392E-16
+C16	net097#5	GRND	cmodel	1.770E-16
+C17	net0113#7	GRND	cmodel	1.794E-16
+C18	A2#3	GRND	cmodel	1.784E-16
+C19	A1#2	GRND	cmodel	1.781E-16
+C20	A0#3	GRND	cmodel	1.670E-16
+C21	B0#2	GRND	cmodel	1.653E-16
+C22	B1#2	GRND	cmodel	1.594E-16
+C23	B2#2	GRND	cmodel	2.817E-16
+C24	net097#7	GRND	cmodel	1.030E-16
+C25	net0113#9	GRND	cmodel	7.382E-17
+C26	A2#1	GRND	cmodel	1.904E-16
+C27	A1#4	GRND	cmodel	1.008E-16
+C28	A0#1	GRND	cmodel	1.382E-16
+C29	B0#4	GRND	cmodel	1.074E-16
+C30	B1#4	GRND	cmodel	1.373E-16
+C31	B2#3	GRND	cmodel	1.561E-16
+C32	A2#4	GRND	cmodel	2.042E-16
+C33	A1#1	GRND	cmodel	2.684E-16
+C34	A0#2	GRND	cmodel	5.532E-16
+C35	B0#1	GRND	cmodel	2.407E-16
+C36	B1#1	GRND	cmodel	2.178E-16
+C37	B2#1	GRND	cmodel	5.120E-16
+C38	POWR#2	GRND	cmodel	1.775E-15
+C39	Y#3	GRND	cmodel	3.479E-16
+C40	Y#2	GRND	cmodel	2.152E-16
+C41	POWR#1	GRND	cmodel	6.492E-16
+C42	net097#4	GRND	cmodel	3.500E-16
+C43	net097#3	GRND	cmodel	1.525E-16
+C44	net0113#5	GRND	cmodel	1.298E-16
+C45	POWR#4	GRND	cmodel	3.406E-16
+C46	net0113#6	GRND	cmodel	2.035E-16
+C47	net50#2	GRND	cmodel	6.232E-16
+C48	net0113#4	GRND	cmodel	7.956E-16
+C49	net50#3	GRND	cmodel	3.548E-16
+C50	B1#3	GRND	cmodel	3.033E-16
+C51	B0#3	GRND	cmodel	2.437E-16
+C52	A1#3	GRND	cmodel	3.000E-16
+C53	A2#2	GRND	cmodel	2.710E-16
+C54	net0113#2	GRND	cmodel	1.698E-16
+C55	net0113#3	GRND	cmodel	4.585E-16
+C56	net0113#8	GRND	cmodel	2.992E-16
+C57	net097#2	GRND	cmodel	1.965E-16
+C58	net097#6	GRND	cmodel	2.616E-16
+C59	POWR#3	GRND	cmodel	1.039E-17
+*
+*
+.ENDS OAI33X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:11:23 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT OR2X1 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	Y#3	net26#6	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	net26#4	A#3	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	net26#4	B#4	GRND#3	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP2	Y#2	net26#5	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	net17	A#4	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	net26#3	B#2	net17	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	B#2	B#3	  130.8069
+Rg2	B#3	B#1	    3.9666
+Rg3	B#3	B#4	   33.5153
+Rg4	A#1	A#2	    4.3416
+Rg5	A#2	A#3	   85.5986
+Rg6	A#2	A#4	   78.7236
+Rg7	net26#5	net26	  160.0836
+Rg8	net26	net26#6	   29.7917
+Rf1	B#1	B	    0.1083
+Rf2	A#1	A	    0.2647
+Rf3	net26	net26#2	    0.1974
+Rf4	net26#2	net26#3	    1.2312
+Rf5	net26#2	net26#4	    0.2363
+Rf6	Y	Y#1	5.508E-02
+Rf7	Y#1	Y#2	    0.2093
+Rf8	Y#1	Y#3	    0.8632
+Rf9	POWR#1	POWR#2	    0.3826
+Rf10	POWR#2	POWR	1.136E-02
+Rf11	GRND#1	GRND#2	    0.2898
+Rf12	GRND#2	GRND	1.299E-02
+Rf13	GRND#2	GRND#3	    0.2946
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	2.771E-16
+C2	B	GRND	cmodel	1.292E-16
+C3	POWR	GRND	cmodel	1.799E-16
+C4	Y	GRND	cmodel	9.489E-17
+C5	net17	GRND	cmodel	4.345E-16
+C6	net26	GRND	cmodel	5.467E-16
+C7	net26#5	GRND	cmodel	2.660E-16
+C8	A#4	GRND	cmodel	1.257E-16
+C9	B#2	GRND	cmodel	1.960E-16
+C10	net26#6	GRND	cmodel	8.088E-17
+C11	A#3	GRND	cmodel	1.602E-16
+C12	B#4	GRND	cmodel	7.910E-17
+C13	A#1	GRND	cmodel	9.806E-17
+C14	B#1	GRND	cmodel	1.985E-16
+C15	POWR#2	GRND	cmodel	7.821E-16
+C16	Y#2	GRND	cmodel	2.548E-16
+C17	Y#3	GRND	cmodel	2.899E-16
+C18	POWR#1	GRND	cmodel	4.099E-16
+C19	net26#4	GRND	cmodel	1.899E-16
+C20	net26#3	GRND	cmodel	4.292E-16
+C21	B#3	GRND	cmodel	2.620E-16
+C22	A#2	GRND	cmodel	3.713E-16
+C23	net26#2	GRND	cmodel	3.786E-16
+C24	Y#1	GRND	cmodel	1.966E-16
+*
+*
+.ENDS OR2X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:16:17 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT OR4X1 A B C D GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	net32#4	A#4	GRND#5	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	net32#4	B#3	GRND#8	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN2	net32#6	C#1	GRND#7	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN3	net32#6	D#4	GRND#6	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN4	Y#1	net32#9	GRND#1	GRND#2	nmos	L=0.18U	W=1U
++ effW=1e-06
+MP2	net23	B#2	net19	POWR#2	pmos	L=0.18U	W=4.4U
++ effW=4.4e-06
+MP1	net27	C#3	net23	POWR#2	pmos	L=0.18U	W=4.4U
++ effW=4.4e-06
+MP4	Y#2	net32#7	POWR#1	POWR#2	pmos	L=0.18U	W=2.38U
++ effW=2.38e-06
+MP0	net32#5	D#2	net27	POWR#2	pmos	L=0.18U	W=2.2U
++ M=2	effW=2.2e-06
+MP3	net19	A#2	POWR#3	POWR#2	pmos	L=0.18U	W=2.2U	M=2
++ effW=2.2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg5	B#2	B#1	  143.2982
+Rg6	B#1	B#3	   51.7663
+Rg7	C#1	C#2	   51.5625
+Rg8	C#2	C#3	  143.2981
+Rg3	A#2	A#4	  124.3677
+Rg2	A#2	A#1	    3.9406
+Rg11	D#2	D#4	  127.4679
+Rg9	D#1	D#2	   25.7489
+Rg13	net32#7	net32#8	  117.0569
+Rg15	net32#8	net32#9	   36.6403
+Rg14	net32#8	net32	    4.3416
+Rf2	B	B#1	8.136E-02
+Rf4	C	C#2	9.378E-02
+Rf18	GRND#1	GRND#2	    0.2583
+Rf19	GRND#2	GRND#3	    0.1402
+Rf20	GRND#3	GRND	    0.1303
+Rf21	GRND	GRND#2	    0.1233
+Rf22	GRND#2	GRND#4	9.072E-02
+Rf23	GRND#4	GRND#5	    0.3376
+Rf24	GRND#3	GRND#6	    0.1978
+Rf25	GRND	GRND#7	    0.2912
+Rf26	GRND#4	GRND#8	    0.1978
+Rf12	Y	Y#1	    0.4950
+Rf13	Y	Y#2	    0.4875
+Rf1	A	A#1	    0.1048
+Rf6	D	D#1	    0.1001
+Rf15	POWR#2	POWR	    0.1827
+Rf16	POWR	POWR#2	    0.3205
+Rf14	POWR#1	POWR#2	    0.4272
+Rf17	POWR#2	POWR#3	    0.3839
+Rf7	net32	net32#2	    0.5777
+Rf11	net32#3	net32#6	    0.1923
+Rf10	net32#2	net32#5	    0.8841
+Rf9	net32#3	net32#4	    1.4195
+Rf8	net32#2	net32#3	    0.2806
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	8.285E-17
+C2	B	GRND	cmodel	7.122E-17
+C3	C	GRND	cmodel	1.031E-16
+C4	D	GRND	cmodel	9.724E-17
+C5	POWR	GRND	cmodel	2.009E-16
+C6	Y	GRND	cmodel	1.488E-16
+C7	net27	GRND	cmodel	1.233E-15
+C8	net32	GRND	cmodel	2.438E-16
+C9	net23	GRND	cmodel	8.391E-16
+C10	net19	GRND	cmodel	1.186E-15
+C11	net32#7	GRND	cmodel	1.764E-16
+C12	C#3	GRND	cmodel	2.489E-16
+C13	B#2	GRND	cmodel	2.478E-16
+C14	A#2	GRND	cmodel	5.579E-16
+C15	net32#9	GRND	cmodel	8.115E-17
+C16	D#4	GRND	cmodel	2.141E-16
+C17	C#1	GRND	cmodel	1.240E-16
+C18	B#3	GRND	cmodel	1.051E-16
+C19	A#4	GRND	cmodel	2.086E-16
+C20	D#1	GRND	cmodel	2.600E-16
+C21	C#2	GRND	cmodel	4.995E-16
+C22	B#1	GRND	cmodel	4.626E-16
+C23	A#1	GRND	cmodel	1.484E-16
+C24	POWR#2	GRND	cmodel	1.445E-15
+C25	Y#2	GRND	cmodel	3.122E-16
+C26	Y#1	GRND	cmodel	2.527E-16
+C27	POWR#1	GRND	cmodel	3.128E-16
+C28	net32#6	GRND	cmodel	2.007E-16
+C29	net32#5	GRND	cmodel	5.575E-16
+C30	POWR#3	GRND	cmodel	3.554E-16
+C31	net32#4	GRND	cmodel	5.581E-16
+C32	D#2	GRND	cmodel	6.278E-16
+C33	net32#2	GRND	cmodel	3.349E-16
+C34	net32#3	GRND	cmodel	4.034E-16
+C35	net32#8	GRND	cmodel	2.163E-16
+*
+*
+.ENDS OR4X1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:19:26 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT SDFFSRX1 CK D GRND POWR Q QN RN SE SI SN
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN16	net0110#6	net151#10	net0122	GRND#3	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN17	net0122	net145#13	GRND#11	GRND#3	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN15	net0110#5	net215#16	net0106	GRND#3	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN14	net0106	net0108#4	GRND#10	GRND#3	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN19	net0108#7	net107#10	net0183#2	GRND#3	nmos	L=0.18U
++ W=0.43U	effW=4.3e-07
+MN20	net0108#7	net0110#8	net0183	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN18	GRND#9	SN#6	net0183	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN13	net107#11	RN#4	GRND#9	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN21	net0212	net0108#16	GRND#8	GRND#3	nmos	L=0.18U
++ W=0.57U	effW=5.7e-07
+MN22	Q#2	net0212#5	GRND#8	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN23	QN#1	net0108#15	GRND#1	GRND#3	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN8	net127	net139	GRND#13	GRND#3	nmos	L=0.18U	W=0.63U
++ effW=6.3e-07
+MN3	net150	net145	GRND#13	GRND#3	nmos	L=0.18U	W=0.63U
++ effW=6.3e-07
+MN2	net147#4	net151#6	net150	GRND#3	nmos	L=0.18U
++ W=0.63U	effW=6.3e-07
+MN6	net124	net215#14	net147#4	GRND#3	nmos	L=0.18U
++ W=0.63U	effW=6.3e-07
+MN12	net145#9	net107#9	net162#2	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN10	net145#9	net147#6	net162	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN11	GRND#12	SN#1	net162	GRND#3	nmos	L=0.18U	W=0.4U
++ effW=4e-07
+MN5	net124#2	D#2	net127	GRND#3	nmos	L=0.18U	W=0.63U
++ effW=6.3e-07
+MN0	net215#2	CK#3	GRND#15	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN1	net151	net215#6	GRND#15	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN4	net139#5	SE#3	GRND#14	GRND#3	nmos	L=0.18U
++ W=0.4U	effW=4e-07
+MN9	net111	SI#2	GRND#14	GRND#3	nmos	L=0.18U	W=0.6U
++ effW=6e-07
+MN7	net124#3	SE#2	net111	GRND#3	nmos	L=0.18U	W=0.4U
++ effW=4e-07
+MP16	net0194	net145#11	POWR#9	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP17	net0110#3	net215#18	net0194	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP11	net145#14	net147#9	net179	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP10	net179	net107#3	POWR#7	POWR#2	pmos	L=0.18U	W=0.6U
++ effW=6e-07
+MP20	net0389	net107#4	POWR#7	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP19	net0108#8	net0110#7	net0389	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP13	net107#6	RN#2	POWR#6	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP18	net0108#10	SN#9	POWR#4	POWR#2	pmos	L=0.18U	W=0.9U
++ effW=9e-07
+MP21	net0212#4	net0108#17	POWR#4	POWR#2	pmos	L=0.18U
++ W=1.35U	effW=1.35e-06
+MP22	Q#3	net0212#6	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP23	QN#2	net0108#12	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP7	net183	net139#3	net191	POWR#2	pmos	L=0.18U	W=0.6U
++ effW=6e-07
+MP9	net183	net151#7	net147#3	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP2	net207	net145#5	POWR#12	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP3	net147#5	net215#11	net207	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP12	net145#8	SN#3	POWR#10	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP15	net0182	net0108#3	POWR#10	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP14	net0110#4	net151#11	net0182	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP6	net191	SI#4	POWR#13	POWR#2	pmos	L=0.18U	W=0.6U
++ effW=6e-07
+MP0	net215#3	CK#2	POWR#16	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP1	net151#3	net215#7	POWR#16	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP4	net139#6	SE#6	POWR#15	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP5	net195#2	SE#7	POWR#15	POWR#2	pmos	L=0.18U
++ W=0.6U	effW=6e-07
+MP8	net183#2	D#4	net195	POWR#2	pmos	L=0.18U	W=0.4U
++ effW=4e-07
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	CK#1	CK#2	   82.5000
+Rg2	CK#1	CK#3	   76.0417
+Rg3	net151#4	net151#2	   46.6910
+Rg4	net215#4	net215#5	   72.7592
+Rg5	net215#5	net215	   81.9496
+Rg6	net215#5	net215#6	   53.5337
+Rg7	net215	net215#7	   37.0833
+Rg8	SI#1	SI#2	  137.0661
+Rg9	SE#2	SE#3	  150.0476
+Rg10	SE#3	SE#4	  157.7295
+Rg11	SE#4	SE#5	   24.1911
+Rg12	SE#5	SE#6	   50.8491
+Rg13	SE#4	SE#1	    5.2166
+Rg14	SE#5	SE#7	   24.0092
+Rg15	SI#4	SI#3	   93.1726
+Rg16	D#2	D#3	  165.1780
+Rg17	D#3	D#1	    5.5224
+Rg18	D#3	D#4	  104.4292
+Rg19	net139	net139#2	  130.6371
+Rg20	net139#2	net139#3	   47.0238
+Rg21	net145	net145#2	  140.6726
+Rg22	net215#10	net215#11	   75.4526
+Rg23	net145#4	net145#3	   72.0833
+Rg24	net145#3	net145#5	   50.3430
+Rg25	net215#12	net215#9	   40.6371
+Rg26	net215#9	net215#13	   48.8702
+Rg27	net215#13	net215#8	    2.5715
+Rg28	net215#13	net215#14	   60.6991
+Rg29	net151#6	net151#5	   94.0774
+Rg30	net151#5	net151#7	  122.2500
+Rg31	net151#5	net151#8	  158.0660
+Rg32	net147#6	net147#7	   24.5833
+Rg33	net147#7	net147	   87.9288
+Rg34	SN#1	SN#2	   76.0776
+Rg35	SN#2	SN#3	  152.3752
+Rg36	net151#10	net151#9	  223.9812
+Rg37	net151#9	net151#11	   48.5893
+Rg38	net145#10	net145#11	   98.3693
+Rg39	net145#11	net145#12	   35.8842
+Rg40	net145#12	net145#6	   66.2125
+Rg41	net145#12	net145#13	  157.8068
+Rg42	net215#16	net215#17	  166.8962
+Rg43	net215#17	net215#18	   64.8129
+Rg44	net215#17	net215#15	    2.9666
+Rg45	net147#9	net147#8	  103.3809
+Rg46	net0108	net0108#2	   33.5925
+Rg47	net0108#2	net0108#3	  506.8365
+Rg48	net0108#2	net0108#4	   43.5337
+Rg49	SN#5	SN#4	   89.6431
+Rg50	net0110#7	net0110	   24.5833
+Rg51	net0110	net0110#8	  129.5991
+Rg52	net107	net107#2	   47.9675
+Rg53	net107#2	net107#3	   71.5330
+Rg54	net107#2	net107#4	   39.9920
+Rg55	SN#6	SN#7	   56.3425
+Rg56	RN#2	RN#3	   93.2690
+Rg57	RN#3	RN#1	    2.5715
+Rg58	RN#3	RN#4	  106.9967
+Rg59	net107#5	net107#7	   69.1667
+Rg60	net107#7	net107#8	  199.8901
+Rg61	net107#8	net107#9	  444.9888
+Rg62	net107#8	net107#10	   39.0092
+Rg63	SN#9	SN#8	  141.7143
+Rg64	net0212#5	net0212#2	   33.7291
+Rg65	net0212#6	net0212#3	   91.6905
+Rg66	net0108#12	net0108#13	   90.0508
+Rg67	net0108#13	net0108#14	  115.9191
+Rg68	net0108#14	net0108#11	    2.6127
+Rg69	net0108#13	net0108#15	   70.2592
+Rg70	net0108#14	net0108#16	   73.1781
+Rg71	net0108#11	net0108#17	   93.4775
+Rf1	CK	CK#1	2.237E-02
+Rf2	net215	net215#2	    1.3624
+Rf3	net215	net215#3	    0.6800
+Rf4	net151	net151#2	    0.7532
+Rf5	net151#2	net151#3	    0.6859
+Rf6	SE	SE#1	    0.1001
+Rf7	net195	net195#2	    0.2500
+Rf8	D	D#1	    0.1118
+Rf9	SI#3	SI	    0.8342
+Rf10	SI	SI#1	    0.1290
+Rf11	net139#2	net139#4	    1.9589
+Rf12	net139#4	net139#5	    1.3364
+Rf13	net139#4	net139#6	    0.1048
+Rf14	net183	net183#2	    0.9553
+Rf15	net151#5	net151#4	    2.8886
+Rf16	net215#8	net215#4	    3.0227
+Rf17	net145#3	net145#2	    0.6167
+Rf18	net124	net124#2	    1.6859
+Rf19	net124#2	net124#3	    0.4868
+Rf20	net147	net147#2	    1.1347
+Rf21	net147#2	net147#3	    0.8489
+Rf22	net147	net147#4	    1.2278
+Rf23	net147#2	net147#5	    0.1089
+Rf24	net215#9	net215#10	    0.7333
+Rf25	net151#8	net151#9	    0.4119
+Rf26	net162	net162#2	    1.0801
+Rf27	net145#6	net145#7	    1.0127
+Rf28	net145#7	net145#4	    0.1067
+Rf29	net145#7	net145#8	    0.2510
+Rf30	net145#4	net145#9	    1.2818
+Rf31	net215#12	net215#15	    1.8035
+Rf32	net147#8	net147#7	    2.3411
+Rf33	net145#14	net145#10	    0.7975
+Rf34	SN#4	SN	    1.7786
+Rf35	SN	SN#2	    0.3628
+Rf36	net0110	net0110#2	    0.4490
+Rf37	net0110#2	net0110#3	    1.2823
+Rf38	net0110#3	net0110#4	    1.5343
+Rf39	net0110#2	net0110#5	    1.5112
+Rf40	net0110#5	net0110#6	    0.9597
+Rf41	net0183	net0183#2	    0.9860
+Rf42	RN	RN#1	7.370E-02
+Rf43	net107#5	net107#6	    0.5902
+Rf44	net107#6	net107	    0.6156
+Rf45	net107#7	net107#11	    0.2158
+Rf46	SN#8	SN#7	    0.9506
+Rf47	SN#7	SN#5	    0.4054
+Rf48	net0108	net0108#5	    0.2997
+Rf49	net0108#5	net0108#6	    0.2580
+Rf50	net0108#6	net0108#7	    0.1627
+Rf51	net0108#5	net0108#8	    1.6220
+Rf52	net0108#6	net0108#9	    1.9229
+Rf53	net0108#9	net0108#10	    0.7818
+Rf54	net0108#9	net0108#11	    0.1947
+Rf55	net0212	net0212#2	    0.6262
+Rf56	net0212#2	net0212#3	    0.4705
+Rf57	net0212#3	net0212#4	    0.5018
+Rf58	Q	Q#1	7.783E-02
+Rf59	Q#1	Q#2	    0.3610
+Rf60	Q#1	Q#3	    0.7742
+Rf61	QN	QN#1	    0.6046
+Rf62	QN	QN#2	    0.5508
+Rf63	POWR#1	POWR#2	    0.4338
+Rf64	POWR#2	POWR#3	    0.2035
+Rf65	POWR#3	POWR#4	    0.4264
+Rf66	POWR#3	POWR#5	    0.2189
+Rf67	POWR#5	POWR#6	    0.4216
+Rf68	POWR#5	POWR#2	    0.4181
+Rf69	POWR#2	POWR#7	    0.3980
+Rf70	POWR#2	POWR#8	    0.4457
+Rf71	POWR#8	POWR#9	    0.4375
+Rf72	POWR#8	POWR	    0.1264
+Rf73	POWR	POWR#2	    0.2708
+Rf74	POWR#2	POWR#10	    0.3755
+Rf75	POWR#2	POWR#11	    0.2844
+Rf76	POWR#11	POWR#12	    0.2903
+Rf77	POWR#11	POWR#2	    0.3894
+Rf78	POWR#2	POWR#13	    0.3304
+Rf79	POWR#2	POWR#14	    0.2241
+Rf80	POWR#14	POWR#15	    0.2903
+Rf81	POWR#14	POWR#2	    0.2524
+Rf82	POWR#2	POWR#16	    0.3695
+Rf83	GRND#1	GRND#2	    0.4960
+Rf84	GRND#2	GRND#3	    0.1207
+Rf85	GRND#3	GRND#4	    0.2892
+Rf86	GRND#4	GRND#3	    0.4019
+Rf87	GRND#3	GRND#5	    0.2068
+Rf88	GRND#5	GRND#6	    0.2444
+Rf89	GRND#6	GRND	1.998E-02
+Rf90	GRND	GRND#3	    0.6420
+Rf91	GRND#3	GRND#7	    0.4724
+Rf92	GRND#7	GRND#3	    0.2688
+Rf93	GRND#2	GRND#8	    0.3278
+Rf94	GRND#4	GRND#9	    0.3466
+Rf95	GRND#3	GRND#10	    0.3740
+Rf96	GRND#5	GRND#11	    0.2882
+Rf97	GRND#6	GRND#12	    0.3466
+Rf98	GRND#3	GRND#13	    0.3016
+Rf99	GRND#7	GRND#14	    0.3017
+Rf100	GRND#3	GRND#15	    0.2427
+*
+*       CAPACITOR CARDS
+*
+*
+C1	CK	GRND	cmodel	1.393E-16
+C2	D	GRND	cmodel	1.052E-16
+C3	POWR	GRND	cmodel	1.380E-16
+C4	Q	GRND	cmodel	1.172E-16
+C5	QN	GRND	cmodel	1.973E-16
+C6	RN	GRND	cmodel	7.197E-17
+C7	SE	GRND	cmodel	1.250E-16
+C8	SI	GRND	cmodel	2.473E-16
+C9	SN	GRND	cmodel	5.556E-16
+C10	net0194	GRND	cmodel	2.467E-23
+C11	net127	GRND	cmodel	2.946E-22
+C12	net0122	GRND	cmodel	1.245E-17
+C13	net0106	GRND	cmodel	1.048E-17
+C14	net0108	GRND	cmodel	3.138E-16
+C15	net151	GRND	cmodel	2.692E-16
+C16	net0212	GRND	cmodel	2.600E-16
+C17	net195	GRND	cmodel	1.514E-16
+C18	net139	GRND	cmodel	2.475E-16
+C19	net183	GRND	cmodel	3.458E-16
+C20	net145	GRND	cmodel	3.251E-16
+C21	net124	GRND	cmodel	5.743E-16
+C22	net147	GRND	cmodel	9.398E-16
+C23	net162	GRND	cmodel	3.852E-16
+C24	net0110	GRND	cmodel	5.410E-16
+C25	net0183	GRND	cmodel	4.283E-16
+C26	net107	GRND	cmodel	3.695E-16
+C27	net215	GRND	cmodel	6.111E-16
+C28	net0108#12	GRND	cmodel	1.400E-16
+C29	net0212#6	GRND	cmodel	1.440E-16
+C30	net0108#17	GRND	cmodel	1.691E-16
+C31	SN#9	GRND	cmodel	2.375E-16
+C32	RN#2	GRND	cmodel	1.579E-16
+C33	net0110#7	GRND	cmodel	7.739E-17
+C34	net107#4	GRND	cmodel	9.629E-17
+C35	net107#3	GRND	cmodel	1.327E-16
+C36	net147#9	GRND	cmodel	2.323E-16
+C37	net215#18	GRND	cmodel	1.574E-16
+C38	net145#11	GRND	cmodel	1.655E-16
+C39	net151#11	GRND	cmodel	9.714E-17
+C40	net0108#3	GRND	cmodel	8.203E-16
+C41	SN#3	GRND	cmodel	3.349E-16
+C42	net215#11	GRND	cmodel	1.948E-16
+C43	net145#5	GRND	cmodel	1.141E-16
+C44	net151#7	GRND	cmodel	2.377E-16
+C45	net139#3	GRND	cmodel	1.106E-16
+C46	SI#4	GRND	cmodel	2.282E-16
+C47	D#4	GRND	cmodel	2.058E-16
+C48	SE#7	GRND	cmodel	7.579E-17
+C49	SE#6	GRND	cmodel	1.217E-16
+C50	net215#7	GRND	cmodel	8.221E-17
+C51	CK#2	GRND	cmodel	1.425E-16
+C52	net0108#15	GRND	cmodel	1.154E-16
+C53	net0212#5	GRND	cmodel	7.372E-17
+C54	net0108#16	GRND	cmodel	1.608E-16
+C55	RN#4	GRND	cmodel	1.862E-16
+C56	SN#6	GRND	cmodel	1.163E-16
+C57	net0110#8	GRND	cmodel	2.520E-16
+C58	net107#10	GRND	cmodel	8.973E-17
+C59	net0108#4	GRND	cmodel	1.122E-16
+C60	net215#16	GRND	cmodel	2.938E-16
+C61	net145#13	GRND	cmodel	3.274E-16
+C62	net151#10	GRND	cmodel	4.370E-16
+C63	SN#1	GRND	cmodel	1.298E-16
+C64	net147#6	GRND	cmodel	8.206E-17
+C65	net107#9	GRND	cmodel	7.109E-16
+C66	net215#14	GRND	cmodel	1.292E-16
+C67	net151#6	GRND	cmodel	1.887E-16
+C68	D#2	GRND	cmodel	3.498E-16
+C69	SE#2	GRND	cmodel	2.859E-16
+C70	SI#2	GRND	cmodel	3.036E-16
+C71	SE#3	GRND	cmodel	5.107E-16
+C72	net215#6	GRND	cmodel	1.165E-16
+C73	CK#3	GRND	cmodel	1.305E-16
+C74	net0212#3	GRND	cmodel	4.975E-16
+C75	net0212#2	GRND	cmodel	4.106E-16
+C76	net0108#11	GRND	cmodel	2.625E-16
+C77	SN#8	GRND	cmodel	6.440E-16
+C78	net107#7	GRND	cmodel	5.546E-16
+C79	net107#5	GRND	cmodel	4.356E-16
+C80	RN#1	GRND	cmodel	1.619E-16
+C81	SN#7	GRND	cmodel	6.277E-16
+C82	SN#5	GRND	cmodel	6.069E-16
+C83	SN#4	GRND	cmodel	9.396E-16
+C84	net147#8	GRND	cmodel	1.258E-15
+C85	net145#10	GRND	cmodel	5.404E-16
+C86	net215#15	GRND	cmodel	6.627E-16
+C87	net145#6	GRND	cmodel	7.221E-16
+C88	SN#2	GRND	cmodel	6.921E-16
+C89	net151#9	GRND	cmodel	9.217E-16
+C90	net147#7	GRND	cmodel	8.352E-16
+C91	net151#8	GRND	cmodel	6.895E-16
+C92	net215#12	GRND	cmodel	1.006E-15
+C93	net145#4	GRND	cmodel	6.483E-16
+C94	net215#9	GRND	cmodel	5.861E-16
+C95	net215#10	GRND	cmodel	5.297E-16
+C96	net145#3	GRND	cmodel	5.972E-16
+C97	net215#8	GRND	cmodel	1.083E-15
+C98	net151#5	GRND	cmodel	1.637E-15
+C99	net145#2	GRND	cmodel	6.531E-16
+C100	net139#2	GRND	cmodel	1.123E-15
+C101	SI#3	GRND	cmodel	5.992E-16
+C102	D#1	GRND	cmodel	2.704E-16
+C103	SI#1	GRND	cmodel	4.364E-16
+C104	SE#1	GRND	cmodel	2.462E-16
+C105	net215#4	GRND	cmodel	1.279E-15
+C106	net151#4	GRND	cmodel	1.162E-15
+C107	net151#2	GRND	cmodel	5.343E-16
+C108	CK#1	GRND	cmodel	3.725E-16
+C109	POWR#2	GRND	cmodel	1.093E-14
+C110	QN#2	GRND	cmodel	2.503E-16
+C111	QN#1	GRND	cmodel	1.792E-16
+C112	POWR#1	GRND	cmodel	3.897E-16
+C113	Q#3	GRND	cmodel	4.007E-16
+C114	Q#2	GRND	cmodel	2.145E-16
+C115	net0212#4	GRND	cmodel	2.551E-16
+C116	POWR#4	GRND	cmodel	2.604E-16
+C117	net0108#10	GRND	cmodel	2.196E-16
+C118	POWR#6	GRND	cmodel	3.270E-16
+C119	net107#11	GRND	cmodel	1.760E-16
+C120	net107#6	GRND	cmodel	4.765E-16
+C121	net0108#7	GRND	cmodel	1.163E-16
+C122	net0108#8	GRND	cmodel	5.049E-16
+C123	net0183#2	GRND	cmodel	3.617E-16
+C124	POWR#7	GRND	cmodel	1.928E-16
+C125	net145#14	GRND	cmodel	2.856E-16
+C126	net0110#5	GRND	cmodel	7.608E-16
+C127	net0110#3	GRND	cmodel	7.382E-16
+C128	net0110#6	GRND	cmodel	3.918E-16
+C129	POWR#9	GRND	cmodel	2.140E-16
+C130	net0110#4	GRND	cmodel	5.696E-16
+C131	net145#9	GRND	cmodel	5.817E-16
+C132	POWR#10	GRND	cmodel	1.783E-16
+C133	net145#8	GRND	cmodel	1.603E-16
+C134	net162#2	GRND	cmodel	4.256E-16
+C135	net147#5	GRND	cmodel	1.009E-16
+C136	net147#4	GRND	cmodel	4.667E-16
+C137	POWR#12	GRND	cmodel	1.587E-16
+C138	net147#3	GRND	cmodel	3.296E-16
+C139	net124#2	GRND	cmodel	6.380E-16
+C140	POWR#13	GRND	cmodel	1.656E-16
+C141	net183#2	GRND	cmodel	3.928E-16
+C142	net124#3	GRND	cmodel	1.900E-16
+C143	net195#2	GRND	cmodel	1.713E-16
+C144	POWR#15	GRND	cmodel	1.863E-16
+C145	net139#5	GRND	cmodel	4.795E-16
+C146	net139#6	GRND	cmodel	1.268E-16
+C147	net151#3	GRND	cmodel	2.356E-16
+C148	POWR#16	GRND	cmodel	1.666E-16
+C149	net215#2	GRND	cmodel	3.199E-16
+C150	net215#3	GRND	cmodel	1.903E-16
+C151	net215#5	GRND	cmodel	2.575E-16
+C152	SE#4	GRND	cmodel	2.906E-16
+C153	SE#5	GRND	cmodel	1.041E-16
+C154	D#3	GRND	cmodel	5.002E-16
+C155	net139#4	GRND	cmodel	9.174E-16
+C156	net147#2	GRND	cmodel	5.275E-16
+C157	net215#13	GRND	cmodel	1.808E-16
+C158	net145#7	GRND	cmodel	2.883E-16
+C159	net145#12	GRND	cmodel	4.447E-16
+C160	net215#17	GRND	cmodel	4.041E-16
+C161	net0108#2	GRND	cmodel	9.837E-16
+C162	net0110#2	GRND	cmodel	9.203E-16
+C163	net107#2	GRND	cmodel	2.235E-16
+C164	RN#3	GRND	cmodel	3.864E-16
+C165	net107#8	GRND	cmodel	1.025E-15
+C166	net0108#5	GRND	cmodel	5.410E-16
+C167	net0108#6	GRND	cmodel	6.397E-16
+C168	net0108#9	GRND	cmodel	6.389E-16
+C169	Q#1	GRND	cmodel	2.073E-16
+C170	net0108#13	GRND	cmodel	3.721E-16
+C171	net0108#14	GRND	cmodel	2.995E-16
+C172	POWR#3	GRND	cmodel	7.308E-17
+C173	POWR#5	GRND	cmodel	1.096E-16
+C174	POWR#8	GRND	cmodel	2.191E-16
+C175	POWR#11	GRND	cmodel	1.354E-16
+C176	POWR#14	GRND	cmodel	8.615E-17
+*
+*
+.ENDS SDFFSRX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:25:07 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TBUFX1 A GRND OE POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN8	net058#2	OE#5	GRND#3	GRND#1	nmos	L=0.18U	W=0.6U
++ effW=6e-07
+MN6	Y#1	net61#8	net046	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN13	net046#2	OE#2	GRND#2	GRND#1	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN12	net61#5	A#3	net058	GRND#1	nmos	L=0.18U	W=0.6U
++ effW=6e-07
+MP7	Y#2	net61#6	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP1	net61#3	A#2	POWR#3	POWR#2	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+MP11	net61#4	OE#6	POWR#4	POWR#2	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#2	A#1	   97.1309
+Rg2	A#1	A#3	   30.2652
+Rg3	OE#2	OE#3	   97.7242
+Rg4	OE#3	OE#4	   99.3994
+Rg5	OE#4	OE#1	    2.9666
+Rg6	OE#3	OE#5	   34.4258
+Rg7	OE#4	OE#6	   46.2236
+Rg8	net61#6	net61#7	   58.3069
+Rg9	net61#7	net61	    3.0916
+Rg10	net61#7	net61#8	  106.0153
+Rf1	OE	OE#1	    0.1192
+Rf2	net058	net058#2	    0.4767
+Rf3	A#1	A	3.488E-02
+Rf4	net046	net046#2	    0.2615
+Rf5	net61	net61#2	6.591E-02
+Rf6	net61#2	net61#3	    0.9245
+Rf7	net61#3	net61#4	    0.2657
+Rf8	net61#2	net61#5	    0.6663
+Rf9	Y	Y#1	    0.4220
+Rf10	Y	Y#2	    0.8383
+Rf11	GRND#1	GRND	1.181E-02
+Rf12	GRND#1	GRND#2	    0.3657
+Rf13	GRND#1	GRND#3	    0.3345
+Rf14	POWR#1	POWR#2	    0.5074
+Rf15	POWR	POWR#2	5.204E-03
+Rf16	POWR#2	POWR#3	    0.4001
+Rf17	POWR#2	POWR#4	    0.5217
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.810E-17
+C2	OE	GRND	cmodel	6.541E-17
+C3	Y	GRND	cmodel	2.046E-16
+C4	net046	GRND	cmodel	1.582E-16
+C5	net058	GRND	cmodel	2.575E-16
+C6	net61	GRND	cmodel	1.728E-16
+C7	net61#6	GRND	cmodel	1.204E-16
+C8	A#2	GRND	cmodel	1.744E-16
+C9	OE#6	GRND	cmodel	1.040E-16
+C10	net61#8	GRND	cmodel	1.721E-16
+C11	OE#2	GRND	cmodel	1.730E-16
+C12	A#3	GRND	cmodel	9.590E-17
+C13	OE#5	GRND	cmodel	7.402E-17
+C14	A#1	GRND	cmodel	3.657E-16
+C15	OE#1	GRND	cmodel	1.506E-16
+C16	POWR#2	GRND	cmodel	1.092E-15
+C17	Y#2	GRND	cmodel	3.464E-16
+C18	Y#1	GRND	cmodel	1.491E-16
+C19	POWR#1	GRND	cmodel	2.995E-16
+C20	POWR#3	GRND	cmodel	1.852E-16
+C21	net046#2	GRND	cmodel	1.405E-16
+C22	net61#5	GRND	cmodel	1.333E-16
+C23	net61#3	GRND	cmodel	3.397E-16
+C24	net61#4	GRND	cmodel	2.123E-16
+C25	net058#2	GRND	cmodel	1.805E-16
+C26	POWR#4	GRND	cmodel	1.717E-16
+C27	OE#3	GRND	cmodel	3.069E-16
+C28	OE#4	GRND	cmodel	1.742E-16
+C29	net61#2	GRND	cmodel	3.268E-16
+C30	net61#7	GRND	cmodel	1.826E-16
+*
+*
+.ENDS TBUFX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:28:32 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TBUFX2 A GRND OE POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	net6#4	A#3	net10	GRND#2	nmos	L=0.18U	W=0.6U
++ effW=6e-07
+MN1	net10	OE#3	GRND#3	GRND#2	nmos	L=0.18U	W=0.6U
++ effW=6e-07
+MN3	Y#2	net6#9	net042	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MN0	net042	OE#5	GRND#1	GRND#2	nmos	L=0.18U	W=1.7U
++ effW=1.7e-06
+MP0	net6#3	A#4	POWR#4	POWR#1	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+MP1	net6#3	OE#1	POWR#5	POWR#1	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+MP3	Y#1	net6#5	POWR#1	POWR#1	pmos	L=0.18U	W=2.02U
++ M=2	effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg3	A#1	A#2	    2.9666
+Rg4	A#2	A#3	  115.3903
+Rg5	A#2	A#4	   65.8069
+Rg1	OE#1	OE#2	  127.9167
+Rg2	OE#2	OE#3	   45.8333
+Rg6	OE#5	OE#4	   51.8871
+Rg10	net6#8	net6#9	   84.5569
+Rg11	net6#8	net6	    2.9666
+Rg9	net6#5	net6#8	   24.3994
+Rf1	A	A#1	6.017E-02
+Rf14	GRND#1	GRND	    0.3715
+Rf15	GRND	GRND#2	    0.1478
+Rf16	GRND#2	GRND#3	    0.2595
+Rf2	OE#4	OE	    0.4349
+Rf3	OE	OE#2	    0.1046
+Rf11	POWR	POWR#1	5.204E-03
+Rf12	POWR#1	POWR#4	    0.4001
+Rf13	POWR#1	POWR#5	    0.5217
+Rf8	Y	Y#2	    0.3903
+Rf7	Y	Y#1	    1.0154
+Rf4	net6	net6#2	    1.1777
+Rf6	net6#2	net6#4	    1.2208
+Rf5	net6#2	net6#3	    0.9383
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.929E-17
+C2	OE	GRND	cmodel	1.635E-16
+C3	Y	GRND	cmodel	2.137E-16
+C4	net10	GRND	cmodel	2.183E-16
+C5	net042	GRND	cmodel	3.709E-16
+C6	net6	GRND	cmodel	4.326E-16
+C7	net6#5	GRND	cmodel	4.153E-16
+C8	A#4	GRND	cmodel	1.090E-16
+C9	OE#1	GRND	cmodel	2.061E-16
+C10	net6#9	GRND	cmodel	1.418E-16
+C11	OE#5	GRND	cmodel	1.183E-16
+C12	A#3	GRND	cmodel	1.915E-16
+C13	OE#3	GRND	cmodel	1.072E-16
+C14	OE#4	GRND	cmodel	3.745E-16
+C15	A#1	GRND	cmodel	7.815E-17
+C16	OE#2	GRND	cmodel	6.065E-16
+C17	POWR#1	GRND	cmodel	1.626E-15
+C18	Y#2	GRND	cmodel	2.215E-16
+C19	Y#1	GRND	cmodel	6.330E-16
+C20	POWR#4	GRND	cmodel	1.708E-16
+C21	net6#4	GRND	cmodel	4.309E-16
+C22	net6#3	GRND	cmodel	4.564E-16
+C23	POWR#5	GRND	cmodel	1.824E-16
+C24	A#2	GRND	cmodel	3.592E-16
+C25	net6#2	GRND	cmodel	6.674E-16
+C26	net6#8	GRND	cmodel	1.716E-16
+*
+*
+.ENDS TBUFX2
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:34:04 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TBUFX4 A GRND OE POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	net6#3	A#3	net10#2	GRND#1	nmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+MN4	net10	OE#4	GRND#4	GRND#1	nmos	L=0.18U	W=1.2U
++ effW=1.2e-06
+MN0	net042	OE#2	GRND#3	GRND#1	nmos	L=0.18U	W=2.4U
++ effW=2.4e-06
+MN3	Y#4	net6#6	net042#2	GRND#1	nmos	L=0.18U	W=1.13U
++ M=3	effW=1.13e-06
+MP4	net6#5	A#4	POWR#8	POWR#1	pmos	L=0.18U	W=2.92U
++ effW=2.92e-06
+MP1	net6#4	OE#5	POWR#7	POWR#1	pmos	L=0.18U	W=2.92U
++ effW=2.92e-06
+MP3	Y#2	net6#9	POWR#1	POWR#1	pmos	L=0.18U	W=2.02U
++ M=4	effW=2.02e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	A#1	A#2	    5.2166
+Rg2	A#2	A#3	   54.1403
+Rg3	A#2	A#4	  101.2236
+Rg4	OE#2	OE#3	  115.3062
+Rg5	OE#3	OE#1	    4.1965
+Rg6	OE#1	OE#4	   47.0833
+Rg7	OE#3	OE#5	   96.7868
+Rg10	net6#6	net6#9	   67.3345
+Rg14	net6#9	net6	    2.5548
+Rf1	A	A#1	3.008E-02
+Rf17	GRND#1	GRND	    0.3353
+Rf18	GRND	GRND#2	3.462E-02
+Rf19	GRND#2	GRND#1	    0.2040
+Rf20	GRND#2	GRND#3	    0.4256
+Rf21	GRND#1	GRND#4	    0.4615
+Rf3	OE	OE#1	2.330E-02
+Rf2	net10	net10#2	    0.2400
+Rf8	net042	net042#2	    0.2554
+Rf23	POWR	POWR#1	    0.1420
+Rf28	POWR#6	POWR#7	    0.4906
+Rf29	POWR#6	POWR#8	    0.7175
+Rf27	POWR#1	POWR#6	9.680E-02
+Rf10	Y	Y#1	6.008E-02
+Rf11	Y#1	Y#2	    0.2358
+Rf13	Y#1	Y#4	    0.2435
+Rf4	net6	net6#2	    0.6939
+Rf7	net6#4	net6#5	    0.2149
+Rf6	net6#2	net6#4	    0.4542
+Rf5	net6#2	net6#3	    1.2232
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	5.089E-17
+C2	OE	GRND	cmodel	1.018E-16
+C3	Y	GRND	cmodel	7.469E-17
+C4	net10	GRND	cmodel	1.868E-16
+C5	net6	GRND	cmodel	3.104E-16
+C6	net042	GRND	cmodel	3.575E-16
+C7	OE#5	GRND	cmodel	1.837E-16
+C8	A#4	GRND	cmodel	1.742E-16
+C9	net6#6	GRND	cmodel	6.020E-16
+C10	OE#2	GRND	cmodel	1.775E-16
+C11	OE#4	GRND	cmodel	1.030E-16
+C12	A#3	GRND	cmodel	1.039E-16
+C13	OE#1	GRND	cmodel	1.195E-16
+C14	A#1	GRND	cmodel	1.079E-16
+C15	POWR#1	GRND	cmodel	2.086E-15
+C16	net042#2	GRND	cmodel	7.922E-16
+C17	POWR#7	GRND	cmodel	3.380E-16
+C18	net6#4	GRND	cmodel	3.250E-16
+C19	net6#5	GRND	cmodel	3.499E-16
+C20	net10#2	GRND	cmodel	1.977E-16
+C21	POWR#8	GRND	cmodel	4.137E-16
+C22	net6#3	GRND	cmodel	3.095E-16
+C23	A#2	GRND	cmodel	3.482E-16
+C24	net6#2	GRND	cmodel	3.721E-16
+C25	OE#3	GRND	cmodel	3.033E-16
+C26	net6#9	GRND	cmodel	9.060E-16
+C27	Y#1	GRND	cmodel	7.831E-17
+C28	Y#2	GRND	cmodel	1.070E-15
+C29	Y#4	GRND	cmodel	6.712E-16
+C30	POWR#6	GRND	cmodel	7.309E-17
+*
+*
+.ENDS TBUFX4
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:37:23 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TBUFX8 A GRND OE POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN5	net042#4	OE#2	GRND	GRND#3	nmos	L=0.18U	W=1.7U
++ M=4	effW=1.7e-06
+MN2	net6	A#6	net10	GRND#3	nmos	L=0.18U	W=1.26U
++ M=2	effW=1.26e-06
+MN6	net10	OE#10	GRND#5	GRND#3	nmos	L=0.18U	W=1.26U
++ M=2	effW=1.26e-06
+MN3	Y#6	net6#9	net042	GRND#3	nmos	L=0.18U	W=1.7U	M=4
++ effW=1.7e-06
+MP3	Y#1	net6#13	POWR#1	POWR#1	pmos	L=0.18U	W=2.31U
++ M=7	effW=2.31e-06
+MP4	net6#2	A#2	POWR#1	POWR#1	pmos	L=0.18U	W=1.99U
++ M=3	effW=1.99e-06
+MP6	net6#2	OE#7	POWR#1	POWR#1	pmos	L=0.18U	W=1.99U
++ M=3	effW=1.99e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg8	A#5	A#1	    4.3416
+Rg3	A#2	A#5	   27.7328
+Rg4	A#5	A#6	   23.1494
+Rg13	OE#2	OE#6	   29.8161
+Rg22	OE#6	OE#1	    2.9666
+Rg14	OE#6	OE#7	   38.1732
+Rg17	OE#7	OE#10	   60.9350
+Rg30	net6#9	net6#13	   56.5012
+Rg35	net6#13	net6#8	   10.6880
+Rf41	GRND#3	GRND#5	    0.4386
+Rf39	GRND	GRND#3	    0.3281
+Rf24	net042	net042#4	    0.2660
+Rf1	A	A#1	9.835E-02
+Rf4	OE	OE#1	1.237E-02
+Rf30	POWR	POWR#1	    0.2136
+Rf16	Y#1	Y	8.521E-02
+Rf17	Y	Y#6	    0.1752
+Rf11	net6#2	net6#8	    0.6141
+Rf5	net6	net6#2	    1.2730
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.205E-16
+C2	OE	GRND	cmodel	1.368E-16
+C3	Y	GRND	cmodel	4.947E-17
+C4	net10	GRND	cmodel	1.300E-15
+C5	net6	GRND	cmodel	5.285E-16
+C6	net042	GRND	cmodel	9.780E-16
+C7	A#2	GRND	cmodel	6.647E-16
+C8	net6#9	GRND	cmodel	8.940E-16
+C9	OE#2	GRND	cmodel	9.158E-16
+C10	net6#8	GRND	cmodel	3.871E-16
+C11	OE#1	GRND	cmodel	8.889E-17
+C12	A#1	GRND	cmodel	1.643E-16
+C13	Y#1	GRND	cmodel	2.220E-15
+C14	POWR#1	GRND	cmodel	5.436E-15
+C15	net042#4	GRND	cmodel	1.347E-15
+C16	A#5	GRND	cmodel	7.944E-17
+C17	A#6	GRND	cmodel	3.295E-16
+C18	net6#2	GRND	cmodel	1.960E-15
+C19	OE#6	GRND	cmodel	1.038E-16
+C20	OE#7	GRND	cmodel	7.656E-16
+C21	OE#10	GRND	cmodel	3.890E-16
+C22	net6#13	GRND	cmodel	1.640E-15
+C23	Y#6	GRND	cmodel	5.952E-16
+*
+*
+.ENDS TBUFX8
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Sep 26 01:32:33 2003
+*
+*
+*
+*  PROGRAM  /cadence_tools/work2/assura.3.0.5/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+*
+.SUBCKT TBUFX8 GRND Y POWR A OE
+*
+*       SUBCIRCUIT CALLS
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MavD227_1       GRND#4  OE#12   net042#9        GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_2       net042#4        OE#2    GRND#4  GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_3       Y#7     net6#20 net042#8        GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_4       net042#7        net6#19 Y#7     GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_5       Y#10    net6#18 net042#7        GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_6       net042#1        net6#9  Y#10    GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_7       net6#5  A#9     net10#3 GRND#1 nmos L=0.18U W=1.26U
++	 effW=1.26e-06
+MavD227_8       net10#2 A#10    net6#5  GRND#1 nmos L=0.18U W=1.26U
++	 effW=1.26e-06
+MavD227_9       GRND#6  OE#11   net10#2 GRND#1 nmos L=0.18U W=1.26U
++	 effW=1.26e-06
+MavD227_10      net10#1 OE#18   GRND#6  GRND#1 nmos L=0.18U W=1.26U
++	 effW=1.26e-06
+MavD227_11      GRND#5  OE#14   net042#6        GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MavD227_12      net042#9        OE#13   GRND#5  GRND#1 nmos L=0.18U
++	 W=1.7U effW=1.7e-06
+MP3     Y#5     net6#26 POWR#7  POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_1   POWR#8  net6#25 Y#5     POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_2   Y#9     net6#24 POWR#8  POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_3   POWR#9  net6#23 Y#9     POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_4   Y#8     net6#22 POWR#9  POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_5   POWR#10 net6#28 Y#8     POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MP3_6   Y#1     net6#29 POWR#10 POWR#2 pmos L=0.18U W=2.31U
++	 effW=2.31e-06
+MavD249_8       net6#8  A#7     POWR#3  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+MavD249_9       POWR#4  A#6     net6#8  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+MavD249_10      net6#7  A#2     POWR#4  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+MavD249_11      POWR#5  OE#17   net6#7  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+MavD249_12      net6#6  OE#16   POWR#5  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+MavD249_13      POWR#6  OE#15   net6#6  POWR#2 pmos L=0.18U W=1.99U
++	 effW=1.99e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1     A#2     A#3 82.1580 $poly
+Rg2     A#3     A#4 29.0012 $poly
+Rg3     A#4     A#5 30.6494 $poly
+Rg4     A#5     A#1 3.7500 $poly
+Rg5     A#3     A#6 50.6170 $poly
+Rg6     A#4     A#7 52.9675 $poly
+Rg7     A#5     A#8 20.2328 $poly
+Rg8     A#8     A#9 37.7592 $poly
+Rg9     A#8     A#10 64.5991 $poly
+Rg10    OE#2    OE#3 76.1163 $poly
+Rg11    OE#3    OE#4 31.3517 $poly
+Rg12    OE#4    OE#5 29.0012 $poly
+Rg13    OE#5    OE#6 29.8161 $poly
+Rg14    OE#6    OE#7 38.1732 $poly
+Rg15    OE#7    OE#8 31.3517 $poly
+Rg16    OE#8    OE#9 29.0012 $poly
+Rg17    OE#9    OE#10 60.9350 $poly
+Rg18    OE#10   OE#11 64.5991 $poly
+Rg19    OE#3    OE#12 44.5753 $poly
+Rg20    OE#4    OE#13 44.5753 $poly
+Rg21    OE#5    OE#14 46.9258 $poly
+Rg22    OE#6    OE#1 1.5000 $poly
+Rg23    OE#7    OE#15 50.6170 $poly
+Rg24    OE#8    OE#16 50.6170 $poly
+Rg25    OE#9    OE#17 52.9675 $poly
+Rg26    OE#10   OE#18 37.7592 $poly
+Rg27    net6#9  net6#10 76.1163 $poly
+Rg28    net6#10 net6#11 31.3517 $poly
+Rg29    net6#11 net6#12 29.0012 $poly
+Rg30    net6#12 net6#13 31.0845 $poly
+Rg31    net6#13 net6#14 8.0183 $poly
+Rg32    net6#14 net6#15 31.3517 $poly
+Rg33    net6#15 net6#16 31.3517 $poly
+Rg34    net6#16 net6#17 31.3517 $poly
+Rg35    net6#17 net6#1 10.6880 $poly
+Rg36    net6#10 net6#18 44.5753 $poly
+Rg37    net6#11 net6#19 44.5753 $poly
+Rg38    net6#12 net6#20 46.9258 $poly
+Rg39    net6#13 net6#21 22.1850 $poly
+Rg40    net6#21 net6#22 57.2837 $poly
+Rg41    net6#14 net6#23 57.2837 $poly
+Rg42    net6#15 net6#24 57.2837 $poly
+Rg43    net6#16 net6#25 57.2837 $poly
+Rg44    net6#17 net6#26 57.2837 $poly
+Rg45    net6#21 net6#27 31.3517 $poly
+Rg46    net6#27 net6#28 57.2837 $poly
+Rg47    net6#27 net6#29 88.8286 $poly
+Rf1     A       A#1 0.1287 $mt1
+Rf2     net10#1 net10#2 1.0167 $mt1
+Rf3     net10#2 net10#3 0.9967 $mt1
+Rf4     OE#1    OE 4.987E-02 $mt1
+Rf5     net6#1  net6#2 0.6141 $mt1
+Rf6     net6#2  net6#3 0.5114 $mt1
+Rf7     net6#3  net6#4 0.4733 $mt1
+Rf8     net6#4  net6#5 0.7315 $mt1
+Rf9     net6#2  net6#6 0.3348 $mt1
+Rf10    net6#3  net6#7 0.3348 $mt1
+Rf11    net6#4  net6#8 0.3661 $mt1
+Rf12    Y#1     Y#2 0.6697 $mt1
+Rf13    Y#2     Y#3 0.1858 $mt1
+Rf14    Y#3     Y#4 0.5047 $mt1
+Rf15    Y#4     Y#5 0.8653 $mt1
+Rf16    Y#2     Y 4.771E-02 $mt1
+Rf17    Y       Y#6 6.021E-02 $mt1
+Rf18    Y#6     Y#7 0.6735 $mt1
+Rf19    Y#3     Y#8 0.3748 $mt1
+Rf20    Y#4     Y#9 0.3748 $mt1
+Rf21    Y#6     Y#10 0.4068 $mt1
+Rf22    net042#1        net042#2 0.7991 $mt1
+Rf23    net042#2        net042#3 0.5080 $mt1
+Rf24    net042#3        net042#4 0.3117 $mt1
+Rf25    net042#4        net042#5 0.8325 $mt1
+Rf26    net042#5        net042#6 0.7991 $mt1
+Rf27    net042#2        net042#7 0.2985 $mt1
+Rf28    net042#3        net042#8 0.2985 $mt1
+Rf29    net042#5        net042#9 0.2985 $mt1
+Rf30    GRND#1  GRND#2 0.5763 $mt1
+Rf31    GRND#2  GRND#3 0.1469 $mt1
+Rf32    GRND#3  GRND#1 0.3281 $mt1
+Rf33    GRND#1  GRND 0.1639 $mt1
+Rf34    GRND#2  GRND#4 0.3381 $mt1
+Rf35    GRND#3  GRND#5 0.3381 $mt1
+Rf36    GRND#1  GRND#6 0.4396 $mt1
+Rf37    POWR    POWR#1 6.867E-02 $mt1
+Rf38    POWR#1  POWR#2 0.4642 $mt1
+Rf39    POWR#1  POWR#3 0.4775 $mt1
+Rf40    POWR#2  POWR#4 0.5262 $mt1
+Rf41    POWR#2  POWR#5 0.5262 $mt1
+Rf42    POWR#2  POWR#6 0.5262 $mt1
+Rf43    POWR#2  POWR#7 0.5662 $mt1
+Rf44    POWR#2  POWR#8 0.5662 $mt1
+Rf45    POWR#2  POWR#9 0.5662 $mt1
+Rf46    POWR#2  POWR#10 0.5721 $mt1
+*
+*       CAPACITOR CARDS
+*
+*
+C1      Y       GRND cmodel 2.344E-17
+C2      A       GRND cmodel 3.947E-17
+C3      OE      GRND cmodel 6.322E-17
+C4      net6#29 GRND cmodel 1.324E-16
+C5      net6#28 GRND cmodel 1.135E-16
+C6      net6#22 GRND cmodel 1.127E-16
+C7      net6#23 GRND cmodel 1.136E-16
+C8      net6#24 GRND cmodel 1.123E-16
+C9      net6#25 GRND cmodel 1.136E-16
+C10     net6#26 GRND cmodel 1.247E-16
+C11     OE#15   GRND cmodel 1.134E-16
+C12     OE#16   GRND cmodel 1.027E-16
+C13     OE#17   GRND cmodel 1.155E-16
+C14     A#2     GRND cmodel 1.287E-16
+C15     A#6     GRND cmodel 1.043E-16
+C16     A#7     GRND cmodel 1.076E-16
+C17     net6#9  GRND cmodel 1.195E-16
+C18     net6#18 GRND cmodel 1.032E-16
+C19     net6#19 GRND cmodel 1.040E-16
+C20     net6#20 GRND cmodel 1.111E-16
+C21     OE#2    GRND cmodel 1.184E-16
+C22     OE#12   GRND cmodel 9.980E-17
+C23     OE#13   GRND cmodel 9.938E-17
+C24     OE#14   GRND cmodel 1.101E-16
+C25     OE#18   GRND cmodel 8.339E-17
+C26     OE#11   GRND cmodel 1.091E-16
+C27     A#10    GRND cmodel 1.179E-16
+C28     A#9     GRND cmodel 9.102E-17
+C29     net6#1  GRND cmodel 3.969E-16
+C30     OE#1    GRND cmodel 1.577E-16
+C31     A#1     GRND cmodel 1.847E-16
+C32     POWR#2  GRND cmodel 2.394E-15
+C33     net042#1        GRND cmodel 3.374E-16
+C34     Y#1     GRND cmodel 3.077E-16
+C35     Y#10    GRND cmodel 3.441E-16
+C36     POWR#10 GRND cmodel 4.590E-16
+C37     net042#7        GRND cmodel 3.445E-16
+C38     Y#8     GRND cmodel 4.348E-16
+C39     Y#7     GRND cmodel 4.254E-16
+C40     POWR#9  GRND cmodel 4.619E-16
+C41     net042#8        GRND cmodel 1.775E-16
+C42     Y#9     GRND cmodel 4.349E-16
+C43     POWR#8  GRND cmodel 4.617E-16
+C44     net042#4        GRND cmodel 3.424E-16
+C45     Y#5     GRND cmodel 6.005E-16
+C46     POWR#7  GRND cmodel 2.878E-16
+C47     net042#9        GRND cmodel 3.435E-16
+C48     POWR#6  GRND cmodel 2.348E-16
+C49     net042#6        GRND cmodel 4.295E-16
+C50     net6#6  GRND cmodel 3.788E-16
+C51     POWR#5  GRND cmodel 4.057E-16
+C52     net10#1 GRND cmodel 3.449E-16
+C53     net6#7  GRND cmodel 3.769E-16
+C54     POWR#4  GRND cmodel 4.057E-16
+C55     net10#2 GRND cmodel 6.235E-16
+C56     net6#8  GRND cmodel 3.789E-16
+C57     net6#5  GRND cmodel 3.751E-16
+C58     POWR#3  GRND cmodel 2.063E-16
+C59     net10#3 GRND cmodel 3.418E-16
+C60     A#3     GRND cmodel 2.246E-16
+C61     A#4     GRND cmodel 1.190E-16
+C62     A#5     GRND cmodel 8.453E-17
+C63     A#8     GRND cmodel 1.619E-16
+C64     net6#2  GRND cmodel 2.278E-16
+C65     net6#3  GRND cmodel 2.109E-16
+C66     net6#4  GRND cmodel 2.420E-16
+C67     OE#3    GRND cmodel 2.175E-16
+C68     OE#4    GRND cmodel 1.311E-16
+C69     OE#5    GRND cmodel 1.208E-16
+C70     OE#6    GRND cmodel 1.035E-16
+C71     OE#7    GRND cmodel 1.531E-16
+C72     OE#8    GRND cmodel 1.278E-16
+C73     OE#9    GRND cmodel 1.733E-16
+C74     OE#10   GRND cmodel 2.385E-16
+C75     Y#2     GRND cmodel 1.183E-16
+C76     Y#3     GRND cmodel 1.057E-16
+C77     Y#4     GRND cmodel 2.272E-16
+C78     Y#6     GRND cmodel 1.602E-16
+C79     net042#2        GRND cmodel 3.138E-16
+C80     net042#3        GRND cmodel 2.155E-16
+C81     net042#5        GRND cmodel 2.610E-16
+C82     net6#10 GRND cmodel 1.977E-16
+C83     net6#11 GRND cmodel 1.218E-16
+C84     net6#12 GRND cmodel 1.237E-16
+C85     net6#13 GRND cmodel 8.106E-17
+C86     net6#14 GRND cmodel 1.009E-16
+C87     net6#15 GRND cmodel 1.388E-16
+C88     net6#16 GRND cmodel 1.372E-16
+C89     net6#17 GRND cmodel 8.948E-17
+C90     net6#21 GRND cmodel 1.192E-16
+C91     net6#27 GRND cmodel 2.306E-16
+*
+*
+.ENDS TBUFX8
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:40:23 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TINVX1 A GRND OE POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN0	net9#2	OE#5	GRND#3	GRND#2	nmos	L=0.18U	W=0.5U
++ effW=5e-07
+MN2	net021	A#2	GRND#1	GRND#2	nmos	L=0.18U	W=0.9U	M=2
++ effW=9e-07
+MN1	Y#1	OE#2	net021	GRND#2	nmos	L=0.18U	W=0.9U	M=2
++ effW=9e-07
+MP0	net9	OE#8	POWR#3	POWR#2	pmos	L=0.18U	W=1U
++ effW=1e-06
+MP2	net044	A#4	POWR#1	POWR#2	pmos	L=0.18U	W=2U	M=2
++ effW=2e-06
+MP1	Y#3	net9#5	net044	POWR#2	pmos	L=0.18U	W=2U	M=2
++ effW=2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg11	OE#7	OE#8	   62.8903
+Rg8	OE#4	OE#5	   24.0092
+Rg12	OE#7	OE#1	    3.2166
+Rg7	OE#2	OE#4	   74.8345
+Rg10	OE#4	OE#7	   32.3161
+Rg14	A#2	A#1	   17.9087
+Rg15	A#1	A#4	   34.0092
+Rg4	net9#5	net9#7	   66.6905
+Rg2	net9#4	net9#5	   53.1758
+Rg1	net9#3	net9#4	   98.7951
+Rg5	net9#7	net9#4	   13.3253
+Rf13	GRND#2	GRND	    0.1757
+Rf14	GRND	GRND#2	    0.1277
+Rf12	GRND#1	GRND#2	    0.3651
+Rf15	GRND#2	GRND#3	    0.4219
+Rf3	OE#1	OE	2.212E-02
+Rf7	A#1	A	    0.1484
+Rf17	POWR#2	POWR	    0.1544
+Rf18	POWR	POWR#3	    0.7704
+Rf16	POWR#1	POWR#2	    0.3179
+Rf5	Y#2	Y	8.132E-02
+Rf4	Y#1	Y#2	    0.5498
+Rf6	Y#2	Y#3	    0.5553
+Rf2	net9	net9#3	    0.5533
+Rf1	net9	net9#2	    0.9821
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	6.079E-17
+C2	OE	GRND	cmodel	1.273E-16
+C3	POWR	GRND	cmodel	4.224E-16
+C4	Y	GRND	cmodel	8.904E-17
+C5	net021	GRND	cmodel	1.202E-15
+C6	net044	GRND	cmodel	1.364E-15
+C7	net9	GRND	cmodel	3.352E-16
+C8	net9#5	GRND	cmodel	2.907E-16
+C9	OE#8	GRND	cmodel	1.063E-16
+C10	A#2	GRND	cmodel	3.239E-16
+C11	OE#2	GRND	cmodel	3.739E-16
+C12	OE#5	GRND	cmodel	6.124E-17
+C13	A#1	GRND	cmodel	3.369E-16
+C14	OE#1	GRND	cmodel	1.001E-16
+C15	net9#3	GRND	cmodel	4.687E-16
+C16	POWR#2	GRND	cmodel	1.272E-15
+C17	POWR#1	GRND	cmodel	2.847E-16
+C18	Y#1	GRND	cmodel	2.766E-16
+C19	Y#3	GRND	cmodel	4.390E-16
+C20	POWR#3	GRND	cmodel	3.608E-16
+C21	net9#2	GRND	cmodel	1.810E-16
+C22	Y#2	GRND	cmodel	1.762E-16
+C23	net9#4	GRND	cmodel	3.406E-16
+C24	OE#4	GRND	cmodel	1.286E-16
+C25	OE#7	GRND	cmodel	1.429E-16
+C26	A#4	GRND	cmodel	3.889E-16
+*
+*
+.ENDS TINVX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:43:08 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TLATSRX1 D G GRND POWR Q QN RN SN
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN12	net0191#12	net0211#8	GRND#8	GRND#2	nmos	L=0.18U
++ W=0.5U	effW=5e-07
+MN8	net92	net0201#8	GRND#7	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN7	net96	RN#4	net92	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN6	net0191	net0219#14	net96	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN2	net0201#3	net0191#16	GRND#6	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN1	QN#2	net0201#9	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	Q#1	net0191#15	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN5	net0211#3	SN#3	GRND#11	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN4	net0215#4	net0219#4	GRND#11	GRND#2	nmos	L=0.18U
++ W=0.5U	effW=5e-07
+MN3	net0219#10	G#3	GRND#10	GRND#2	nmos	L=0.18U
++ W=0.6U	effW=6e-07
+MN11	net80	D#3	GRND#9	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN9	net88	RN#3	net80	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN10	net0191#7	net0215#7	net88	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MP12	net0191#10	RN#1	net27	POWR#2	pmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MP6	net35	net0201#10	POWR#8	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP10	net31	net0211#4	net35	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP11	net0191#9	net0215#9	net31	POWR#2	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP2	net0201#4	net0191#17	POWR#7	POWR#2	pmos	L=0.18U
++ W=1U	effW=1e-06
+MP1	QN#3	net0201#5	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP0	Q#2	net0191#13	POWR#1	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP5	net0211	SN#4	POWR#6	POWR#2	pmos	L=0.18U	W=1U
++ effW=1e-06
+MP4	net0215#3	net0219#5	POWR#6	POWR#2	pmos	L=0.18U
++ W=0.8U	effW=8e-07
+MP3	net0219#7	G#2	POWR#11	POWR#2	pmos	L=0.18U
++ W=1U	effW=1e-06
+MP7	net43	D#1	POWR#10	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP8	net39	net0211#9	net43	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP9	net0191#11	net0219#12	net39	POWR#2	pmos	L=0.18U
++ W=2.02U	effW=2.02e-06
+MP13	net27	net0211#7	POWR#9	POWR#2	pmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	SN#1	SN#2	    2.9666
+Rg2	SN#2	SN#3	   58.9319
+Rg3	SN#2	SN#4	   75.5986
+Rg4	net0219	net0219#2	   38.1292
+Rg5	net0219#2	net0219#3	   64.2683
+Rg6	net0219#3	net0219#4	   33.1758
+Rg7	net0219#2	net0219#5	   40.6758
+Rg8	net0219#3	net0219#6	   34.3670
+Rg9	G#2	G#1	  145.8809
+Rg10	G#1	G#3	  116.2976
+Rg11	D#1	D#2	   66.6667
+Rg12	D#2	D#3	   86.8750
+Rg13	net0215#5	net0215#6	   47.9657
+Rg14	net0215#6	net0215	    2.5715
+Rg15	net0215#6	net0215#7	   51.5324
+Rg16	net0219#8	net0219#11	   51.0898
+Rg17	net0219#11	net0219#12	  192.9917
+Rg18	RN#1	RN#2	  147.4881
+Rg19	RN#2	RN#3	  325.6848
+Rg20	net0211#4	net0211#5	  207.8306
+Rg21	net0211#5	net0211#6	  118.0183
+Rg22	net0211#6	net0211#2	  292.3901
+Rg23	net0211#5	net0211#7	   54.9920
+Rg24	net0211#7	net0211#8	  222.8035
+Rg25	net0211#6	net0211#9	   63.7420
+Rg26	RN#4	RN#5	   53.5983
+Rg27	net0215#8	net0215#9	  100.8455
+Rg28	net0219#13	net0219#14	   33.5538
+Rg29	net0201#5	net0201#6	  124.0092
+Rg30	net0201#6	net0201#7	   54.4411
+Rg31	net0201#7	net0201#8	  295.9583
+Rg32	net0201#6	net0201#9	   41.3008
+Rg33	net0201#7	net0201	    2.5715
+Rg34	net0201#8	net0201#10	  220.3035
+Rg35	net0191#13	net0191#14	  310.5559
+Rg36	net0191#14	net0191#8	    4.7691
+Rg37	net0191#13	net0191#15	  166.4583
+Rg38	net0191#14	net0191#16	   91.2965
+Rg39	net0191#14	net0191#17	   34.4631
+Rf1	net0211	net0211#2	    0.4500
+Rf2	net0211	net0211#3	    1.0767
+Rf3	SN	SN#1	    0.1494
+Rf4	net0219	net0219#7	    0.7742
+Rf5	G	G#1	    0.1318
+Rf6	D	D#2	    0.1593
+Rf7	net0215	net0215#2	    1.6471
+Rf8	net0215#2	net0215#3	    0.5840
+Rf9	net0215#2	net0215#4	    0.4684
+Rf10	net0219#8	net0219#9	    1.4060
+Rf11	net0219#9	net0219#6	    0.5199
+Rf12	net0219#9	net0219#10	    0.1627
+Rf13	RN#5	RN#2	    0.4823
+Rf14	RN#2	RN	    0.1356
+Rf15	net0215#8	net0215#5	    1.7453
+Rf16	net0219#11	net0219#13	    1.3165
+Rf17	net0191	net0191#2	    1.0523
+Rf18	net0191#2	net0191#3	    0.1180
+Rf19	net0191#3	net0191#4	    1.3833
+Rf20	net0191#4	net0191#5	    0.8900
+Rf21	net0191#5	net0191#6	    1.3804
+Rf22	net0191#6	net0191#7	    0.4370
+Rf23	net0191#2	net0191#8	    0.1610
+Rf24	net0191#3	net0191#9	    0.4109
+Rf25	net0191#4	net0191#10	    0.3260
+Rf26	net0191#5	net0191#11	    0.2698
+Rf27	net0191#6	net0191#12	9.437E-02
+Rf28	net0201	net0201#2	5.271E-02
+Rf29	net0201#2	net0201#3	    0.2367
+Rf30	net0201#2	net0201#4	    0.7101
+Rf31	QN	QN#1	8.133E-02
+Rf32	QN#1	QN#2	    0.6447
+Rf33	QN#1	QN#3	    0.5576
+Rf34	Q	Q#1	    0.4308
+Rf35	Q	Q#2	    0.7837
+Rf36	POWR#1	POWR#2	    0.7639
+Rf37	POWR#2	POWR#3	    0.3207
+Rf38	POWR#3	POWR	    0.2146
+Rf39	POWR	POWR#4	4.803E-02
+Rf40	POWR#4	POWR#5	    0.3071
+Rf41	POWR#5	POWR#2	    0.1495
+Rf42	POWR#2	POWR#6	    0.9204
+Rf43	POWR#2	POWR#7	    0.5668
+Rf44	POWR#3	POWR#8	    0.4191
+Rf45	POWR#4	POWR#9	    0.4416
+Rf46	POWR#5	POWR#10	    0.4941
+Rf47	POWR#2	POWR#11	    0.6288
+Rf48	GRND#1	GRND#2	    0.3039
+Rf49	GRND#2	GRND#3	    0.4189
+Rf50	GRND#3	GRND#4	    0.1307
+Rf51	GRND#4	GRND	8.174E-02
+Rf52	GRND	GRND#5	    0.3573
+Rf53	GRND#5	GRND#2	    0.2799
+Rf54	GRND#2	GRND#6	    0.4077
+Rf55	GRND#3	GRND#7	    0.2728
+Rf56	GRND#4	GRND#8	    0.2416
+Rf57	GRND#5	GRND#9	    0.2728
+Rf58	GRND#2	GRND#10	    0.3099
+Rf59	GRND#2	GRND#11	    0.3099
+*
+*       CAPACITOR CARDS
+*
+*
+C1	D	GRND	cmodel	1.186E-16
+C2	G	GRND	cmodel	9.232E-17
+C3	Q	GRND	cmodel	1.885E-16
+C4	QN	GRND	cmodel	9.298E-17
+C5	RN	GRND	cmodel	1.034E-16
+C6	SN	GRND	cmodel	7.939E-17
+C7	avS11	GRND	cmodel	3.005E-16
+C8	net80	GRND	cmodel	1.341E-17
+C9	net88	GRND	cmodel	1.292E-17
+C10	net0219	GRND	cmodel	4.196E-16
+C11	net0215	GRND	cmodel	6.561E-16
+C12	net0191	GRND	cmodel	4.157E-16
+C13	net0201	GRND	cmodel	9.877E-17
+C14	net0211	GRND	cmodel	3.223E-16
+C15	net0191#13	GRND	cmodel	5.527E-16
+C16	net0201#5	GRND	cmodel	2.123E-16
+C17	net0191#17	GRND	cmodel	8.055E-17
+C18	net0215#9	GRND	cmodel	1.634E-16
+C19	net0211#4	GRND	cmodel	4.141E-16
+C20	net0201#10	GRND	cmodel	3.850E-16
+C21	RN#1	GRND	cmodel	2.850E-16
+C22	net0211#7	GRND	cmodel	3.512E-16
+C23	net0219#12	GRND	cmodel	3.171E-16
+C24	net0211#9	GRND	cmodel	1.797E-16
+C25	D#1	GRND	cmodel	1.510E-16
+C26	G#2	GRND	cmodel	2.677E-16
+C27	net0219#5	GRND	cmodel	7.901E-17
+C28	SN#4	GRND	cmodel	1.320E-16
+C29	net0191#15	GRND	cmodel	2.602E-16
+C30	net0201#9	GRND	cmodel	9.328E-17
+C31	net0191#16	GRND	cmodel	1.406E-16
+C32	net0219#14	GRND	cmodel	1.025E-16
+C33	RN#4	GRND	cmodel	1.373E-16
+C34	net0201#8	GRND	cmodel	9.347E-16
+C35	net0211#8	GRND	cmodel	4.761E-16
+C36	net0215#7	GRND	cmodel	1.327E-16
+C37	RN#3	GRND	cmodel	5.769E-16
+C38	D#3	GRND	cmodel	1.868E-16
+C39	G#3	GRND	cmodel	2.304E-16
+C40	net0219#4	GRND	cmodel	7.803E-17
+C41	SN#3	GRND	cmodel	1.166E-16
+C42	net0191#8	GRND	cmodel	1.714E-16
+C43	net0215#8	GRND	cmodel	8.111E-16
+C44	net0219#13	GRND	cmodel	6.035E-16
+C45	RN#5	GRND	cmodel	4.825E-16
+C46	RN#2	GRND	cmodel	1.032E-15
+C47	net0219#11	GRND	cmodel	9.917E-16
+C48	net0215#5	GRND	cmodel	8.164E-16
+C49	net0219#8	GRND	cmodel	8.266E-16
+C50	D#2	GRND	cmodel	4.647E-16
+C51	G#1	GRND	cmodel	5.327E-16
+C52	net0219#6	GRND	cmodel	3.761E-16
+C53	SN#1	GRND	cmodel	8.247E-17
+C54	net0211#2	GRND	cmodel	6.406E-16
+C55	POWR#2	GRND	cmodel	4.838E-15
+C56	Q#2	GRND	cmodel	2.868E-16
+C57	Q#1	GRND	cmodel	1.458E-16
+C58	POWR#1	GRND	cmodel	4.837E-16
+C59	QN#3	GRND	cmodel	3.173E-16
+C60	QN#2	GRND	cmodel	2.046E-16
+C61	net0201#4	GRND	cmodel	2.479E-16
+C62	net0201#3	GRND	cmodel	9.424E-17
+C63	POWR#7	GRND	cmodel	2.849E-16
+C64	net0191#9	GRND	cmodel	2.218E-16
+C65	POWR#8	GRND	cmodel	2.409E-16
+C66	net0191#10	GRND	cmodel	1.787E-16
+C67	net0191#12	GRND	cmodel	9.537E-17
+C68	POWR#9	GRND	cmodel	2.191E-16
+C69	net0191#11	GRND	cmodel	1.841E-16
+C70	net0191#7	GRND	cmodel	2.613E-16
+C71	POWR#10	GRND	cmodel	2.120E-16
+C72	net0219#7	GRND	cmodel	3.614E-16
+C73	net0219#10	GRND	cmodel	1.049E-16
+C74	POWR#11	GRND	cmodel	1.912E-16
+C75	net0215#4	GRND	cmodel	1.700E-16
+C76	net0215#3	GRND	cmodel	1.699E-16
+C77	POWR#6	GRND	cmodel	3.570E-16
+C78	net0211#3	GRND	cmodel	2.525E-16
+C79	SN#2	GRND	cmodel	2.917E-16
+C80	net0219#2	GRND	cmodel	1.857E-16
+C81	net0219#3	GRND	cmodel	1.816E-16
+C82	net0215#2	GRND	cmodel	7.047E-16
+C83	net0219#9	GRND	cmodel	5.331E-16
+C84	net0215#6	GRND	cmodel	1.634E-16
+C85	net0211#5	GRND	cmodel	5.761E-16
+C86	net0211#6	GRND	cmodel	7.387E-16
+C87	net0191#2	GRND	cmodel	1.675E-16
+C88	net0191#3	GRND	cmodel	3.240E-16
+C89	net0191#4	GRND	cmodel	5.365E-16
+C90	net0191#5	GRND	cmodel	5.705E-16
+C91	net0191#6	GRND	cmodel	5.220E-16
+C92	net0201#2	GRND	cmodel	1.724E-16
+C93	QN#1	GRND	cmodel	1.759E-16
+C94	net0201#6	GRND	cmodel	2.821E-16
+C95	net0201#7	GRND	cmodel	4.690E-16
+C96	net0191#14	GRND	cmodel	4.974E-16
+C97	POWR#3	GRND	cmodel	1.569E-16
+C98	POWR#4	GRND	cmodel	2.091E-16
+C99	POWR#5	GRND	cmodel	1.257E-16
+*
+*
+.ENDS TLATSRX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:46:44 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT TLATX1 C D GRND POWR Q QN
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN13	net170#6	C#3	GRND#3	GRND#2	nmos	L=0.18U	W=0.8U
++ effW=8e-07
+MN17	net186#5	net170#3	GRND#3	GRND#2	nmos	L=0.18U
++ W=0.8U	effW=8e-07
+MN10	net158	D#4	GRND#5	GRND#2	nmos	L=0.18U	W=0.82U
++ effW=8.2e-07
+MN9	net166	net186#2	net158	GRND#2	nmos	L=0.18U	W=0.82U
++ effW=8.2e-07
+MN12	net166	net170#8	net162	GRND#2	nmos	L=0.18U	W=0.83U
++ effW=8.3e-07
+MN11	net162	net164#5	GRND#4	GRND#2	nmos	L=0.18U	W=0.83U
++ effW=8.3e-07
+MN15	QN#2	net164#8	GRND#4	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN16	net164#10	net166#9	GRND#1	GRND#2	nmos	L=0.18U
++ W=0.85U	effW=8.5e-07
+MN14	Q#2	net166#8	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP11	net170#7	C#2	POWR#5	POWR#2	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+MP12	net186#8	net170	POWR#5	POWR#2	pmos	L=0.18U	W=1.46U
++ effW=1.46e-06
+MP13	net261	D#2	POWR#4	POWR#2	pmos	L=0.18U	W=1.6U
++ effW=1.6e-06
+MP17	net166#3	net170#10	net261	POWR#2	pmos	L=0.18U
++ W=1.6U	effW=1.6e-06
+MP16	net166#3	net186#3	net257	POWR#2	pmos	L=0.18U
++ W=1.8U	effW=1.8e-06
+MP15	net257	net164#7	POWR#3	POWR#2	pmos	L=0.18U	W=1.8U
++ effW=1.8e-06
+MP14	QN#1	net164#6	POWR#3	POWR#2	pmos	L=0.18U	W=2.02U
++ effW=2.02e-06
+MP10	net164#11	net166#10	POWR#1	POWR#2	pmos	L=0.18U
++ W=2U	effW=2e-06
+MP9	Q#3	net166#5	POWR#1	POWR#2	pmos	L=0.18U	W=2U
++ effW=2e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	C#2	C#1	   96.2500
+Rg2	C#1	C#3	   53.7500
+Rg3	net170	net170#2	   50.8333
+Rg4	net170#2	net170#3	   99.1667
+Rg5	D#2	D#3	  138.3545
+Rg6	D#3	D#1	    2.9666
+Rg7	D#3	D#4	   92.1045
+Rg8	net186	net186#2	   33.6385
+Rg9	net170#8	net170#9	  121.7651
+Rg10	net170#9	net170#4	   23.8792
+Rg11	net170#9	net170#10	   73.5925
+Rg12	net186#3	net186#4	   54.3455
+Rg13	net164	net164#2	   35.6880
+Rg14	net164#2	net164#3	   37.5694
+Rg15	net164#3	net164#4	   73.4393
+Rg16	net164#4	net164#5	   27.9406
+Rg17	net164#2	net164#6	   51.2420
+Rg18	net164#3	net164#7	   57.1647
+Rg19	net164#4	net164#8	   61.8886
+Rg20	net166#5	net166#6	   90.6758
+Rg21	net166#6	net166#7	   28.5277
+Rg22	net166#7	net166#4	   73.1191
+Rg23	net166#6	net166#8	   66.7175
+Rg24	net166#7	net166#9	   66.2440
+Rg25	net166#7	net166#10	   90.2024
+Rf1	C	C#1	    0.1085
+Rf2	D#1	D	    0.1542
+Rf3	net170#4	net170#2	    0.7882
+Rf4	net170#2	net170#5	    0.3864
+Rf5	net170#5	net170#6	    1.0816
+Rf6	net170#5	net170#7	    0.2685
+Rf7	net186#5	net186#6	    0.8355
+Rf8	net186#6	net186#7	    0.5039
+Rf9	net186#7	net186#4	    0.2202
+Rf10	net186#6	net186	6.118E-02
+Rf11	net186#7	net186#8	    0.8873
+Rf12	net166	net166#2	    0.6598
+Rf13	net166#2	net166#3	    0.6275
+Rf14	net166#2	net166#4	    0.2016
+Rf15	QN	QN#1	    0.6981
+Rf16	QN	QN#2	    0.4141
+Rf17	net164	net164#9	2.771E-02
+Rf18	net164#9	net164#10	    0.7280
+Rf19	net164#9	net164#11	    0.4117
+Rf20	Q	Q#1	2.450E-02
+Rf21	Q#1	Q#2	    0.6369
+Rf22	Q#1	Q#3	    0.5140
+Rf23	POWR#1	POWR#2	    0.9836
+Rf24	POWR#2	POWR#3	    0.6160
+Rf25	POWR	POWR#2	3.872E-02
+Rf26	POWR#2	POWR#4	    0.5116
+Rf27	POWR#2	POWR#5	    0.7308
+Rf28	GRND#1	GRND#2	    0.7249
+Rf29	GRND#2	GRND	2.517E-02
+Rf30	GRND	GRND#3	    0.5954
+Rf31	GRND#2	GRND#4	    0.3730
+Rf32	GRND#2	GRND#5	    0.3231
+*
+*       CAPACITOR CARDS
+*
+*
+C1	C	GRND	cmodel	1.146E-16
+C2	D	GRND	cmodel	1.328E-16
+C3	QN	GRND	cmodel	2.561E-16
+C4	net257	GRND	cmodel	1.959E-17
+C5	net162	GRND	cmodel	9.546E-18
+C6	net164	GRND	cmodel	2.094E-16
+C7	net170	GRND	cmodel	9.250E-17
+C8	net186	GRND	cmodel	2.982E-16
+C9	net166	GRND	cmodel	3.569E-16
+C10	net166#5	GRND	cmodel	1.245E-16
+C11	net166#10	GRND	cmodel	1.321E-16
+C12	net164#6	GRND	cmodel	1.156E-16
+C13	net164#7	GRND	cmodel	1.245E-16
+C14	net186#3	GRND	cmodel	1.365E-16
+C15	net170#10	GRND	cmodel	1.403E-16
+C16	D#2	GRND	cmodel	2.682E-16
+C17	C#2	GRND	cmodel	1.624E-16
+C18	net166#8	GRND	cmodel	9.470E-17
+C19	net166#9	GRND	cmodel	1.126E-16
+C20	net164#8	GRND	cmodel	1.279E-16
+C21	net164#5	GRND	cmodel	7.776E-17
+C22	net170#8	GRND	cmodel	2.530E-16
+C23	net186#2	GRND	cmodel	1.018E-16
+C24	D#4	GRND	cmodel	1.990E-16
+C25	net170#3	GRND	cmodel	1.431E-16
+C26	C#3	GRND	cmodel	1.018E-16
+C27	net166#4	GRND	cmodel	4.009E-16
+C28	net186#4	GRND	cmodel	4.296E-16
+C29	net170#4	GRND	cmodel	5.131E-16
+C30	D#1	GRND	cmodel	1.876E-16
+C31	net170#2	GRND	cmodel	6.224E-16
+C32	C#1	GRND	cmodel	4.966E-16
+C33	POWR#2	GRND	cmodel	2.218E-15
+C34	Q#3	GRND	cmodel	2.334E-16
+C35	Q#2	GRND	cmodel	1.814E-16
+C36	POWR#1	GRND	cmodel	4.074E-16
+C37	net164#11	GRND	cmodel	3.375E-16
+C38	net164#10	GRND	cmodel	2.410E-16
+C39	QN#1	GRND	cmodel	4.695E-16
+C40	QN#2	GRND	cmodel	1.945E-16
+C41	POWR#3	GRND	cmodel	3.711E-16
+C42	net166#3	GRND	cmodel	4.423E-16
+C43	POWR#4	GRND	cmodel	2.449E-16
+C44	net186#8	GRND	cmodel	4.663E-16
+C45	net186#5	GRND	cmodel	3.670E-16
+C46	POWR#5	GRND	cmodel	3.645E-16
+C47	net170#7	GRND	cmodel	1.572E-16
+C48	net170#6	GRND	cmodel	3.485E-16
+C49	D#3	GRND	cmodel	4.017E-16
+C50	net170#5	GRND	cmodel	2.807E-16
+C51	net170#9	GRND	cmodel	3.951E-16
+C52	net186#6	GRND	cmodel	2.449E-16
+C53	net186#7	GRND	cmodel	3.459E-16
+C54	net166#2	GRND	cmodel	3.258E-16
+C55	net164#2	GRND	cmodel	1.427E-16
+C56	net164#3	GRND	cmodel	2.590E-16
+C57	net164#4	GRND	cmodel	2.264E-16
+C58	net164#9	GRND	cmodel	2.212E-16
+C59	net166#6	GRND	cmodel	1.966E-16
+C60	net166#7	GRND	cmodel	3.012E-16
+C61	Q#1	GRND	cmodel	2.123E-16
+*
+*
+.ENDS TLATX1
+*
+*
+*
+*
+*                       SUN4 UNIX       Fri Jan 28 15:49:42 2005
+*
+*
+*
+*  PROGRAM  /home/jfelipe/assura313/tools/assura/bin/32bit/advgen
+*
+*  HSPICE LIBRARY
+*
+*
+*
+
+*
+.SUBCKT XOR2X1 A B GRND POWR Y
+*
+*
+*  caps2d version: 8
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MN2	net14#4	B#3	GRND#3	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN3	net14	A#5	GRND#3	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN1	Y#1	net14#10	GRND#4	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN4	Y#1	A#2	net10	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MN0	net10	B#5	GRND#1	GRND#2	nmos	L=0.18U	W=0.85U
++ effW=8.5e-07
+MP4	net14#7	B#1	net29	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP0	net29	A#6	POWR#3	POWR#2	pmos	L=0.18U	W=2.8U
++ effW=2.8e-06
+MP1	net075#2	net14#9	POWR#1	POWR#2	pmos	L=0.18U
++ W=3U	effW=3e-06
+MP2	Y#2	A#7	net075#2	POWR#2	pmos	L=0.18U	W=3U
++ effW=3e-06
+MP3	Y#2	B#6	net075	POWR#2	pmos	L=0.18U	W=3U
++ effW=3e-06
+*
+*
+*       RESISTOR AND CAP/DIODE CARDS
+*
+Rg1	B#1	B#2	  101.2500
+Rg2	B#2	B#3	   56.4583
+Rg3	net14#9	net14#8	   85.4526
+Rg4	net14#10	net14#5	   70.8034
+Rg5	A#2	A#3	   71.7413
+Rg6	A#3	A#4	  119.8345
+Rg7	A#4	A#5	   66.7175
+Rg8	A#3	A#1	   25.8253
+Rg9	A#4	A#6	  107.3425
+Rg10	A#1	A#7	   74.5833
+Rg11	B#5	B#4	   97.9167
+Rg12	B#4	B#6	   78.3455
+Rf1	net14	net14#2	    0.1590
+Rf2	net14#2	net14#3	    0.4678
+Rf3	net14#3	net14#4	    0.1825
+Rf4	net14#2	net14#5	    0.1601
+Rf5	net14#3	net14#6	    0.5302
+Rf6	net14#6	net14#7	    0.4318
+Rf7	net14#6	net14#8	    0.9065
+Rf8	A#1	A	    0.1533
+Rf9	B#2	B	    1.4794
+Rf10	B	B#4	    0.2194
+Rf11	net075	net075#2	    0.3071
+Rf12	Y	Y#1	    0.6902
+Rf13	Y	Y#2	    1.0128
+Rf14	GRND#1	GRND#2	    0.4292
+Rf15	GRND#2	GRND	3.274E-03
+Rf16	GRND	GRND#3	    0.3834
+Rf17	GRND#2	GRND#4	    0.2340
+Rf18	POWR#1	POWR	    0.4392
+Rf19	POWR	POWR#2	    0.1572
+Rf20	POWR#2	POWR#3	    0.4820
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	GRND	cmodel	1.803E-16
+C2	B	GRND	cmodel	4.408E-16
+C3	POWR	GRND	cmodel	2.859E-16
+C4	Y	GRND	cmodel	4.748E-16
+C5	net29	GRND	cmodel	5.892E-16
+C6	net10	GRND	cmodel	2.604E-16
+C7	net14	GRND	cmodel	1.680E-16
+C8	net075	GRND	cmodel	3.797E-16
+C9	B#6	GRND	cmodel	1.583E-16
+C10	A#7	GRND	cmodel	1.638E-16
+C11	net14#9	GRND	cmodel	1.679E-16
+C12	A#6	GRND	cmodel	1.676E-16
+C13	B#1	GRND	cmodel	1.649E-16
+C14	B#5	GRND	cmodel	1.843E-16
+C15	A#2	GRND	cmodel	1.507E-16
+C16	net14#10	GRND	cmodel	1.489E-16
+C17	A#5	GRND	cmodel	1.327E-16
+C18	B#3	GRND	cmodel	1.175E-16
+C19	B#4	GRND	cmodel	4.501E-16
+C20	A#1	GRND	cmodel	3.509E-16
+C21	net14#8	GRND	cmodel	5.949E-16
+C22	net14#5	GRND	cmodel	3.633E-16
+C23	B#2	GRND	cmodel	9.116E-16
+C24	POWR#2	GRND	cmodel	7.680E-16
+C25	Y#2	GRND	cmodel	6.908E-16
+C26	Y#1	GRND	cmodel	4.315E-16
+C27	net075#2	GRND	cmodel	6.786E-16
+C28	POWR#1	GRND	cmodel	3.398E-16
+C29	POWR#3	GRND	cmodel	3.401E-16
+C30	net14#7	GRND	cmodel	2.954E-16
+C31	net14#4	GRND	cmodel	1.423E-16
+C32	net14#2	GRND	cmodel	1.662E-16
+C33	net14#3	GRND	cmodel	2.761E-16
+C34	net14#6	GRND	cmodel	4.202E-16
+C35	A#3	GRND	cmodel	3.661E-16
+C36	A#4	GRND	cmodel	4.763E-16
+*
+*
+.ENDS XOR2X1
+*

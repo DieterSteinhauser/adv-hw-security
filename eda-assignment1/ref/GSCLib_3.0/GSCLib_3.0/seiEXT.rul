@@ -1,0 +1,12 @@
+#SIP extraction rule file
+#LAYER bBox Pimp Nimp Nwell 
+#DIFF bBox Pimp Nimp 
+#MERGE bBox Nwell 
+32 Nwell NWELL
+8 AND Nimp Nwell lay259
+33 lay259 NWCONT
+1024 lay259
+8 SUB Pimp Nwell lay260
+33 lay260 PCONT
+1024 lay260
+1024

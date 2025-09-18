@@ -1,0 +1,10 @@
+CONT Cont
+VIA Via1
+METAL Poly Metal1 Metal2
+DIFF Pimp Nimp Pwell Nwell
+CONNECT Poly Metal1 Cont
+CONNECT Metal1 Metal2 Via1
+CONNECT Metal1 Pimp Cont
+CONNECT Metal1 Nimp Cont
+
+

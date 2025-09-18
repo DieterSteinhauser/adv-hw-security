@@ -1,0 +1,12 @@
+#
+gpdk pmos ivpcell
++4
++5
++6
++7
+#
+gpdk nmos ivpcell
++0
++1
++2
++3

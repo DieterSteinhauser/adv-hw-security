@@ -1,0 +1,5 @@
+TDMCHECKPOINT="1.0"
+GSCLib/CLKBUFX1 type="cell"
+GSCLib/CLKBUFX2 type="cell"
+GSCLib/CLKBUFX3 type="cell"
+keepEmptyCategory type="unknown"

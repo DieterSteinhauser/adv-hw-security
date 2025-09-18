@@ -1,0 +1,18 @@
+WROUTE version 2.3.35 db version 1.01
+WROUTE compiled on 07/31/2002 15:01 (dsm_cm9)
+Date   : Tue Jul 22 17:25:54 2003
+Machine: csulbsrv1 (SunOS 5.7 sun4u)
+Version: 5.4, Unit: 1000, Final routed design
+Sbox 3 out of 3 (not accurate in multi-thread mode)
+4th or 5th search repair pass, 41st search repair sbox
+19 layers, 6 routing layers, 1 overlap layer
+1 macros, 1 used
+5 components
+  5 core components: 0 unplaced, 5 placed, 0 fixed
+25 physical pins
+  25 physical pins: 0 unplaced, 25 placed, 0 fixed
+25 nets, 25 routed
+50 terminals
+735 gcells for 7 layers
+50 real and virtual terminals
+0 violation

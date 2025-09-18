@@ -1,0 +1,6 @@
+cUiSelectCellP {MX2X1}
+cUiSetViewStatus {MX2X1} {logical} {1}
+cUiSetViewStatus {MX2X1} {abstract.pin} {0}
+cUiSetViewStatus {MX2X1} {abstract.ext} {0}
+cUiSetViewStatus {MX2X1} {abstract} {37}
+cUiSetViewStatus {MX2X1} {abstract.ver} {0}

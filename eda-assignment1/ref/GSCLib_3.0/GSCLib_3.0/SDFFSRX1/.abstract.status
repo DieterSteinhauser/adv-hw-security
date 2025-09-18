@@ -1,0 +1,6 @@
+cUiSelectCellP {SDFFSRX1}
+cUiSetViewStatus {SDFFSRX1} {logical} {1}
+cUiSetViewStatus {SDFFSRX1} {abstract.pin} {0}
+cUiSetViewStatus {SDFFSRX1} {abstract.ext} {0}
+cUiSetViewStatus {SDFFSRX1} {abstract} {37}
+cUiSetViewStatus {SDFFSRX1} {abstract.ver} {0}

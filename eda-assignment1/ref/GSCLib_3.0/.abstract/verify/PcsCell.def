@@ -1,0 +1,236 @@
+VERSION 5.4 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN XOR2X1 ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( -19800 -44220 ) ( 27060 52140 ) ;
+TRACKS X -19470 DO 1 STEP 660 ;
+TRACKS X 26730 DO 1 STEP 660 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal1 ;
+TRACKS Y -43890 DO 1 STEP 660 ;
+TRACKS Y 51810 DO 1 STEP 660 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal1 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal2 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal2 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal3 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal3 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal4 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal4 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal5 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal5 ;
+TRACKS X -18810 DO 69 STEP 660 LAYER Metal6 ;
+TRACKS Y -43230 DO 144 STEP 660 LAYER Metal6 ;
+GCELLGRID X -19800 DO 2 STEP 6930 ;
+GCELLGRID X -6270 DO 5 STEP 6600 ;
+GCELLGRID X 27060 DO 1 STEP 0 ;
+GCELLGRID Y -44220 DO 2 STEP 6930 ;
+GCELLGRID Y -30690 DO 13 STEP 6600 ;
+GCELLGRID Y 52140 DO 1 STEP 0 ;
+
+ROW ROW_0 CORE     -7260 -31680 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_1 CORE     -7260 -23760 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_2 CORE     -7260 -15840 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_3 CORE     -7260 -7920 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_4 CORE     -7260 0 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_5 CORE     -7260 7920 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_6 CORE     -7260 15840 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_7 CORE     -7260 23760 N DO 33 BY 1 STEP 660 7920 ;
+
+ROW ROW_8 CORE     -7260 31680 N DO 33 BY 1 STEP 660 7920 ;
+
+COMPONENTS 5 ;
+ - Top          XOR2X1 	+ PLACED ( 0 7920 ) FS  ;
+ - Bottom       XOR2X1 	+ PLACED ( 0 -7920 ) FS  ;
+ - Right        XOR2X1 	+ PLACED ( 7260 0 ) FN  ;
+ - Left         XOR2X1 	+ PLACED ( -7260 0 ) FN  ;
+ - main         XOR2X1 	+ PLACED ( 0 0 ) N  ;
+END COMPONENTS
+PINS 25 ;
+  - Top_POWR + NET Top_POWR 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 12060 51000 ) N ;
+  - Top_Y + NET Top_Y 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 9420 51000 ) N ;
+  - Top_GRND + NET Top_GRND 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 8760 51000 ) N ;
+  - Top_B + NET Top_B 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 8100 51000 ) N ;
+  - Top_A + NET Top_A 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 7440 51000 ) N ;
+  - Bottom_POWR + NET Bottom_POWR 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 2820 51000 ) N ;
+  - Bottom_Y + NET Bottom_Y 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 6780 51000 ) N ;
+  - Bottom_GRND + NET Bottom_GRND 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 6120 51000 ) N ;
+  - Bottom_B + NET Bottom_B 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 2160 51000 ) N ;
+  - Bottom_A + NET Bottom_A 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 5460 51000 ) N ;
+  - Right_POWR + NET Right_POWR 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 14040 51000 ) N ;
+  - Right_Y + NET Right_Y 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 11400 51000 ) N ;
+  - Right_GRND + NET Right_GRND 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 10740 51000 ) N ;
+  - Right_B + NET Right_B 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 13380 51000 ) N ;
+  - Right_A + NET Right_A 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 10080 51000 ) N ;
+  - Left_POWR + NET Left_POWR 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 180 51000 ) N ;
+  - Left_Y + NET Left_Y 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( -2460 51000 ) N ;
+  - Left_GRND + NET Left_GRND 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( -3120 51000 ) N ;
+  - Left_B + NET Left_B 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( -480 51000 ) N ;
+  - Left_A + NET Left_A 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( -3780 51000 ) N ;
+  - main_POWR + NET main_POWR 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 1500 51000 ) N ;
+  - main_Y + NET main_Y 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 4800 51000 ) N ;
+  - main_GRND + NET main_GRND 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 3480 51000 ) N ;
+  - main_B + NET main_B 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 840 51000 ) N ;
+  - main_A + NET main_A 
+    + DIRECTION INPUT 
+    + USE SIGNAL 
+    + LAYER Metal1 ( 0 0 ) ( 300 300 ) 
+    + PLACED ( 4140 51000 ) N ;
+END PINS
+
+NETS 25 ;
+    - Left_B       
+	( Left B ) ; 
+    - Right_GRND   
+	( Right GRND ) ; 
+    - main_A       
+	( main A ) ; 
+    - Top_GRND     
+	( Top GRND ) ; 
+    - main_B       
+	( main B ) ; 
+    - Left_POWR    
+	( Left POWR ) ; 
+    - Bottom_B     
+	( Bottom B ) ; 
+    - Bottom_GRND  
+	( Bottom GRND ) ; 
+    - Bottom_A     
+	( Bottom A ) ; 
+    - main_POWR    
+	( main POWR ) ; 
+    - Top_Y        
+	( Top Y ) ; 
+    - Right_POWR   
+	( Right POWR ) ; 
+    - Right_Y      
+	( Right Y ) ; 
+    - Top_POWR     
+	( Top POWR ) ; 
+    - Left_Y       
+	( Left Y ) ; 
+    - Bottom_POWR  
+	( Bottom POWR ) ; 
+    - main_GRND    
+	( main GRND ) ; 
+    - main_Y       
+	( main Y ) ; 
+    - Bottom_Y     
+	( Bottom Y ) ; 
+    - Top_B        
+	( Top B ) ; 
+    - Left_GRND    
+	( Left GRND ) ; 
+    - Top_A        
+	( Top A ) ; 
+    - Right_A      
+	( Right A ) ; 
+    - Left_A       
+	( Left A ) ; 
+    - Right_B      
+	( Right B ) ; 
+END NETS
+END DESIGN

@@ -1,0 +1,38 @@
+Cadence CRETE Generic Standard Cell Library 3.0 (GSCLib_3.0)
+UConn Contact:  Jeremy Lee (jslee@engr.uconn.edu)
+Date:           09 Nov 2007
+Last Updated:   09 Nov 2007
+
+The GSCLib_3.0 is a standard cell library that at one time was publicly
+available and supported by Cadence Design Systems.  Support for the library
+ceased around 2004.  The library is a 180nm technology node that can be used
+to perform gate-level synthesis, DFT insertion, layout synthesis, 
+and simulations.  
+
+At UConn, the library is available for academic purposes only and is
+available in the directory:
+/apps/ecs-apps/software/synopsys/GSCLib_3.0
+on any machine that has access to the ECS fileserver.  This directory
+has several sub-directories that can be used for synthesis or
+verification purposes.  A summary of the contents of each sub-directory
+is listed below.
+
+GSCLib_3.0/
+|-- GSCLib_3.0
+|   (Cadence views of GSCLib_3.0 cells)
+|-- bin
+|-- doc
+|   (Documentation of GSCLib_3.0)
+|-- lef
+|   (LEF tech file and cell views)
+|-- stream
+|   (GDS cell views)
+|-- tech.dpux
+|-- timing
+|   (Synopsys and Cadence formated database files for logic synthesis.  
+|    Also SPICE netlists)
+`-- verilog
+    (Verilog and VHDL files of GSCLib_3.0 cells)
+
+The Synopsys database files have been modified to include test functionality
+to the SDFFSRX1 cell and have been characterized with new timing delays.

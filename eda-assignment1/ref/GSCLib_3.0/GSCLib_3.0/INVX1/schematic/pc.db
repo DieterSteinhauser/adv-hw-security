@@ -1,0 +1,14 @@
+#
+gpdk pmos symbol
+MP0
+#
+gpdk nmos symbol
+MN0
+#ISCELL
+basic ipin symbol
+PIN0
+PIN3
+PIN4
+#ISCELL
+basic opin symbol
+PIN1

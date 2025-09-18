@@ -1,0 +1,6 @@
+cUiSelectCellP {TLATSRX1}
+cUiSetViewStatus {TLATSRX1} {logical} {0}
+cUiSetViewStatus {TLATSRX1} {abstract.pin} {0}
+cUiSetViewStatus {TLATSRX1} {abstract.ext} {0}
+cUiSetViewStatus {TLATSRX1} {abstract} {0}
+cUiSetViewStatus {TLATSRX1} {abstract.ver} {0}

@@ -1,0 +1,5 @@
+TDMCHECKPOINT="1.0"
+GSCLib/DFFSRX1 type="cell"
+GSCLib/DFFX1 type="cell"
+GSCLib/SDFFSRX1 type="cell"
+keepEmptyCategory type="unknown"
